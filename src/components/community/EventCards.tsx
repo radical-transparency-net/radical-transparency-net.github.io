@@ -14,13 +14,13 @@ export const EventCards: React.FC = () => {
         <div className="flex flex-col gap-space-xs max-w-xl">
           <div className="inline-flex items-center gap-1 font-badge-caps text-badge-caps uppercase tracking-wider text-secondary font-semibold">
             <span className="material-symbols-outlined text-[16px]">calendar_month</span>
-            <span>Live Community Engagements</span>
+            <span>(DRAFT) Live Community Engagements</span>
           </div>
           <h3 className="font-headline-md text-headline-md text-on-surface font-bold">
-            Upcoming Community Webinars & Sprints
+            (DRAFT) Upcoming Community Webinars & Sprints
           </h3>
           <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-            Join practical sessions with Open Science architects to validate linksets, resolve SPARQL queries, and review schema updates.
+            (DRAFT) Join practical sessions with Open Science architects to validate linksets, resolve SPARQL queries, and review schema updates.
           </p>
         </div>
 

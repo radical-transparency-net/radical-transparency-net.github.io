@@ -21,13 +21,13 @@ export const ChannelsGrid: React.FC = () => {
         <div className="lg:col-span-7 flex flex-col gap-space-md">
           <div className="flex flex-col gap-space-xs">
             <span className="font-badge-caps text-badge-caps text-secondary uppercase tracking-widest font-semibold">
-              Multi-Channel Operations
+              (DRAFT) Multi-Channel Operations
             </span>
             <h3 className="font-headline-md text-headline-md text-on-surface font-bold">
-              Stakeholder Engagement Channels & Feedback Loops
+              (DRAFT) Stakeholder Engagement Channels & Feedback Loops
             </h3>
             <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              Continuous communication pipelines ensuring two-way dialogue between the Task Force and the European scientific ecosystem.
+              (DRAFT) Continuous communication pipelines ensuring two-way dialogue between the Task Force and the scientific ecosystem.
             </p>
           </div>
 
@@ -80,7 +80,7 @@ export const ChannelsGrid: React.FC = () => {
         <div className="lg:col-span-5 flex flex-col p-space-lg rounded-xl bg-surface-container-lowest shadow-md border border-surface-container-high/40">
           <div className="flex items-center gap-space-xs mb-space-xs">
             <span className="px-space-xs py-0.5 rounded bg-surface-container text-secondary font-badge-caps text-badge-caps uppercase font-semibold">
-              Monthly Dispatch
+              (DRAFT) Monthly Dispatch
             </span>
             <span className="font-label-code-sm text-label-code-sm text-outline">
               Direct to Inbox
@@ -88,10 +88,10 @@ export const ChannelsGrid: React.FC = () => {
           </div>
 
           <h3 className="font-headline-sm text-headline-sm text-on-surface mb-space-xs font-bold">
-            Subscribe to the Transparency Digest
+            (DRAFT) Subscribe to the Transparency Digest
           </h3>
           <p className="font-body-md text-body-md text-on-surface-variant mb-space-md leading-relaxed">
-            A concise monthly bulletin detailing semantic crosswalk approvals, governance milestones, RFC comment windows, and interoperability case studies.
+            (DRAFT) A concise monthly bulletin detailing semantic crosswalk approvals, governance milestones, RFC comment windows, and interoperability case studies.
           </p>
 
           {isSubscribed ? (

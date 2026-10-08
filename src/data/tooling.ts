@@ -1,42 +1,42 @@
 import { SpecCard, SdkItem, ValidationProfile } from '../types';
 
 export const cliTerminalData = {
-  command: "npx @eosc-interop/rt-cli validate --linkset ./mappings/chem-mesh.ttl --conformity ./profiles/v1.json --verbose",
-  infoMessage: "[INFO] Resolving VoID linkset schema & SHACL constraints...",
+  command: "npx @lorem/rt-cli validate --linkset ./lorem/sample.ttl --profile ./lorem/profile.json --verbose",
+  infoMessage: "[LOREM] Resolving lorem ipsum schema & constraints...",
   outputLines: [
-    "> Checking SSSOM mapping table: 1,842 predicates",
-    "> Validating DOI / PURL resolution matrix: OK (200)",
+    "> Checking lorem mapping table: 1,234 predicates",
+    "> Validating lorem resolution matrix: OK (200)",
   ],
-  passBadge: "CONFORMITY: PASS (100% Provenance Audit)",
-  duration: "98ms",
+  passBadge: "LOREM: PASS (Lorem Ipsum Audit)",
+  duration: "42ms",
 };
 
 export const specCardsData: SpecCard[] = [
   {
     id: "spec-01",
-    badge: "SHACL · ShEx · JSON-LD",
-    title: "Conformity Profiles Engine",
-    description: "Strict shape topologies guaranteeing semantic fidelity, schema parity, and required licensing tags across all federation nodes before publication.",
-    targetUri: "purl.org/eosc/cp/v2.1/core.shacl",
-    specUrl: "https://github.com/eosc-semantic-interop/if-solutions-proposals",
+    badge: "Lorem · Ipsum · Spec",
+    title: "Lorem Ipsum Conformity Engine",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
+    targetUri: "example.org/lorem/cp/v1/core.shacl",
+    specUrl: "#/developer",
     icon: "verified_user",
   },
   {
     id: "spec-02",
-    badge: "VoID · SSSOM · SPARQL",
-    title: "Linkset Usage Patterns",
-    description: "Architectural blueprints to serialize VoID partition linksets, SSSOM TSV mapping tables, and construct SPARQL 1.1 query graphs with deterministic URIs.",
-    targetUri: "eosc-interop/void-sssom-adapter",
-    specUrl: "https://github.com/eosc-semantic-interop/if-solutions-proposals",
+    badge: "Lorem · Linkset · Pattern",
+    title: "Lorem Ipsum Linkset Patterns",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris massa. Vestibulum lacinia arcu eget nulla.",
+    targetUri: "example.org/lorem/linkset-adapter",
+    specUrl: "#/developer",
     icon: "hub",
   },
   {
     id: "spec-03",
-    badge: "CI / CD · GitHub Actions",
-    title: "Alignment Actions Automations",
-    description: "Drop-in GitHub Action workflows executing semantic regression testing, triple drift analysis, and provenance hashes whenever target vocabularies bump versions.",
-    targetUri: "actions/eosc-semantic-check@v2",
-    specUrl: "https://github.com/eosc-semantic-interop/if-solutions-proposals",
+    badge: "Lorem · Automation · Workflow",
+    title: "Lorem Ipsum Action Automations",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.",
+    targetUri: "actions/lorem-check@v1",
+    specUrl: "#/developer",
     icon: "sync_alt",
   },
 ];
@@ -44,28 +44,28 @@ export const specCardsData: SpecCard[] = [
 export const sdkCardsData: SdkItem[] = [
   {
     langCode: "Py",
-    name: "eosc-rt-py",
-    version: "v1.8.2",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi nulla quis sem at nibh elementum imperdiet.",
-    installCmd: "pip install eosc-rt-py",
+    name: "lorem-rt-py",
+    version: "v1.0.0",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ante dapibus diam. Sed nisi nulla quis sem at nibh elementum imperdiet.",
+    installCmd: "pip install lorem-rt-py",
     docsUrl: "#",
     badgeText: "PyPI · Placeholder",
   },
   {
     langCode: "Rs",
-    name: "rt-core-rs",
-    version: "v0.9.4",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.",
-    installCmd: "cargo add rt-core-rs",
+    name: "lorem-core-rs",
+    version: "v0.1.0",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris massa. Vestibulum lacinia arcu eget nulla per conubia nostra.",
+    installCmd: "cargo add lorem-core-rs",
     docsUrl: "#",
     badgeText: "crates.io · Placeholder",
   },
   {
     langCode: "TS",
-    name: "@eosc-interop/rt-sdk",
-    version: "v2.4.0",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh felis tempor.",
-    installCmd: "npm install @eosc-interop/rt-sdk",
+    name: "@lorem/rt-sdk",
+    version: "v1.0.0",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.",
+    installCmd: "npm install @lorem/rt-sdk",
     docsUrl: "#",
     badgeText: "npm · Placeholder",
   },
@@ -73,59 +73,57 @@ export const sdkCardsData: SdkItem[] = [
 
 export const playgroundProfilesData: ValidationProfile[] = [
   {
-    id: "eosc-core-v2.1",
-    name: "EOSC-Semantic-Core v2.1 (Full SHACL)",
-    defaultCode: `@prefix void: <http://rdfs.org/ns/void#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix eosc: <http://purl.org/eosc/interop/terms/> .
+    id: "lorem-profile-01",
+    name: "Lorem Ipsum Profile Alpha (SHACL)",
+    defaultCode: `@prefix lorem: <http://example.org/lorem/ns#> .
+@prefix ipsum: <http://example.org/ipsum/ns#> .
+@prefix dolor: <http://example.org/dolor/terms#> .
 
-<https://purl.org/eosc/linksets/mesh-chebi-2025>
-    a void:Linkset ;
-    dct:title "MeSH to ChEBI Radical Transparency Alignment" ;
-    dct:license <https://creativecommons.org/licenses/by/4.0/> ;
-    void:subjectsTarget <http://id.nlm.nih.gov/mesh> ;
-    void:objectsTarget <http://purl.obolibrary.org/obo/chebi> ;
-    void:linkPredicate skos:exactMatch ;
-    void:triples 1842 ;
-    eosc:provenanceChain <https://github.com/eosc-semantic-interop/crosswalk-chem/commit/7a2f1b> ;
-    eosc:transparencyRating "A+"^^eosc:ConformityGrade .`,
+<http://example.org/lorem/linkset/sample-01>
+    a lorem:Linkset ;
+    dolor:title "Lorem Ipsum Alignment Declaration" ;
+    dolor:license <https://creativecommons.org/licenses/by/4.0/> ;
+    lorem:subjectsTarget <http://example.org/vocab/alpha> ;
+    lorem:objectsTarget <http://example.org/vocab/beta> ;
+    lorem:linkPredicate ipsum:exactMatch ;
+    lorem:triples 1234 ;
+    lorem:transparencyRating "A+"^^lorem:Grade .`,
     checks: [
-      { name: "SHACL Target Class Check", detail: "void:Linkset conforms to shape #EoscLinksetShape", status: "pass" },
-      { name: "Open Data License Enforced", detail: "CC-BY 4.0 (Authoritative IRI validated)", status: "pass" },
-      { name: "Immutable Lineage Tracking", detail: "SHA-1 Git commit verified on github remote", status: "pass" },
-      { name: "Transitive Closure Health", detail: "0 circular contradictions detected in 1,842 mappings", status: "pass" },
+      { name: "Lorem Target Class Check", detail: "lorem:Linkset conforms to shape #LoremShape", status: "pass" },
+      { name: "Lorem License Declaration", detail: "Lorem Ipsum IRI validated (200 OK)", status: "pass" },
+      { name: "Lorem Lineage Verification", detail: "Lorem hash verified on git remote", status: "pass" },
+      { name: "Lorem Closure Health", detail: "0 contradictions detected in 1,234 mappings", status: "pass" },
     ],
   },
   {
-    id: "sssom-strict",
-    name: "SSSOM Strict Metadata Matrix 1.0",
-    defaultCode: `@prefix sssom: <https://w3id.org/sssom/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+    id: "lorem-profile-02",
+    name: "Lorem Ipsum Profile Beta (Matrix)",
+    defaultCode: `@prefix lorem: <http://example.org/lorem/ns#> .
+@prefix ipsum: <http://example.org/ipsum/ns#> .
 
-<https://purl.org/eosc/sssom/mapping-01>
-    a sssom:MappingSet ;
-    sssom:mapping_set_id "https://purl.org/eosc/sssom/chem-01" ;
-    sssom:license "https://creativecommons.org/licenses/by/4.0/" ;
-    sssom:mapping_tool "rt-cli v2.4.0" .`,
+<http://example.org/lorem/mapping/sample-02>
+    a lorem:MappingSet ;
+    lorem:mapping_set_id "http://example.org/lorem/set-02" ;
+    lorem:license <https://creativecommons.org/licenses/by/4.0/> ;
+    lorem:tool "lorem-cli v1.0.0" .`,
     checks: [
-      { name: "SSSOM Required Headers", detail: "mapping_set_id and license fields declared", status: "pass" },
-      { name: "Predicate Terminology Validity", detail: "SKOS mapping properties verified against schema", status: "pass" },
-      { name: "Confidence Score Bounds", detail: "All similarity scores normalized between [0.0, 1.0]", status: "pass" },
+      { name: "Lorem Required Headers", detail: "mapping_set_id and license declared", status: "pass" },
+      { name: "Lorem Predicate Validity", detail: "Lorem properties verified against schema", status: "pass" },
+      { name: "Lorem Score Bounds", detail: "All confidence scores normalized between [0.0, 1.0]", status: "pass" },
     ],
   },
   {
-    id: "void-federation",
-    name: "VoID Transitive Linkset Minimum",
-    defaultCode: `@prefix void: <http://rdfs.org/ns/void#> .
+    id: "lorem-profile-03",
+    name: "Lorem Ipsum Profile Gamma (Minimum)",
+    defaultCode: `@prefix lorem: <http://example.org/lorem/ns#> .
 
-<https://purl.org/eosc/linksets/basic-sample>
-    a void:Linkset ;
-    void:subjectsTarget <https://example.org/datasetA> ;
-    void:objectsTarget <https://example.org/datasetB> .`,
+<http://example.org/lorem/linkset/basic-sample>
+    a lorem:Linkset ;
+    lorem:subjectsTarget <http://example.org/dataset/alpha> ;
+    lorem:objectsTarget <http://example.org/dataset/beta> .`,
     checks: [
-      { name: "VoID Minimum Targets", detail: "subjectsTarget and objectsTarget resolved", status: "pass" },
-      { name: "SPARQL Endpoint Resolution", detail: "Endpoint metadata online with HTTP 200", status: "pass" },
+      { name: "Lorem Minimum Targets", detail: "subjectsTarget and objectsTarget resolved", status: "pass" },
+      { name: "Lorem Endpoint Resolution", detail: "Endpoint metadata online with HTTP 200", status: "pass" },
     ],
   },
 ];

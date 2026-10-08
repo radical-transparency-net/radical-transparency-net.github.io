@@ -8,11 +8,11 @@ export const SpotlightGrid: React.FC = () => {
       <div className="max-w-[1440px] mx-auto px-margin">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-lg">
           <div>
-            <span className="font-badge-caps text-badge-caps uppercase tracking-wider text-outline">
-              Featured Specifications
+            <span className="font-badge-caps text-badge-caps uppercase tracking-wider text-outline font-semibold">
+              (DRAFT) Featured Specifications
             </span>
-            <h2 className="font-headline-lg text-headline-lg text-on-surface tracking-tight">
-              Quick Start Spotlight
+            <h2 className="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">
+              (DRAFT) Quick Start Spotlight
             </h2>
           </div>
           <a

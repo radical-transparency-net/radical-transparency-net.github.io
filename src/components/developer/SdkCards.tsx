@@ -16,14 +16,14 @@ export const SdkCards: React.FC = () => {
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
         <div className="flex flex-col">
           <span className="font-label-code-sm text-label-code-sm text-secondary uppercase tracking-wider font-semibold">
-            SDKs & Toolchains
+            (DRAFT) Lorem Toolchains
           </span>
           <h2 className="font-headline-lg text-headline-lg text-on-surface font-bold">
-            Client Libraries & Language Bindings
+            (DRAFT) Lorem Ipsum: Client Libraries
           </h2>
         </div>
         <p className="font-body-md text-body-md text-on-surface-variant max-w-md">
-          Official high-performance SDKs for Python data science pipelines, Rust systems engineering, and Node/TypeScript web microservices.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
         </p>
       </div>
 
@@ -66,7 +66,7 @@ export const SdkCards: React.FC = () => {
 
             <div className="flex items-center justify-between text-body-sm font-body-sm pt-space-xs border-t border-surface-container-high/30">
               <span className="text-secondary font-semibold hover:underline flex items-center gap-1 cursor-pointer">
-                <span>Read Docs</span>
+                <span>Lorem Docs</span>
                 <span className="material-symbols-outlined text-[16px]">chevron_right</span>
               </span>
               <span className="text-outline text-label-code-sm font-label-code-sm text-xs font-mono">

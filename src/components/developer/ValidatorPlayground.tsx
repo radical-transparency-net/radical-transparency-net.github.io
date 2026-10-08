@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { playgroundProfilesData } from '../../data/tooling';
 
 export const ValidatorPlayground: React.FC = () => {
-  const [selectedProfileId, setSelectedProfileId] = useState<string>('eosc-core-v2.1');
+  const [selectedProfileId, setSelectedProfileId] = useState<string>('lorem-profile-01');
   const currentProfile = playgroundProfilesData.find((p) => p.id === selectedProfileId) || playgroundProfilesData[0];
 
   const [code, setCode] = useState<string>(currentProfile.defaultCode);
@@ -38,11 +38,11 @@ export const ValidatorPlayground: React.FC = () => {
             science
           </span>
           <h2 className="font-headline-lg text-headline-lg text-on-surface font-bold">
-            Interactive Linkset Validator Playground
+            (DRAFT) Lorem Ipsum: Interactive Validator Playground
           </h2>
         </div>
         <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl leading-relaxed">
-          Execute client-side conformity assertions against Turtle/RDF statements. Validate metadata completeness, PURL resolution endpoints, and license compliance instantaneously.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.
         </p>
       </div>
 
@@ -51,7 +51,7 @@ export const ValidatorPlayground: React.FC = () => {
         <div className="px-space-md py-space-sm bg-surface-container-low border-b border-surface-container-high/40 flex flex-wrap items-center justify-between gap-space-sm">
           <div className="flex items-center gap-space-md">
             <label className="font-label-code-sm text-label-code-sm text-outline uppercase tracking-wider flex items-center gap-1.5 font-semibold text-xs">
-              <span>Profile Standard:</span>
+              <span>Lorem Profile:</span>
               <select
                 className="h-8 px-2 rounded bg-surface-container-lowest text-on-surface text-body-sm font-label-code-sm focus:outline-none focus:ring-2 focus:ring-secondary border border-outline-variant/30"
                 value={selectedProfileId}
@@ -67,7 +67,7 @@ export const ValidatorPlayground: React.FC = () => {
             <span className="hidden sm:inline text-outline-variant">|</span>
             <span className="font-label-code-sm text-label-code-sm text-outline hidden sm:flex items-center gap-1">
               <span className="material-symbols-outlined text-[14px]">memory</span>
-              Engine: Rust WASM (Core v0.9.4)
+              Engine: Lorem WASM
             </span>
           </div>
 
@@ -77,7 +77,7 @@ export const ValidatorPlayground: React.FC = () => {
               className="px-space-sm py-1 rounded hover:bg-surface-container text-body-sm font-body-sm text-on-surface-variant transition-colors flex items-center gap-1"
             >
               <span className="material-symbols-outlined text-[16px]">restart_alt</span>
-              Reset Snippet
+              Reset Lorem
             </button>
             <button
               onClick={handleRunValidation}
@@ -87,7 +87,7 @@ export const ValidatorPlayground: React.FC = () => {
               <span className="material-symbols-outlined text-[18px]">
                 {isValidating ? 'sync' : 'play_arrow'}
               </span>
-              <span>{isValidating ? 'Validating...' : 'Run Validation'}</span>
+              <span>{isValidating ? 'Validating...' : 'Run Lorem Validation'}</span>
             </button>
           </div>
         </div>
@@ -98,7 +98,7 @@ export const ValidatorPlayground: React.FC = () => {
           <div className="lg:col-span-7 p-space-md bg-surface-container-lowest border-r border-surface-container-high/40 flex flex-col">
             <div className="flex items-center justify-between mb-2">
               <span className="font-label-code-sm text-label-code-sm text-outline uppercase font-mono text-xs">
-                linkset-input.ttl (RDF / Turtle)
+                lorem-input.ttl (RDF / Turtle)
               </span>
               <span className="font-label-code-sm text-label-code-sm text-on-tertiary-container font-semibold">
                 Editable
@@ -117,11 +117,11 @@ export const ValidatorPlayground: React.FC = () => {
             <div>
               <div className="flex items-center justify-between mb-space-sm">
                 <span className="font-label-code-sm text-label-code-sm text-outline uppercase font-mono text-xs">
-                  Conformity Report
+                  Lorem Report
                 </span>
                 <div className="px-space-sm py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-badge-caps text-badge-caps uppercase tracking-wider flex items-center gap-1 border border-on-tertiary-container/30">
                   <span className="material-symbols-outlined text-[14px]">check_circle</span>
-                  <span>PASS (100% Provenance)</span>
+                  <span>PASS (Lorem 100%)</span>
                 </div>
               </div>
 
@@ -152,13 +152,13 @@ export const ValidatorPlayground: React.FC = () => {
             {/* Bottom Action within Playground */}
             <div className="mt-space-md pt-space-md border-t border-surface-container-high/40 flex items-center justify-between">
               <span className="font-label-code-sm text-label-code-sm text-outline text-xs font-mono">
-                SHACL Execution: 12ms
+                Lorem Runtime: 12ms
               </span>
               <button
-                onClick={() => alert('Exporting SHACL JSON-LD Validation Report')}
+                onClick={() => alert('Exporting Lorem JSON-LD Validation Report')}
                 className="font-body-sm text-body-sm font-semibold text-secondary hover:underline flex items-center gap-1"
               >
-                <span>Export Report (JSON-LD)</span>
+                <span>Export Lorem Report</span>
                 <span className="material-symbols-outlined text-[16px]">download</span>
               </button>
             </div>

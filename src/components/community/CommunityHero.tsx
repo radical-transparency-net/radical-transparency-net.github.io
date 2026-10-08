@@ -9,13 +9,13 @@ export const CommunityHero: React.FC = () => {
           <div className="lg:col-span-8 flex flex-col gap-space-sm">
             <div className="inline-flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container text-secondary font-label-code-sm text-label-code-sm w-fit border border-outline-variant/30 font-semibold">
               <span className="material-symbols-outlined text-[15px]">campaign</span>
-              <span>STRATEGIC FRAMEWORK 2026-2027</span>
+              <span>(DRAFT) STRATEGIC FRAMEWORK 2026-2027</span>
             </div>
-            <h1 className="font-display-hero text-display-hero text-on-surface tracking-tight leading-tight">
-              Community Empowerment & Strategic Communication Plan
+            <h1 className="font-display-hero text-display-hero text-on-surface tracking-tight leading-tight font-bold">
+              (DRAFT) Community Empowerment & Strategic Communication Plan
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
-              Equipping research organizations, data stewards, and working groups with educational resources, while executing a transparent, milestone-driven outreach campaign.
+              (DRAFT) Equipping research organizations, data stewards, and working groups with educational resources, while executing a transparent, milestone-driven outreach campaign.
             </p>
           </div>
 

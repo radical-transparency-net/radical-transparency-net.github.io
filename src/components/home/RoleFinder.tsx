@@ -21,15 +21,15 @@ export const RoleFinder: React.FC = () => {
       {/* Header and status indicator */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
         <div>
-          <div className="flex items-center gap-space-xs font-badge-caps text-badge-caps uppercase tracking-wider text-secondary mb-space-xs">
+          <div className="flex items-center gap-space-xs font-badge-caps text-badge-caps uppercase tracking-wider text-secondary mb-space-xs font-semibold">
             <span className="material-symbols-outlined text-[15px]">tune</span>
-            Tailored Workflow Engine
+            (DRAFT) Tailored Workflow Engine
           </div>
-          <h2 className="font-headline-lg text-headline-lg text-on-surface tracking-tight">
-            Instant Role Finder
+          <h2 className="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">
+            (DRAFT) Instant Role Finder
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant mt-1">
-            Select your scientific or technical capacity to reveal immediate, actionable starting points.
+            (DRAFT) Select your scientific or technical capacity to reveal immediate, actionable starting points.
           </p>
         </div>
 
@@ -149,7 +149,7 @@ export const RoleFinder: React.FC = () => {
                 auto_stories
               </span>
               <span className="font-title-md text-title-md text-on-surface font-semibold">
-                Curated Fast-Track
+                (DRAFT) Curated Fast-Track
               </span>
             </div>
 
@@ -255,7 +255,7 @@ export const RoleFinder: React.FC = () => {
             to="/community"
             className="mt-space-md w-full inline-flex items-center justify-center py-2.5 rounded bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-inverse-surface transition-colors shadow-sm"
           >
-            Download Role Handbook
+            (DRAFT) Download Role Handbook
           </Link>
         </div>
       </div>

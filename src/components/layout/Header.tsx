@@ -15,10 +15,10 @@ export const Header: React.FC = () => {
           </div>
           <div className="flex items-center gap-space-sm">
             <span className="font-title-md text-title-md text-on-surface tracking-tight font-semibold">
-              Radical Transparency
+              (DRAFT) Radical Transparency
             </span>
             <span className="px-space-xs py-0.5 rounded bg-surface-container text-on-tertiary-container font-badge-caps text-badge-caps uppercase tracking-wider">
-              EOSC Interop
+              (DRAFT) Interop
             </span>
           </div>
         </Link>
@@ -71,7 +71,7 @@ export const Header: React.FC = () => {
             to="/community"
             className="inline-flex items-center justify-center px-space-md py-1.5 rounded bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-inverse-surface transition-colors shadow-sm"
           >
-            Get Involved
+            (DRAFT) Get Involved
           </Link>
 
           {/* Mobile menu toggle button */}

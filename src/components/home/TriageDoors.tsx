@@ -6,57 +6,57 @@ export const TriageDoors: React.FC = () => {
     {
       id: "door-01",
       number: "01",
-      category: "Exploration & Theory",
+      category: "(DRAFT) Exploration & Theory",
       categoryColor: "text-on-tertiary-container",
       icon: "visibility",
       iconColor: "text-on-tertiary-container",
-      title: "New to the Concept? What is Radical Transparency?",
-      description: "Grasp the foundational pillars: provenance traceability, open governance rationales, FAIR evolution, and the architectural motivation paper.",
+      title: "(DRAFT) New to the Concept? What is Radical Transparency?",
+      description: "(DRAFT) Grasp the foundational pillars: provenance traceability, open governance rationales, FAIR evolution, and the architectural motivation paper.",
       checkpoints: [
-        "FAIR Data Evolution",
-        "Motivation Whitepaper",
-        "High-Level EOSC Principles",
+        "(DRAFT) FAIR Data Evolution",
+        "(DRAFT) Motivation Whitepaper",
+        "(DRAFT) High-Level Principles",
       ],
       checkColor: "text-on-tertiary-container",
-      cta: "Start Learning Path",
+      cta: "(DRAFT) Start Learning Path",
       ctaPath: "/theory",
       btnClass: "bg-surface-container text-on-surface hover:bg-primary hover:text-on-primary",
     },
     {
       id: "door-02",
       number: "02",
-      category: "Engineering & Spec",
+      category: "(DRAFT) Engineering & Spec",
       categoryColor: "text-secondary",
       icon: "terminal",
       iconColor: "text-secondary",
-      title: "Building & Integrating? Developer & Technical Hub",
-      description: "Ready-to-run tooling: JSON-LD conformity profiles, Linkset Usage Patterns, Alignment Actions CLI/APIs, and OpenAPI/RDF verification pipelines.",
+      title: "(DRAFT) Building & Integrating? Developer & Technical Hub",
+      description: "(DRAFT) Ready-to-run tooling: JSON-LD conformity profiles, Linkset Usage Patterns, Alignment Actions CLI/APIs, and OpenAPI/RDF verification pipelines.",
       checkpoints: [
-        "Linkset Usage Patterns",
-        "Alignment CLI & Triplestores",
-        "JSON-LD & SHACL Schemas",
+        "(DRAFT) Linkset Usage Patterns",
+        "(DRAFT) Alignment CLI & Triplestores",
+        "(DRAFT) JSON-LD & SHACL Schemas",
       ],
       checkColor: "text-secondary",
-      cta: "Explore Dev Tooling",
+      cta: "(DRAFT) Explore Dev Tooling",
       ctaPath: "/developer",
       btnClass: "bg-secondary text-on-secondary hover:bg-secondary-container",
     },
     {
       id: "door-03",
       number: "03",
-      category: "Advocacy & Mobilization",
+      category: "(DRAFT) Advocacy & Mobilization",
       categoryColor: "text-on-surface",
       icon: "groups",
       iconColor: "text-on-surface",
-      title: "Educate & Mobilize? Community, Playbooks & Roadmap",
-      description: "Empower your institution with peer training circles, curated pilot case studies, onboarding curricula, and strategic 4-phase milestone roadmaps.",
+      title: "(DRAFT) Educate & Mobilize? Community, Playbooks & Roadmap",
+      description: "(DRAFT) Empower your institution with peer training circles, curated pilot case studies, onboarding curricula, and strategic 4-phase milestone roadmaps.",
       checkpoints: [
-        "Peer-to-Peer Cohorts",
-        "Institutional Adoption Kits",
-        "Strategic 4-Phase Roadmap",
+        "(DRAFT) Peer-to-Peer Cohorts",
+        "(DRAFT) Institutional Adoption Kits",
+        "(DRAFT) Strategic 4-Phase Roadmap",
       ],
       checkColor: "text-on-surface",
-      cta: "Join Community Circle",
+      cta: "(DRAFT) Join Community Circle",
       ctaPath: "/community",
       btnClass: "bg-surface-container text-on-surface hover:bg-primary hover:text-on-primary",
     },
@@ -73,7 +73,7 @@ export const TriageDoors: React.FC = () => {
             <div className="flex flex-col">
               <div className="flex items-center justify-between gap-space-xs mb-space-md">
                 <span
-                  className={`px-space-sm py-0.5 rounded bg-surface-container ${door.categoryColor} font-badge-caps text-badge-caps uppercase tracking-wider`}
+                  className={`px-space-sm py-0.5 rounded bg-surface-container ${door.categoryColor} font-badge-caps text-badge-caps uppercase tracking-wider font-semibold`}
                 >
                   {door.category}
                 </span>
@@ -86,7 +86,7 @@ export const TriageDoors: React.FC = () => {
                   {door.icon}
                 </span>
               </div>
-              <h2 className="font-headline-sm text-headline-sm text-on-surface mb-space-xs leading-snug">
+              <h2 className="font-headline-sm text-headline-sm text-on-surface mb-space-xs leading-snug font-bold">
                 {door.title}
               </h2>
               <p className="font-body-sm text-body-sm text-on-surface-variant mb-space-md leading-relaxed">
