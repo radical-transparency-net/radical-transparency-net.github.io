@@ -63,7 +63,7 @@ export const TriageDoors: React.FC = () => {
   ];
 
   return (
-    <div className="max-w-[1440px] mx-auto px-margin -mt-8 mb-space-xl">
+    <section className="max-w-[1440px] mx-auto px-margin py-space-xl">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop">
         {doors.map((door) => (
           <div
@@ -112,6 +112,6 @@ export const TriageDoors: React.FC = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
