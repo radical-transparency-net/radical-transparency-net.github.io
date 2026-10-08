@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-container": "#fefcff", "surface-container-lowest": "#ffffff", "tertiary-container": "#00201d", "background": "#f8f9ff", "primary-fixed-dim": "#bec6e0", "on-background": "#0b1c30", "on-tertiary-container": "#0c9488", "primary-fixed": "#dae2fd", "primary": "#000000", "on-secondary-fixed": "#00174b", "inverse-on-surface": "#eaf1ff", "outline-variant": "#c6c6cd", "tertiary-fixed-dim": "#6bd8cb", "tertiary-fixed": "#89f5e7", "secondary": "#0051d5", "inverse-surface": "#213145", "on-secondary-fixed-variant": "#003ea8", "on-error-container": "#93000a", "outline": "#76777d", "on-surface": "#0b1c30", "error-container": "#ffdad6", "inverse-primary": "#bec6e0", "error": "#ba1a1a", "tertiary": "#000000", "on-primary-fixed-variant": "#3f465c", "surface-container-high": "#dce9ff", "surface-tint": "#565e74", "surface-container-low": "#eff4ff", "secondary-fixed": "#dbe1ff", "secondary-container": "#316bf3", "surface-container-highest": "#d3e4fe", "on-tertiary-fixed": "#00201d", "on-tertiary": "#ffffff", "surface-variant": "#d3e4fe", "surface-container": "#e5eeff", "on-primary-fixed": "#131b2e", "on-tertiary-fixed-variant": "#005049", "on-primary-container": "#7c839b", "on-surface-variant": "#45464d", "surface-dim": "#cbdbf5", "on-error": "#ffffff", "primary-container": "#131b2e", "surface": "#f8f9ff", "on-primary": "#ffffff", "secondary-fixed-dim": "#b4c5ff", "surface-bright": "#f8f9ff", "on-secondary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-desktop": "3rem", "gutter-mobile": "1rem", "gutter-desktop": "2rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "gutter": "1.5rem", "space-xl": "2.5rem", "space-md": "1rem", "margin": "2rem", "space-lg": "1.5rem" }, "fontFamily": { "label-code-sm": ["JetBrains Mono"], "body-lg": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "badge-caps": ["JetBrains Mono"], "headline-md": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-code-md": ["JetBrains Mono"], "body-sm": ["Plus Jakarta Sans"] }, "fontSize": { "label-code-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }], "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "badge-caps": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-code-md": ["13px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-[1440px] mx-auto px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><img alt="Radical Transparency Brand Mark" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc7egXac54ZwwmgOrYq10IxZ6s4zMMEw33vKSZFanCQ0RT3wt97B0hP4wT8kp9sAy8Bugedt1ykttNYC_HMCRUwaGLa9mbX2gC6FZU5KcdAcu_uWCsdrAGbEfQxA4h283M8fHLQU-SvnB2iG2ljQerCh_xnbm8fxTMl8zEBGiss4fBswwVab-YOR_6_hP2fUhhl2y-0CBxc22_CedUM1WEaMwiRxkdkLBUBXLS6eQ7"/><div class="flex items-center gap-space-sm"><span class="font-title-md text-title-md text-on-surface tracking-tight">Radical Transparency</span><span class="px-space-xs py-0.5 rounded bg-surface-container-low text-on-tertiary-container font-badge-caps text-badge-caps uppercase tracking-wider">EOSC Interop</span></div></div><nav class="hidden xl:flex items-center gap-space-sm text-body-md font-body-md" data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded"><a class="px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="triage-and-explore" href="#">Triage &amp; Explore</a><a class="px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="what-is-radical-transparency" href="#">What is Radical Transparency?</a><a class="px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="developer-hub-and-tooling" href="#">Developer Hub &amp; Tooling</a><a class="px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="knowledge-and-community" href="#">Knowledge &amp; Community</a><a class="px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="communication-roadmap" href="#">Communication Roadmap</a></nav><div class="flex items-center gap-space-sm shrink-0"><div class="relative hidden md:flex items-center"><span class="material-symbols-outlined absolute left-2.5 text-outline text-[18px] pointer-events-none">search</span><input class="h-9 pl-8 pr-space-sm rounded bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-sm font-body-sm w-56 focus:outline-none focus:ring-2 focus:ring-secondary/20" placeholder="Search schemas, PURLs, proposals..." type="search"/></div><a class="hidden sm:flex items-center gap-1.5 px-space-sm py-1.5 rounded text-body-sm font-label-code-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="https://github.com/eosc-semantic-interop/if-solutions-proposals" rel="noopener noreferrer" target="_blank" title="eosc-semantic-interop/if-solutions-proposals"><span class="material-symbols-outlined text-[18px]">code</span><span>GitHub</span></a><a class="inline-flex items-center justify-center px-space-md py-1.5 rounded bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-inverse-surface transition-colors" data-path="get-involved" href="#">Get Involved</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background min-h-[calc(100vh-4rem)]"><div class="flex flex-col w-full">
+<div class="max-w-[1440px] w-full mx-auto px-margin py-space-xl flex flex-col gap-space-xl">
+<!-- Top Breadcrumb & Hero Header -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-outline">
+<a class="hover:text-on-surface transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-medium">Understanding Radical Transparency</span>
+<span class="ml-space-sm px-space-xs py-0.5 rounded bg-surface-container text-on-tertiary-container font-badge-caps text-badge-caps uppercase tracking-wider">Doc Ref: EOSC-IF-V2.4</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high w-fit text-secondary font-label-code-sm text-label-code-sm">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>EOSC SEMANTIC INTEROPERABILITY FRAMEWORK</span>
+</div>
+<h1 class="text-display-hero font-display-hero text-on-surface tracking-tight leading-tight">
+            The Paradigm of Radical Transparency
+          </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
+            True semantic interoperability fails when cross-walks operate within closed black boxes. The <span class="text-on-surface font-semibold">Radical Transparency</span> paradigm replaces opaque schema translations with completely auditable, machine-verifiable, and community-curated data lineages, ensuring European Open Science Cloud (EOSC) assets are permanently reliable across autonomous nodes.
+          </p>
+</div>
+<div class="lg:col-span-4 bg-surface-container-low p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">Pillars at a Glance</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+</div>
+<div class="flex flex-col gap-space-sm text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center justify-between py-1 bg-surface-container-lowest px-space-sm rounded">
+<span>Cryptographic Signatures</span>
+<span class="font-label-code-sm text-label-code-sm text-on-tertiary-container">Ed25519 Linked</span>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container-lowest px-space-sm rounded">
+<span>Automated Continuous CI</span>
+<span class="font-label-code-sm text-label-code-sm text-secondary">SHACL / SPARQL</span>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container-lowest px-space-sm rounded">
+<span>FAIR Actionability</span>
+<span class="font-label-code-sm text-label-code-sm text-on-surface">100% Machine-First</span>
+</div>
+</div>
+<a class="inline-flex items-center justify-center gap-1.5 px-space-md py-2 rounded bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-inverse-surface transition-colors" href="#matrix-breakdown">
+<span>Explore Comparison Matrix</span>
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Visual Banner with Academic Imagery and Architectural Schematic -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-stretch">
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between overflow-hidden relative">
+<div class="flex flex-col gap-space-sm z-10">
+<div class="flex items-center gap-space-xs text-secondary font-label-code-sm text-label-code-sm">
+<span class="material-symbols-outlined text-[16px]">schema</span>
+<span>SYSTEM CONTEXT DIAGRAM</span>
+</div>
+<h2 class="text-headline-sm font-headline-sm text-on-surface">From Point-to-Point Pipelines to Interlinked Triplestores</h2>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-xl">
+            Isolated repositories historically bridged vocabularies via hardcoded bespoke scripts. Radical Transparency decomposes mapping into public W3C VoID linksets, published under distributed version control with open provenance graphs.
+          </p>
+</div>
+<!-- Inline Visual Architectural SVG Mini-Graphic -->
+<div class="my-space-md w-full py-4 bg-surface-container-low rounded-lg flex items-center justify-center z-10">
+<svg class="w-full max-w-[540px] h-32" fill="none" viewbox="0 0 540 120" xmlns="http://www.w3.org/2000/svg">
+<rect class="fill-surface-container-highest stroke-outline" height="50" rx="4" stroke-width="0" width="110" x="10" y="35"></rect>
+<text class="fill-on-surface font-title-md text-[11px] font-bold" text-anchor="middle" x="65" y="58">Domain A</text>
+<text class="fill-outline font-label-code-sm text-[9px]" text-anchor="middle" x="65" y="73">DCAT-AP-EU</text>
+<path d="M125 60 L180 60" stroke="#0051d5" stroke-dasharray="4 2" stroke-width="2"></path>
+<polygon fill="#0051d5" points="185,60 178,56 178,64"></polygon>
+<rect class="fill-surface-container-high" height="80" rx="6" width="160" x="190" y="20"></rect>
+<circle class="fill-surface-container-lowest" cx="270" cy="45" r="14"></circle>
+<text class="fill-on-tertiary-container font-label-code-sm text-[12px] font-bold" text-anchor="middle" x="270" y="49">URI</text>
+<text class="fill-on-surface font-title-md text-[11px] font-bold" text-anchor="middle" x="270" y="73">Radical Linkset Hub</text>
+<text class="fill-outline font-label-code-sm text-[9px]" text-anchor="middle" x="270" y="86">PROV-O Signed</text>
+<path d="M355 60 L410 60" stroke="#0051d5" stroke-dasharray="4 2" stroke-width="2"></path>
+<polygon fill="#0051d5" points="415,60 408,56 408,64"></polygon>
+<rect class="fill-surface-container-highest" height="50" rx="4" width="110" x="420" y="35"></rect>
+<text class="fill-on-surface font-title-md text-[11px] font-bold" text-anchor="middle" x="475" y="58">Domain B</text>
+<text class="fill-outline font-label-code-sm text-[9px]" text-anchor="middle" x="475" y="73">Schema.org / Bio</text>
+</svg>
+</div>
+<div class="flex items-center gap-space-md text-label-code-sm font-label-code-sm text-outline z-10">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary"></span> Continuous SHACL Validated</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span> Zero Silo Retention</span>
+</div>
+</div>
+<div class="lg:col-span-5 rounded-xl overflow-hidden shadow-sm relative min-h-[320px]">
+<img class="w-full h-full object-cover" data-alt="High-tech European scientific research laboratory computing facility with server stacks, researchers examining semantic knowledge graph visual representations on large displays, cool blue tones and deep atmospheric lighting, sleek and academic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs_TdYstvextXpk6Jg_UBTYOEVrVQ5UKVmeWFZLj_Zo7FScAXuPxAbu5cupqE664J5_qJukCYrKN6qO8BoHx8_hjUro6m4GPNUVya2TjpBKzfHWuRx_lZu58XyV8L7J7d97KLb-rrFjQtsyi_czBupPK4U7edZxFiI3yW4P2ZzO3J5PHI4vFWYYy7HgrEkHa7y-6hwxfXsXg9GoAdeKIMCO_Au10_wdDOexH4vQCg_"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/95 via-primary-container/40 to-transparent flex flex-col justify-end p-space-lg text-surface-container-lowest">
+<span class="font-badge-caps text-badge-caps text-tertiary-fixed uppercase tracking-wider mb-space-xs">Sovereign Data Governance</span>
+<h3 class="font-headline-sm text-headline-sm mb-space-xs">Trust Rooted in Verifiable Evidence</h3>
+<p class="font-body-sm text-body-sm text-primary-fixed-dim leading-relaxed">
+            By shifting from undocumented implicit assumptions to declarative conformity specifications, inter-institutional federation becomes resilient against personnel transitions and API rot.
+          </p>
+</div>
+</div>
+</section>
+<!-- SECTION 1: Core Tenets & Pillars (4 Grid Cards) -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-md">
+<div>
+<span class="font-badge-caps text-badge-caps text-secondary uppercase tracking-wider">Foundations</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface">Core Tenets &amp; Pillars</h2>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant max-w-md">
+          Four operational requirements defining compliance with the EOSC Interoperability Framework (EIF).
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div class="flex flex-col gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-code-sm text-label-code-sm text-outline">TENET 01</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-secondary transition-colors">Auditable Provenance</h3>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+              Every semantic crosswalk and entity alignment is cryptographically signed and open for peer inspection, utilizing PROV-O ontology specifications to track origin, curator, and modification history.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-container-low px-space-sm py-2 rounded flex items-center justify-between text-label-code-sm font-label-code-sm text-on-surface">
+<span>Signature Layer</span>
+<span class="text-on-tertiary-container font-semibold">W3C PROV-O</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div class="flex flex-col gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">fact_check</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-code-sm text-label-code-sm text-outline">TENET 02</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-secondary transition-colors">Declarative Conformity</h3>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+              Profiles explicitly declare structural and semantic invariants, avoiding hidden translation assumptions. Systems evaluate machine-readable SHACL shapes rather than guessing schema bounds.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-container-low px-space-sm py-2 rounded flex items-center justify-between text-label-code-sm font-label-code-sm text-on-surface">
+<span>Specification</span>
+<span class="text-on-tertiary-container font-semibold">SHACL Core</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div class="flex flex-col gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">hub</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-code-sm text-label-code-sm text-outline">TENET 03</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-secondary transition-colors">Decentralized Linksets</h3>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+              Reusable mapping datasets (linksets) versioned as public goods rather than locked in proprietary data silos. Cross-domain relationships are stored as persistent, resolvable RDF triplestores.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-container-low px-space-sm py-2 rounded flex items-center justify-between text-label-code-sm font-label-code-sm text-on-surface">
+<span>Publishing Spec</span>
+<span class="text-on-tertiary-container font-semibold">VoID / DCAT-3</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div class="flex flex-col gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">published_with_changes</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-code-sm text-label-code-sm text-outline">TENET 04</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-secondary transition-colors">Continuous Community</h3>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+              Alignment actions with transparent issue-tracking governance, public RFC cycles, automated regression test suites, and participatory dispute resolution for ontological discrepancies.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-container-low px-space-sm py-2 rounded flex items-center justify-between text-label-code-sm font-label-code-sm text-on-surface">
+<span>Governance Cycle</span>
+<span class="text-on-tertiary-container font-semibold">Open RFC Mode</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: From Ambiguity to Clarity (Architectural Comparison Matrix) -->
+<section class="flex flex-col gap-space-lg" id="matrix-breakdown">
+<div class="flex flex-col gap-space-xs">
+<span class="font-badge-caps text-badge-caps text-secondary uppercase tracking-wider">Comparative Architecture</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface">From Ambiguity to Clarity</h2>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-2xl">
+          Observe how the Radical Transparency Model eliminates systematic points of failure inherent in conventional closed-source crosswalks.
+        </p>
+</div>
+<!-- Comparison Matrix Table / Split Bento View -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter-desktop items-stretch">
+<!-- Left: Closed Crosswalks -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Traditional Closed Crosswalks</h3>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-error font-badge-caps text-badge-caps uppercase">Deprecated Paradigms</span>
+</div>
+<div class="flex flex-col gap-space-md text-body-md font-body-md">
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">Opaque Mapping Definitions</span>
+<span class="material-symbols-outlined text-error text-[20px]">cancel</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                Equivalences buried inside Python/Java ETL scripts, undocumented spreadsheets, or private API layers with zero machine-readable lineage.
+              </p>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">Silent Breakages Unmonitored</span>
+<span class="material-symbols-outlined text-error text-[20px]">cancel</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                Upstream taxonomy updates degrade translations quietly. Downstream consumers experience silent null queries or semantic drift without alerts.
+              </p>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">Single Point of Failure</span>
+<span class="material-symbols-outlined text-error text-[20px]">cancel</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                Centrally maintained translation brokers create vendor lock-in, recurring infrastructure costs, and single-institution gatekeeping.
+              </p>
+</div>
+</div>
+<div class="mt-auto pt-space-md bg-surface-container p-space-md rounded-lg">
+<span class="font-label-code-sm text-label-code-sm text-error uppercase block mb-1">Impact on European Science</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              High risk of irreproducible science, unresolvable citations, and wasted duplicated effort across member states.
+            </p>
+</div>
+</div>
+<!-- Right: Radical Transparency Model -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md ring-2 ring-secondary/20">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-on-tertiary-container"></span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Radical Transparency Model</h3>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-tertiary-container font-badge-caps text-badge-caps uppercase">EOSC Standard Baseline</span>
+</div>
+<div class="flex flex-col gap-space-md text-body-md font-body-md">
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">Public RDF Linksets</span>
+<span class="material-symbols-outlined text-on-tertiary-container text-[20px]">check_circle</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                Canonical triples published with unambiguous SKOS mapping properties (<code class="font-label-code-sm text-label-code-sm text-secondary">exactMatch</code>, <code class="font-label-code-sm text-label-code-sm text-secondary">closeMatch</code>) and machine-accessible PURLs.
+              </p>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">Automated Validation Runs</span>
+<span class="material-symbols-outlined text-on-tertiary-container text-[20px]">check_circle</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                Continuous CI/CD semantic pipelines test mappings against evolving ontologies; breaking changes generate automated GitHub notifications and rollbacks.
+              </p>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">Peer-Audited Alignment Histories</span>
+<span class="material-symbols-outlined text-on-tertiary-container text-[20px]">check_circle</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                Distributed git lineage lets any research community fork, suggest patches, and evaluate consensus metrics through open peer review.
+              </p>
+</div>
+</div>
+<div class="mt-auto pt-space-md bg-surface-container-low p-space-md rounded-lg">
+<span class="font-label-code-sm text-label-code-sm text-secondary uppercase block mb-1">Impact on European Science</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Guaranteed long-term reproducibility, autonomous interoperability between national clusters, and full adherence to the EOSC Interoperability Framework.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: The EOSC Connection & Motivation -->
+<section class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="font-badge-caps text-badge-caps text-secondary uppercase tracking-wider">Strategic Directive</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface">The EOSC Connection &amp; Motivation</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-3xl">
+          Extracted and synthesized from the official <code class="font-label-code-md text-label-code-md text-secondary">motivation.md</code> specifications of the European Open Science Cloud Semantic Interoperability Task Force.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop">
+<!-- Item 1 -->
+<div class="flex flex-col gap-space-sm bg-surface-container-low p-space-lg rounded-xl">
+<div class="flex items-center gap-space-sm text-secondary mb-space-xs">
+<span class="material-symbols-outlined text-[28px]">biotech</span>
+<h3 class="text-title-md font-title-md text-on-surface">Cross-Disciplinary Synthesis</h3>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+            Major societal challenges—from climate impact on pandemics to renewable battery chemistry—require uniting disparate datasets from ESFRI clusters. Without radical semantic openness, cross-domain queries hit semantic dead ends.
+          </p>
+<div class="mt-auto pt-space-sm">
+<span class="font-label-code-sm text-label-code-sm text-outline">Cluster Impact: Life Sci + Enviro</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex flex-col gap-space-sm bg-surface-container-low p-space-lg rounded-xl">
+<div class="flex items-center gap-space-sm text-secondary mb-space-xs">
+<span class="material-symbols-outlined text-[28px]">account_balance</span>
+<h3 class="text-title-md font-title-md text-on-surface">EIF Regulatory Compliance</h3>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+            The European Interoperability Framework requires clear specification of data formats, semantic representations, and automated conformance tests. Radical Transparency transforms abstract guidance into machine-executed governance.
+          </p>
+<div class="mt-auto pt-space-sm">
+<span class="font-label-code-sm text-label-code-sm text-outline">Target: EIF Semantic Layer</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex flex-col gap-space-sm bg-surface-container-low p-space-lg rounded-xl">
+<div class="flex items-center gap-space-sm text-secondary mb-space-xs">
+<span class="material-symbols-outlined text-[28px]">auto_awesome</span>
+<h3 class="text-title-md font-title-md text-on-surface">Autonomous AI/FAIR Integration</h3>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+            Autonomous scientific agents and Large Knowledge Models cannot rely on subjective human mediation. They require unambiguous, self-describing provenance trees to reliably execute federated SPARQL federation.
+          </p>
+<div class="mt-auto pt-space-sm">
+<span class="font-label-code-sm text-label-code-sm text-outline">Readiness: FAIR Principle I3 &amp; R1.3</span>
+</div>
+</div>
+</div>
+<!-- Motivation Highlight Box -->
+<div class="bg-surface-container p-space-lg rounded-xl flex flex-col md:flex-row items-center gap-space-lg">
+<img class="w-24 h-24 rounded-lg object-cover shrink-0 shadow-sm" data-alt="A macro minimalist photograph of interconnected translucent glass prism cubes reflecting precise geometric light paths in blue, turquoise and white tones, symbolising crystal clear data structures and open science transparency." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADat-qY6AO50cYKu0WrGKHgw9PG5KcTwD8-9BT1fqUCNMqnhi-kt7P7xYK8XDKRPARGJ4dFLQARJjamdqKoBUsVix6kQJ5EuE2yxNahZqxc_L4g2-qJh1iHxY5AVsFCg5rmoRBtzAwlJlZzCFNbcugYWf8A1oLKrK5ehDaoVEsGVZLRrWdORQu9oopey-MNEyiqCzNjnmde5HIpULVeGixbSATBA8pReQqguT0cvdW"/>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-code-sm text-label-code-sm text-on-surface font-semibold">FROM THE CHARTER MANIFESTO:</span>
+<p class="text-body-md font-body-md text-on-surface-variant italic">
+            “Interoperability cannot be achieved through decree alone; it requires a living ecosystem of machine-actionable declarations that allow any scientist or automated workflow to trace every semantic transformation down to its origin.”
+          </p>
+</div>
+</div>
+</section>
+<!-- Interactive Live PURL / Lineage Inspector Teaser -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">terminal</span>
+<h2 class="text-title-md font-title-md text-on-surface">Inspect a Radically Transparent Linkset Declaration</h2>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-secondary font-label-code-sm text-label-code-sm">RDF / Turtle Preview</span>
+</div>
+<div class="bg-primary-container p-space-md rounded-lg text-surface-container-lowest font-label-code-md text-label-code-md overflow-x-auto">
+<pre class="leading-relaxed"><code><span class="text-primary-fixed-dim">@prefix void:</span> &lt;http://rdfs.org/ns/void#&gt; .
+<span class="text-primary-fixed-dim">@prefix prov:</span> &lt;http://www.w3.org/ns/prov#&gt; .
+<span class="text-primary-fixed-dim">@prefix eosc:</span> &lt;https://purl.org/eosc/interop/terms#&gt; .
+
+&lt;https://purl.org/eosc/linksets/env-life-v2&gt; a void:Linkset ;
+    void:subjectsTarget   &lt;https://vocabs.lter-europe.net/env_thes&gt; ;
+    void:objectsTarget    &lt;http://purl.obolibrary.org/obo/envo.owl&gt; ;
+    void:linkPredicate    &lt;http://www.w3.org/2004/02/skos/core#exactMatch&gt; ;
+    eosc:conformityProfile &lt;https://purl.org/eosc/profiles/v2/strict-shacl&gt; ;
+    prov:wasGeneratedBy   [ prov:wasAssociatedWith &lt;https://orcid.org/0000-0002-1825-0097&gt; ;
+                            prov:endedAtTime "2025-03-01T10:00:00Z"^^xsd:dateTime ] .</code></pre>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs text-body-sm font-body-sm text-outline">
+<div class="flex items-center gap-space-md">
+<span class="flex items-center gap-1 text-on-tertiary-container"><span class="material-symbols-outlined text-[16px]">check_circle</span> SHACL Shape Conforming</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">key</span> Signed: EOSC-CA-2025</span>
+</div>
+<button class="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container-high text-on-surface hover:bg-surface-container font-label-code-sm text-label-code-sm transition-colors" onclick="navigator.clipboard.writeText('https://purl.org/eosc/linksets/env-life-v2'); alert('PURL copied to clipboard');">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Copy Resolvable PURL</span>
+</button>
+</div>
+</section>
+<!-- SECTION 4: Next Steps & Developer Callouts -->
+<section class="flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-badge-caps text-badge-caps text-secondary uppercase tracking-wider">Continuous Path</span>
+<h2 class="text-headline-md font-headline-md text-on-surface">Operationalize Radical Transparency</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-desktop">
+<!-- Callout 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between gap-space-lg">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-secondary font-badge-caps text-badge-caps uppercase">Specification Guide</span>
+<span class="material-symbols-outlined text-outline text-[20px]">description</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Conformity Profiles Architecture</h3>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+              Read how <code class="font-label-code-sm text-label-code-sm text-secondary">conformity-profiles.md</code> formalize syntactic and semantic invariants with executable SHACL test suites.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-space-md">
+<a class="inline-flex items-center gap-1.5 px-space-md py-2 rounded bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-inverse-surface transition-colors" href="#">
+<span>Read Conformity Profiles</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<div class="flex items-center gap-1 text-label-code-sm font-label-code-sm text-outline">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>MD / PDF</span>
+</div>
+</div>
+</div>
+<!-- Callout 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between gap-space-lg">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-tertiary-container font-badge-caps text-badge-caps uppercase">Developer SDK</span>
+<span class="material-symbols-outlined text-outline text-[20px]">terminal</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Developer Hub &amp; Tooling</h3>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+              Integrate the EOSC CLI and GitHub Actions workflows to validate linksets on pull request and verify PURL resolution uptime automatically.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-space-md">
+<a class="inline-flex items-center gap-1.5 px-space-md py-2 rounded bg-secondary text-on-secondary font-body-sm text-body-sm font-semibold hover:bg-on-secondary-fixed-variant transition-colors" href="#">
+<span>Explore Developer Tooling</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<div class="flex items-center gap-1 text-label-code-sm font-label-code-sm text-outline">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span>npm / brew / pip</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_8px_rgba(0,0,0,0.02)]"><div class="max-w-[1440px] mx-auto px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter-desktop mb-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md pr-space-lg"><div class="flex items-center gap-space-sm"><img alt="Radical Transparency Brand Mark" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc7egXac54ZwwmgOrYq10IxZ6s4zMMEw33vKSZFanCQ0RT3wt97B0hP4wT8kp9sAy8Bugedt1ykttNYC_HMCRUwaGLa9mbX2gC6FZU5KcdAcu_uWCsdrAGbEfQxA4h283M8fHLQU-SvnB2iG2ljQerCh_xnbm8fxTMl8zEBGiss4fBswwVab-YOR_6_hP2fUhhl2y-0CBxc22_CedUM1WEaMwiRxkdkLBUBXLS6eQ7"/><span class="font-title-md text-title-md text-on-surface">Radical Transparency</span></div><p class="text-body-md font-body-md text-on-surface-variant leading-relaxed max-w-md">EOSC Semantic Interoperability architecture delivering authoritative, machine-actionable conformity profiles, triplestore linksets, and open scientific data governance.</p><div class="flex items-center gap-space-xs"><span class="px-space-sm py-0.5 rounded bg-surface-container text-on-tertiary-container font-badge-caps text-badge-caps uppercase tracking-wider">EOSC Core Aligned</span><span class="px-space-sm py-0.5 rounded bg-surface-container text-secondary font-badge-caps text-badge-caps uppercase tracking-wider">CC-BY 4.0</span><span class="px-space-sm py-0.5 rounded bg-surface-container text-on-surface font-badge-caps text-badge-caps uppercase tracking-wider">FAIR Verified</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-title-md text-title-md text-on-surface mb-space-xs">Interoperability</span><a class="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="conformity-profiles" href="#">Conformity Profiles</a><a class="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="linksets-documentation" href="#">Linksets Documentation</a><a class="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="purl-resolution-directory" href="#">Persistent URI Directory</a><a class="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="crosswalk-registries" href="#">Crosswalk Registries</a></div><div class="flex flex-col gap-space-sm"><span class="font-title-md text-title-md text-on-surface mb-space-xs">Framework &amp; Governance</span><a class="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="open-data-licensing" href="#">Open Data Licensing</a><a class="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="federated-nodes" href="#">Federated Nodes</a><a class="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="provenance-standards" href="#">Provenance Standards</a><a class="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="https://github.com/eosc-semantic-interop/if-solutions-proposals" rel="noopener noreferrer" target="_blank">GitHub Proposals</a></div><div class="flex flex-col gap-space-sm"><span class="font-title-md text-title-md text-on-surface mb-space-xs">Stay Informed</span><p class="text-body-sm font-body-sm text-on-surface-variant mb-space-xs">Subscribe to semantic interoperability releases, RFCs, and governance alerts.</p><form class="flex flex-col gap-space-xs" onsubmit="event.preventDefault();"><div class="flex items-center gap-space-xs"><input class="h-9 px-space-sm rounded bg-surface-container text-on-surface placeholder:text-outline text-body-sm font-body-sm w-full focus:outline-none focus:ring-2 focus:ring-secondary/20" placeholder="researcher@domain.eu" type="email"/><button class="h-9 px-space-md rounded bg-primary text-on-primary font-body-sm text-body-sm font-medium hover:bg-inverse-surface transition-colors shrink-0" type="submit">Join</button></div><span class="text-body-sm font-body-sm text-outline">EOSC Community Privacy Principles apply.</span></form></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md text-body-sm font-body-sm text-outline"><p>© European Open Science Cloud (EOSC) Semantic Interoperability Task Force. Open Access.</p><div class="flex items-center gap-space-lg"><a class="hover:text-on-surface transition-colors" data-path="legal-notice" href="#">Legal Notice</a><a class="hover:text-on-surface transition-colors" data-path="accessibility" href="#">Accessibility</a><a class="hover:text-on-surface transition-colors" data-path="fair-compliance" href="#">FAIR Compliance Statement</a></div></div></div></footer></body></html>

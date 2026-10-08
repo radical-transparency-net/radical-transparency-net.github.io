@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-container": "#fefcff", "surface-container-lowest": "#ffffff", "tertiary-container": "#00201d", "background": "#f8f9ff", "primary-fixed-dim": "#bec6e0", "on-background": "#0b1c30", "on-tertiary-container": "#0c9488", "primary-fixed": "#dae2fd", "primary": "#000000", "on-secondary-fixed": "#00174b", "inverse-on-surface": "#eaf1ff", "outline-variant": "#c6c6cd", "tertiary-fixed-dim": "#6bd8cb", "tertiary-fixed": "#89f5e7", "secondary": "#0051d5", "inverse-surface": "#213145", "on-secondary-fixed-variant": "#003ea8", "on-error-container": "#93000a", "outline": "#76777d", "on-surface": "#0b1c30", "error-container": "#ffdad6", "inverse-primary": "#bec6e0", "error": "#ba1a1a", "tertiary": "#000000", "on-primary-fixed-variant": "#3f465c", "surface-container-high": "#dce9ff", "surface-tint": "#565e74", "surface-container-low": "#eff4ff", "secondary-fixed": "#dbe1ff", "secondary-container": "#316bf3", "surface-container-highest": "#d3e4fe", "on-tertiary-fixed": "#00201d", "on-tertiary": "#ffffff", "surface-variant": "#d3e4fe", "surface-container": "#e5eeff", "on-primary-fixed": "#131b2e", "on-tertiary-fixed-variant": "#005049", "on-primary-container": "#7c839b", "on-surface-variant": "#45464d", "surface-dim": "#cbdbf5", "on-error": "#ffffff", "primary-container": "#131b2e", "surface": "#f8f9ff", "on-primary": "#ffffff", "secondary-fixed-dim": "#b4c5ff", "surface-bright": "#f8f9ff", "on-secondary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-desktop": "3rem", "gutter-mobile": "1rem", "gutter-desktop": "2rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "gutter": "1.5rem", "space-xl": "2.5rem", "space-md": "1rem", "margin": "2rem", "space-lg": "1.5rem" }, "fontFamily": { "label-code-sm": ["JetBrains Mono"], "body-lg": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "badge-caps": ["JetBrains Mono"], "headline-md": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-code-md": ["JetBrains Mono"], "body-sm": ["Plus Jakarta Sans"] }, "fontSize": { "label-code-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }], "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "badge-caps": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-code-md": ["13px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-[1440px] mx-auto px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><img alt="Radical Transparency Brand Mark" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc7egXac54ZwwmgOrYq10IxZ6s4zMMEw33vKSZFanCQ0RT3wt97B0hP4wT8kp9sAy8Bugedt1ykttNYC_HMCRUwaGLa9mbX2gC6FZU5KcdAcu_uWCsdrAGbEfQxA4h283M8fHLQU-SvnB2iG2ljQerCh_xnbm8fxTMl8zEBGiss4fBswwVab-YOR_6_hP2fUhhl2y-0CBxc22_CedUM1WEaMwiRxkdkLBUBXLS6eQ7"/><div class="flex items-center gap-space-sm"><span class="font-title-md text-title-md text-on-surface tracking-tight">Radical Transparency</span><span class="px-space-xs py-0.5 rounded bg-surface-container-low text-on-tertiary-container font-badge-caps text-badge-caps uppercase tracking-wider">EOSC Interop</span></div></div><nav class="hidden xl:flex items-center gap-space-sm text-body-md font-body-md" data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded"><a class="px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="triage-and-explore" href="#">Triage &amp; Explore</a><a class="px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="what-is-radical-transparency" href="#">What is Radical Transparency?</a><a class="px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="developer-hub-and-tooling" href="#">Developer Hub &amp; Tooling</a><a class="px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="knowledge-and-community" href="#">Knowledge &amp; Community</a><a class="px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="communication-roadmap" href="#">Communication Roadmap</a></nav><div class="flex items-center gap-space-sm shrink-0"><div class="relative hidden md:flex items-center"><span class="material-symbols-outlined absolute left-2.5 text-outline text-[18px] pointer-events-none">search</span><input class="h-9 pl-8 pr-space-sm rounded bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-sm font-body-sm w-56 focus:outline-none focus:ring-2 focus:ring-secondary/20" placeholder="Search schemas, PURLs, proposals..." type="search"/></div><a class="hidden sm:flex items-center gap-1.5 px-space-sm py-1.5 rounded text-body-sm font-label-code-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="https://github.com/eosc-semantic-interop/if-solutions-proposals" rel="noopener noreferrer" target="_blank" title="eosc-semantic-interop/if-solutions-proposals"><span class="material-symbols-outlined text-[18px]">code</span><span>GitHub</span></a><a class="inline-flex items-center justify-center px-space-md py-1.5 rounded bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-inverse-surface transition-colors" data-path="get-involved" href="#">Get Involved</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background min-h-[calc(100vh-4rem)]"><div class="flex flex-col w-full">
+<!-- Subtle ambient top gradient & accent ribbon -->
+<div class="relative w-full overflow-hidden bg-surface-container-low pb-space-xl">
+<div class="absolute -top-32 right-1/4 w-96 h-96 rounded-full bg-secondary/5 blur-3xl pointer-events-none"></div>
+<div class="absolute top-10 right-10 w-80 h-80 rounded-full bg-on-tertiary-container/5 blur-3xl pointer-events-none"></div>
+<div class="max-w-[1440px] mx-auto px-margin pt-space-xl">
+<!-- Institutional Context Breadcrumb / Meta Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs font-label-code-sm text-label-code-sm text-on-surface-variant">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-lowest shadow-sm text-on-surface font-semibold">EOSC-SI TF</span>
+<span>/</span>
+<span class="text-secondary font-semibold">REF-SPEC-2025</span>
+<span>/</span>
+<span class="font-label-code-sm text-label-code-sm text-outline">v2.4-STABLE</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded bg-surface-container-lowest text-on-tertiary-container font-badge-caps text-badge-caps uppercase tracking-wider shadow-sm">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container animate-pulse"></span>
+            Federated Schema Live
+          </span>
+<span class="hidden sm:inline-flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface-variant font-label-code-sm text-label-code-sm shadow-sm">
+<span class="material-symbols-outlined text-[15px] text-outline">verified_user</span>
+            CC-BY 4.0 Open Spec
+          </span>
+</div>
+</div>
+<!-- Hero Header Section -->
+<div class="max-w-4xl mb-space-xl">
+<div class="inline-flex items-center gap-space-xs mb-space-sm px-space-sm py-1 rounded bg-surface-container text-secondary font-badge-caps text-badge-caps uppercase tracking-widest">
+<span class="material-symbols-outlined text-[14px]">device_hub</span>
+          INTEROPERABILITY ARCHITECTURE PORTAL
+        </div>
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight mb-space-md">
+          Radical Transparency in Semantic Interoperability
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          Accelerating open science through unambiguous data provenance, verifiable linksets, conformity profiles, and transparent semantic alignment across European research infrastructures.
+        </p>
+</div>
+<!-- TRIAGE SELECTOR CARDS (Core Entrypoint) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop">
+<!-- Triage 1: Exploration & Theory -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-all duration-200 group">
+<div class="flex flex-col">
+<div class="flex items-center justify-between gap-space-xs mb-space-md">
+<span class="px-space-sm py-0.5 rounded bg-surface-container text-on-tertiary-container font-badge-caps text-badge-caps uppercase tracking-wider">
+                Exploration &amp; Theory
+              </span>
+<span class="font-label-code-sm text-label-code-sm text-outline">01</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-tertiary-container mb-space-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">visibility</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">
+              New to the Concept? What is Radical Transparency?
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Grasp the foundational pillars: provenance traceability, open governance rationales, FAIR evolution, and the architectural motivation paper.
+            </p>
+<ul class="flex flex-col gap-1.5 mb-space-lg font-label-code-sm text-label-code-sm text-outline">
+<li class="flex items-center gap-1.5"><span class="text-on-tertiary-container">✓</span> FAIR Data Evolution</li>
+<li class="flex items-center gap-1.5"><span class="text-on-tertiary-container">✓</span> Motivation Whitepaper</li>
+<li class="flex items-center gap-1.5"><span class="text-on-tertiary-container">✓</span> High-Level EOSC Principles</li>
+</ul>
+</div>
+<a class="w-full inline-flex items-center justify-between px-space-md py-2.5 rounded bg-surface-container text-on-surface font-title-md text-title-md hover:bg-primary hover:text-on-primary transition-colors" data-path="what-is-radical-transparency" href="#">
+<span>Start Learning Path</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- Triage 2: Engineering & Spec -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-all duration-200 group">
+<div class="flex flex-col">
+<div class="flex items-center justify-between gap-space-xs mb-space-md">
+<span class="px-space-sm py-0.5 rounded bg-surface-container text-secondary font-badge-caps text-badge-caps uppercase tracking-wider">
+                Engineering &amp; Spec
+              </span>
+<span class="font-label-code-sm text-label-code-sm text-outline">02</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary mb-space-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">
+              Building &amp; Integrating? Developer &amp; Technical Hub
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Ready-to-run tooling: JSON-LD conformity profiles, Linkset Usage Patterns, Alignment Actions CLI/APIs, and OpenAPI/RDF verification pipelines.
+            </p>
+<ul class="flex flex-col gap-1.5 mb-space-lg font-label-code-sm text-label-code-sm text-outline">
+<li class="flex items-center gap-1.5"><span class="text-secondary">✓</span> Linkset Usage Patterns</li>
+<li class="flex items-center gap-1.5"><span class="text-secondary">✓</span> Alignment CLI &amp; Triplestores</li>
+<li class="flex items-center gap-1.5"><span class="text-secondary">✓</span> JSON-LD &amp; SHACL Schemas</li>
+</ul>
+</div>
+<a class="w-full inline-flex items-center justify-between px-space-md py-2.5 rounded bg-secondary text-on-secondary font-title-md text-title-md hover:bg-secondary-container transition-colors" data-path="developer-hub-and-tooling" href="#">
+<span>Explore Dev Tooling</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- Triage 3: Advocacy & Education -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-all duration-200 group">
+<div class="flex flex-col">
+<div class="flex items-center justify-between gap-space-xs mb-space-md">
+<span class="px-space-sm py-0.5 rounded bg-surface-container text-on-surface font-badge-caps text-badge-caps uppercase tracking-wider">
+                Advocacy &amp; Education
+              </span>
+<span class="font-label-code-sm text-label-code-sm text-outline">03</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface mb-space-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">groups</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">
+              Educate &amp; Mobilize? Community &amp; Learning Circles
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Empower your institution with peer training circles, curated pilot case studies, onboarding curricula, and semantic stewardship toolkits.
+            </p>
+<ul class="flex flex-col gap-1.5 mb-space-lg font-label-code-sm text-label-code-sm text-outline">
+<li class="flex items-center gap-1.5"><span class="text-on-surface">✓</span> Peer-to-Peer Cohorts</li>
+<li class="flex items-center gap-1.5"><span class="text-on-surface">✓</span> Institutional Adoption Kits</li>
+<li class="flex items-center gap-1.5"><span class="text-on-surface">✓</span> Case Study Catalogues</li>
+</ul>
+</div>
+<a class="w-full inline-flex items-center justify-between px-space-md py-2.5 rounded bg-surface-container text-on-surface font-title-md text-title-md hover:bg-primary hover:text-on-primary transition-colors" data-path="knowledge-and-community" href="#">
+<span>Join Community Circle</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- Triage 4: Outreach & Milestones -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-all duration-200 group">
+<div class="flex flex-col">
+<div class="flex items-center justify-between gap-space-xs mb-space-md">
+<span class="px-space-sm py-0.5 rounded bg-surface-container text-on-surface-variant font-badge-caps text-badge-caps uppercase tracking-wider">
+                Outreach &amp; Milestones
+              </span>
+<span class="font-label-code-sm text-label-code-sm text-outline">04</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant mb-space-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">alt_route</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">
+              Campaign &amp; Strategy? Communication Roadmap
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Keep track of public consultations, RFC deadlines, quarterly townhalls, open deliverables, and cross-cluster EU synchronization milestones.
+            </p>
+<ul class="flex flex-col gap-1.5 mb-space-lg font-label-code-sm text-label-code-sm text-outline">
+<li class="flex items-center gap-1.5"><span class="text-outline">✓</span> 2025 Release Cadence</li>
+<li class="flex items-center gap-1.5"><span class="text-outline">✓</span> Community Townhall Agenda</li>
+<li class="flex items-center gap-1.5"><span class="text-outline">✓</span> Stakeholder Matrix</li>
+</ul>
+</div>
+<a class="w-full inline-flex items-center justify-between px-space-md py-2.5 rounded bg-surface-container text-on-surface font-title-md text-title-md hover:bg-primary hover:text-on-primary transition-colors" data-path="communication-roadmap" href="#">
+<span>View Communication Plan</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Proposal Repository Pulse Stats Strip -->
+<div class="w-full bg-surface-container-lowest shadow-sm py-space-md">
+<div class="max-w-[1440px] mx-auto px-margin">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter-desktop items-center">
+<div class="flex items-center gap-space-md py-space-xs">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[22px]">description</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">7 Core</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Architectural Documents</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md py-space-xs">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">sync_alt</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">Active</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Alignment Protocols</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md py-space-xs">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined text-[22px]">fact_check</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">W3C / EOSC</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Compliant Linksets</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md py-space-xs">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[22px]">lock_open</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">100%</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Open Access &amp; Code</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Section: Instant Role Finder & Targeted Recommendations -->
+<div class="max-w-[1440px] mx-auto px-margin py-space-xl w-full">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+<div>
+<div class="flex items-center gap-space-xs font-badge-caps text-badge-caps uppercase tracking-wider text-secondary mb-space-xs">
+<span class="material-symbols-outlined text-[15px]">tune</span>
+          Tailored Workflow Engine
+        </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Instant Role Finder
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          Select your scientific or technical capacity to reveal immediate, actionable starting points.
+        </p>
+</div>
+<!-- Live Filter Status Indicator -->
+<div class="flex items-center gap-space-xs font-label-code-sm text-label-code-sm text-on-surface-variant px-space-md py-1.5 rounded-full bg-surface-container">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span id="role-status-text">Viewing recommendations for: <strong>Data Steward</strong></span>
+</div>
+</div>
+<!-- Role Filter Pill Strip -->
+<div class="flex flex-wrap items-center gap-space-xs mb-space-lg">
+<button class="role-pill px-space-md py-2 rounded-lg font-title-md text-title-md bg-primary text-on-primary transition-all" id="btn-role-steward" onclick="switchRole('steward')">
+        Data Steward
+      </button>
+<button class="role-pill px-space-md py-2 rounded-lg font-title-md text-title-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all" id="btn-role-ontologist" onclick="switchRole('ontologist')">
+        Ontologist
+      </button>
+<button class="role-pill px-space-md py-2 rounded-lg font-title-md text-title-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all" id="btn-role-architect" onclick="switchRole('architect')">
+        Software Architect
+      </button>
+<button class="role-pill px-space-md py-2 rounded-lg font-title-md text-title-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all" id="btn-role-funder" onclick="switchRole('funder')">
+        Research Funder
+      </button>
+<button class="role-pill px-space-md py-2 rounded-lg font-title-md text-title-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all" id="btn-role-citizen" onclick="switchRole('citizen')">
+        Citizen Scientist
+      </button>
+</div>
+<!-- Role Recommendation Workspace (Dynamic Card Display) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-stretch" id="role-panel">
+<!-- Left Content: High Priority Tasks for Selected Role (8 cols) -->
+<div class="lg:col-span-8 flex flex-col justify-between rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div>
+<div class="flex items-center justify-between pb-space-md mb-space-md bg-surface-container-low rounded-lg p-space-md">
+<div>
+<span class="font-badge-caps text-badge-caps uppercase tracking-wider text-secondary" id="role-kicker">Operational Priority</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-1" id="role-title">Conformity Profiling &amp; FAIR Governance</h3>
+</div>
+<span class="font-label-code-sm text-label-code-sm px-space-sm py-1 rounded bg-surface-container text-on-surface-variant" id="role-time-estimate">Est. 20 min</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-space-lg leading-relaxed" id="role-description">
+            As a Data Steward, your objective is to ensure institutional schemas emit transparent, machine-verifiable conformity assertions without modifying underlying repository backends.
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md mb-space-lg" id="role-action-cards">
+<!-- Dynamic Sub-Actions -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-space-xs text-secondary font-label-code-sm text-label-code-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Direct Standard</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface mb-1">Adopt Conformity Profiles</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Declare schema adherence using RFC conformity JSON-LD headers.</p>
+</div>
+<a class="mt-space-md inline-flex items-center gap-1 font-label-code-sm text-label-code-sm text-secondary font-semibold hover:underline" href="#">
+                View Specification <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</a>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-space-xs text-on-tertiary-container font-label-code-sm text-label-code-sm">
+<span class="material-symbols-outlined text-[16px]">rule</span>
+<span>Validation Check</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface mb-1">Audit Linkset Quality</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Verify VoID and DCAT linkset statements against EOSC criteria.</p>
+</div>
+<a class="mt-space-md inline-flex items-center gap-1 font-label-code-sm text-label-code-sm text-on-tertiary-container font-semibold hover:underline" href="#">
+                Run Linkset Validator <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+<!-- CLI / Quick Snippet Bar -->
+<div class="p-space-md rounded-lg bg-primary text-on-primary font-label-code-sm text-label-code-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm overflow-x-auto w-full">
+<span class="text-outline">$</span>
+<code class="text-secondary-fixed" id="role-code-snippet">eosc-profile inspect --uri https://schema.org/Dataset --strict</code>
+</div>
+<button class="px-space-sm py-1 rounded bg-inverse-surface hover:bg-outline-variant hover:text-on-surface text-on-primary font-body-sm text-body-sm transition-colors shrink-0" onclick="navigator.clipboard.writeText(document.getElementById('role-code-snippet').innerText)">
+            Copy
+          </button>
+</div>
+</div>
+<!-- Right Content: Recommended Reading & Visual Artifact (4 cols) -->
+<div class="lg:col-span-4 flex flex-col justify-between rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div>
+<div class="flex items-center gap-space-xs mb-space-md">
+<span class="material-symbols-outlined text-secondary text-[20px]">auto_stories</span>
+<span class="font-title-md text-title-md text-on-surface">Curated Fast-Track</span>
+</div>
+<!-- Semantic Graph SVG Micro-Visual -->
+<div class="w-full h-36 rounded-lg bg-surface-container flex items-center justify-center p-space-sm mb-space-md overflow-hidden relative">
+<svg class="w-full h-full text-secondary" fill="none" viewbox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+<path d="M40 60 H 120 M160 60 H 240 M140 40 V 20 M140 80 V 100" stroke="currentColor" stroke-dasharray="4 4" stroke-opacity="0.3" stroke-width="2"></path>
+<!-- Subject -->
+<circle cx="40" cy="60" fill="#0051d5" fill-opacity="0.1" r="22" stroke="#0051d5" stroke-width="2"></circle>
+<text class="font-label-code-sm text-[10px]" fill="#0b1c30" font-weight="600" text-anchor="middle" x="40" y="64">SUBJ</text>
+<!-- Predicate (Linkset node) -->
+<rect fill="#000000" height="36" rx="6" width="60" x="110" y="42"></rect>
+<text class="font-label-code-sm text-[9px]" fill="#ffffff" font-weight="600" text-anchor="middle" x="140" y="64">skos:exact</text>
+<!-- Object -->
+<circle cx="240" cy="60" fill="#0c9488" fill-opacity="0.1" r="22" stroke="#0c9488" stroke-width="2"></circle>
+<text class="font-label-code-sm text-[10px]" fill="#0b1c30" font-weight="600" text-anchor="middle" x="240" y="64">OBJ</text>
+</svg>
+<div class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-surface-container-lowest font-label-code-sm text-[10px] text-outline">
+              RDF Linkset Graph
+            </div>
+</div>
+<div class="space-y-space-sm" id="role-reading-list">
+<a class="block p-space-sm rounded hover:bg-surface-container transition-colors" href="#">
+<div class="font-label-code-sm text-label-code-sm text-secondary font-semibold">GUIDE / 04</div>
+<div class="font-title-md text-title-md text-on-surface">Data Stewardship Checklist for EOSC Nodes</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Step-by-step checklist to verify triple coverage.</div>
+</a>
+<a class="block p-space-sm rounded hover:bg-surface-container transition-colors" href="#">
+<div class="font-label-code-sm text-label-code-sm text-on-tertiary-container font-semibold">RFC DRAFT</div>
+<div class="font-title-md text-title-md text-on-surface">Persistent URI Dereferencing Standards</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">HTTP 303 redirects and content negotiation for PURLs.</div>
+</a>
+</div>
+</div>
+<a class="mt-space-md w-full inline-flex items-center justify-center py-2.5 rounded bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-inverse-surface transition-colors" data-path="get-involved" href="#">
+          Download Role Handbook
+        </a>
+</div>
+</div>
+</div>
+<!-- Quick Start Spotlight: Featured Specifications & Artifacts -->
+<div class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-[1440px] mx-auto px-margin">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-lg">
+<div>
+<span class="font-badge-caps text-badge-caps uppercase tracking-wider text-outline">Featured Specifications</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            Quick Start Spotlight
+          </h2>
+</div>
+<a class="inline-flex items-center gap-1 font-body-sm text-body-sm font-semibold text-secondary hover:underline" href="https://github.com/eosc-semantic-interop/if-solutions-proposals" rel="noopener noreferrer" target="_blank">
+          View full GitHub proposal tree
+          <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop">
+<!-- Spotlight 1: Motivation.md -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div>
+<div class="flex items-center justify-between gap-space-xs mb-space-md">
+<span class="px-space-sm py-0.5 rounded bg-surface-container text-on-surface font-badge-caps text-badge-caps uppercase">
+                Proposal Core
+              </span>
+<span class="font-label-code-sm text-label-code-sm text-outline">markdown</span>
+</div>
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">assignment</span>
+<h3 class="font-title-md text-title-md text-on-surface">motivation.md</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              The foundational rationale detailing why radical transparency is prerequisite for trusted cross-domain query federation across Europe.
+            </p>
+<div class="p-space-sm rounded bg-surface-container font-label-code-sm text-label-code-sm text-on-surface-variant mb-space-md">
+<code>URI: /proposals/001-motivation</code>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-md">
+<span class="font-label-code-sm text-label-code-sm text-on-tertiary-container font-semibold">Status: Adopted</span>
+<a class="inline-flex items-center gap-1 font-label-code-sm text-label-code-sm font-semibold text-secondary hover:underline" href="#">
+              Read Doc <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Spotlight 2: Conformity-profiles.md -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div>
+<div class="flex items-center justify-between gap-space-xs mb-space-md">
+<span class="px-space-sm py-0.5 rounded bg-surface-container text-secondary font-badge-caps text-badge-caps uppercase">
+                Interoperability Model
+              </span>
+<span class="font-label-code-sm text-label-code-sm text-outline">schema</span>
+</div>
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">fact_check</span>
+<h3 class="font-title-md text-title-md text-on-surface">conformity-profiles.md</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Standardized SHACL shapes and JSON-LD contexts to validate metadata alignment against declared discipline-specific profiles.
+            </p>
+<div class="p-space-sm rounded bg-surface-container font-label-code-sm text-label-code-sm text-on-surface-variant mb-space-md">
+<code>URI: /proposals/002-conformity</code>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-md">
+<span class="font-label-code-sm text-label-code-sm text-secondary font-semibold">Status: Active RFC</span>
+<a class="inline-flex items-center gap-1 font-label-code-sm text-label-code-sm font-semibold text-secondary hover:underline" href="#">
+              Inspect Profiles <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Spotlight 3: Linkset Usage Patterns -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div>
+<div class="flex items-center justify-between gap-space-xs mb-space-md">
+<span class="px-space-sm py-0.5 rounded bg-surface-container text-on-tertiary-container font-badge-caps text-badge-caps uppercase">
+                Triplestore Spec
+              </span>
+<span class="font-label-code-sm text-label-code-sm text-outline">sparql/dcat</span>
+</div>
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="material-symbols-outlined text-on-tertiary-container text-[20px]">account_tree</span>
+<h3 class="font-title-md text-title-md text-on-surface">linkset-usage-patterns</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Practical architecture for publishing, discovering, and dereferencing VoID crosswalk linksets across federated triplestore endpoints.
+            </p>
+<div class="p-space-sm rounded bg-surface-container font-label-code-sm text-label-code-sm text-on-surface-variant mb-space-md">
+<code>URI: /proposals/003-linksets</code>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-md">
+<span class="font-label-code-sm text-label-code-sm text-on-tertiary-container font-semibold">Status: Stable v1.1</span>
+<a class="inline-flex items-center gap-1 font-label-code-sm text-label-code-sm font-semibold text-secondary hover:underline" href="#">
+              Query Patterns <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Real-world Engagement Banner & Visual Teaser -->
+<div class="max-w-[1440px] mx-auto px-margin py-space-xl w-full">
+<div class="rounded-xl bg-primary text-on-primary p-space-xl relative overflow-hidden shadow-lg">
+<div class="absolute -right-10 -bottom-10 w-96 h-96 rounded-full bg-secondary/20 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 max-w-3xl">
+<div class="inline-flex items-center gap-space-xs mb-space-sm px-space-sm py-0.5 rounded bg-surface-container-high text-on-primary font-badge-caps text-badge-caps uppercase">
+          Open Consultation Open Until Q3 2025
+        </div>
+<h2 class="font-headline-lg text-headline-lg text-on-primary tracking-tight mb-space-sm">
+          Shape the Future of Cross-Domain European Research
+        </h2>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim leading-relaxed mb-space-lg">
+          Whether you manage an ESFRI research infrastructure, contribute to RDA working groups, or build institutional data catalogs, your alignment feedback is vital. Join the open GitHub discussion and weekly working sync.
+        </p>
+<div class="flex flex-wrap items-center gap-space-md">
+<a class="inline-flex items-center gap-space-xs px-space-lg py-3 rounded bg-on-primary text-primary font-body-sm text-body-sm font-bold hover:bg-surface-container-high transition-colors" data-path="get-involved" href="#">
+<span>Contribute to Architecture</span>
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+<a class="inline-flex items-center gap-space-xs px-space-md py-3 rounded bg-transparent text-on-primary border border-outline font-body-sm text-body-sm font-semibold hover:bg-surface-container-low/10 transition-colors" href="https://github.com/eosc-semantic-interop/if-solutions-proposals" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">code</span>
+<span>Browse Issue Tracker</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Inline Script for Interactive Role Finder Filter -->
+<script>
+    const roleData = {
+      steward: {
+        title: "Conformity Profiling & FAIR Governance",
+        kicker: "Operational Priority",
+        desc: "As a Data Steward, your objective is to ensure institutional schemas emit transparent, machine-verifiable conformity assertions without modifying underlying repository backends.",
+        time: "Est. 20 min",
+        statusText: "Viewing recommendations for: <strong>Data Steward</strong>",
+        snippet: "eosc-profile inspect --uri https://schema.org/Dataset --strict",
+        actions: [
+          {
+            tag: "Direct Standard",
+            color: "text-secondary",
+            icon: "verified",
+            title: "Adopt Conformity Profiles",
+            body: "Declare schema adherence using RFC conformity JSON-LD headers.",
+            cta: "View Specification"
+          },
+          {
+            tag: "Validation Check",
+            color: "text-on-tertiary-container",
+            icon: "rule",
+            title: "Audit Linkset Quality",
+            body: "Verify VoID and DCAT linkset statements against EOSC criteria.",
+            cta: "Run Linkset Validator"
+          }
+        ],
+        reading: [
+          { guide: "GUIDE / 04", color: "text-secondary", title: "Data Stewardship Checklist for EOSC Nodes", desc: "Step-by-step checklist to verify triple coverage." },
+          { guide: "RFC DRAFT", color: "text-on-tertiary-container", title: "Persistent URI Dereferencing Standards", desc: "HTTP 303 redirects and content negotiation for PURLs." }
+        ]
+      },
+      ontologist: {
+        title: "Equivalence Mappings & Crosswalk Ontologies",
+        kicker: "Semantic Precision",
+        desc: "As an Ontologist, align discipline-specific vocabularies using standardized SKOS and OWL matching axioms, registering verified mapping confidence metrics.",
+        time: "Est. 35 min",
+        statusText: "Viewing recommendations for: <strong>Ontologist</strong>",
+        snippet: "sparql-cli --endpoint /eosc-sparql --query 'SELECT ?s ?p ?o WHERE { ?s skos:exactMatch ?o }'",
+        actions: [
+          {
+            tag: "Formal Logic",
+            color: "text-secondary",
+            icon: "schema",
+            title: "SKOS Alignment Crosswalks",
+            body: "Deploy exactMatch and closeMatch predicates with formal confidence weights.",
+            cta: "Explore Alignment Patterns"
+          },
+          {
+            tag: "Registry Ingestion",
+            color: "text-on-tertiary-container",
+            icon: "hub",
+            title: "Register In EOSC Registry",
+            body: "Publish OWL ontologies directly to the federated PURL resolver directory.",
+            cta: "Registry Documentation"
+          }
+        ],
+        reading: [
+          { guide: "PATTERN / 02", color: "text-secondary", title: "Crosswalk Confidence Matrices", desc: "Machine-readable confidence scoring in RDF triples." },
+          { guide: "ONTOLOGY RFC", color: "text-on-tertiary-container", title: "EOSC Core Semantic Vocabulary (ECSV)", desc: "Core classes for European research assets." }
+        ]
+      },
+      architect: {
+        title: "Triplestores, Microservices & Content Negotiation",
+        kicker: "System Architecture",
+        desc: "As a Software Architect, engineer performant triple ingestion pipelines, federated SPARQL query federators, and robust HTTP 303 PURL redirection routing.",
+        time: "Est. 45 min",
+        statusText: "Viewing recommendations for: <strong>Software Architect</strong>",
+        snippet: "curl -H 'Accept: application/ld+json' https://purl.org/eosc/dataset/4901",
+        actions: [
+          {
+            tag: "Infrastructure",
+            color: "text-secondary",
+            icon: "cloud_sync",
+            title: "Deploy RDF Linkset Cache",
+            body: "Set up high-throughput cache proxies for million-triple crosswalk linksets.",
+            cta: "Deploy Blueprint"
+          },
+          {
+            tag: "Security & Specs",
+            color: "text-on-tertiary-container",
+            icon: "security",
+            title: "Machine-Actionable Trust",
+            body: "Cryptographically sign conformity assertions via W3C Verifiable Credentials.",
+            cta: "Read Security Architecture"
+          }
+        ],
+        reading: [
+          { guide: "SPEC / 01", color: "text-secondary", title: "REST & SPARQL Interop Service Blueprint", desc: "Production API standards for federated EOSC endpoints." },
+          { guide: "BENCHMARK", color: "text-on-tertiary-container", title: "Evaluating Triplestore Latency at Scale", desc: "GraphDB, Virtuoso, and Blazegraph under federated load." }
+        ]
+      },
+      funder: {
+        title: "Compliance Verification & Impact Tracking",
+        kicker: "Governance & Policy",
+        desc: "As a Research Funder, evaluate grant deliverable interoperability compliance in real-time, enforcing open scientific attribution and verifiable FAIR data benchmarks.",
+        time: "Est. 15 min",
+        statusText: "Viewing recommendations for: <strong>Research Funder</strong>",
+        snippet: "eosc-compliance-report --grant-id EU-HORIZON-2024-8849 --json",
+        actions: [
+          {
+            tag: "Policy Alignment",
+            color: "text-secondary",
+            icon: "policy",
+            title: "Automated FAIR Scoring",
+            body: "Generate verifiable data compliance scorecards across funded consortia.",
+            cta: "View Scoring Criteria"
+          },
+          {
+            tag: "Open Science",
+            color: "text-on-tertiary-container",
+            icon: "public",
+            title: "Cross-Consortium Reusability",
+            body: "Inspect which research datasets are actively being integrated across borders.",
+            cta: "View Reusability Dashboard"
+          }
+        ],
+        reading: [
+          { guide: "EXECUTIVE SUMMARY", color: "text-secondary", title: "Funder Mandates for Radical Transparency", desc: "How policy language transforms semantic infrastructure adoption." },
+          { guide: "HORIZON EUROPE", color: "text-on-tertiary-container", title: "FAIR Data Management Plan Guideline 2025", desc: "Standard templates for multi-partner consortia." }
+        ]
+      },
+      citizen: {
+        title: "Open Data Access & Community Validation",
+        kicker: "Public Participation",
+        desc: "As a Citizen Scientist, discover how transparent metadata makes scientific discoveries accessible, traceable, and verifiable for non-academic investigators.",
+        time: "Est. 10 min",
+        statusText: "Viewing recommendations for: <strong>Citizen Scientist</strong>",
+        snippet: "eosc-search --topic 'biodiversity observations' --open-access-only",
+        actions: [
+          {
+            tag: "Discovery",
+            color: "text-secondary",
+            icon: "travel_explore",
+            title: "Query Open Scientific Datasets",
+            body: "Learn how plain English queries map to verified research repositories.",
+            cta: "Start Dataset Search"
+          },
+          {
+            tag: "Crowdsourcing",
+            color: "text-on-tertiary-container",
+            icon: "volunteer_activism",
+            title: "Join Annotation Drives",
+            body: "Help enrich vocabulary mappings and biological taxon crosswalks.",
+            cta: "Browse Active Drives"
+          }
+        ],
+        reading: [
+          { guide: "EXPLAINER", color: "text-secondary", title: "Why Research Transparency Matters to Society", desc: "Demystifying linked open scientific data for everyone." },
+          { guide: "TUTORIAL", color: "text-on-tertiary-container", title: "Understanding Scientific Metadata Without a PhD", desc: "A practical guide to research identifiers and datasets." }
+        ]
+      }
+    };
+
+    function switchRole(roleKey) {
+      const data = roleData[roleKey];
+      if (!data) return;
+
+      // Update button pills
+      document.querySelectorAll('.role-pill').forEach(btn => {
+        btn.classList.remove('bg-primary', 'text-on-primary');
+        btn.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+      const activeBtn = document.getElementById('btn-role-' + roleKey);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        activeBtn.classList.add('bg-primary', 'text-on-primary');
+      }
+
+      // Update status string
+      document.getElementById('role-status-text').innerHTML = data.statusText;
+
+      // Update primary card texts
+      document.getElementById('role-kicker').innerText = data.kicker;
+      document.getElementById('role-title').innerText = data.title;
+      document.getElementById('role-time-estimate').innerText = data.time;
+      document.getElementById('role-description').innerText = data.desc;
+      document.getElementById('role-code-snippet').innerText = data.snippet;
+
+      // Render action cards
+      const actionContainer = document.getElementById('role-action-cards');
+      actionContainer.innerHTML = '';
+      data.actions.forEach(action => {
+        const card = document.createElement('div');
+        card.className = 'p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between';
+        card.innerHTML = `
+          <div>
+            <div class="flex items-center gap-space-xs mb-space-xs ${action.color} font-label-code-sm text-label-code-sm">
+              <span class="material-symbols-outlined text-[16px]">${action.icon}</span>
+              <span>${action.tag}</span>
+            </div>
+            <h4 class="font-title-md text-title-md text-on-surface mb-1">${action.title}</h4>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">${action.body}</p>
+          </div>
+          <a href="#" class="mt-space-md inline-flex items-center gap-1 font-label-code-sm text-label-code-sm ${action.color} font-semibold hover:underline">
+            ${action.cta} <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+          </a>
+        `;
+        actionContainer.appendChild(card);
+      });
+
+      // Render reading list
+      const readingContainer = document.getElementById('role-reading-list');
+      readingContainer.innerHTML = '';
+      data.reading.forEach(item => {
+        const link = document.createElement('a');
+        link.href = '#';
+        link.className = 'block p-space-sm rounded hover:bg-surface-container transition-colors';
+        link.innerHTML = `
+          <div class="font-label-code-sm text-label-code-sm ${item.color} font-semibold">${item.guide}</div>
+          <div class="font-title-md text-title-md text-on-surface">${item.title}</div>
+          <div class="font-body-sm text-body-sm text-on-surface-variant">${item.desc}</div>
+        `;
+        readingContainer.appendChild(link);
+      });
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_8px_rgba(0,0,0,0.02)]"><div class="max-w-[1440px] mx-auto px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter-desktop mb-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md pr-space-lg"><div class="flex items-center gap-space-sm"><img alt="Radical Transparency Brand Mark" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc7egXac54ZwwmgOrYq10IxZ6s4zMMEw33vKSZFanCQ0RT3wt97B0hP4wT8kp9sAy8Bugedt1ykttNYC_HMCRUwaGLa9mbX2gC6FZU5KcdAcu_uWCsdrAGbEfQxA4h283M8fHLQU-SvnB2iG2ljQerCh_xnbm8fxTMl8zEBGiss4fBswwVab-YOR_6_hP2fUhhl2y-0CBxc22_CedUM1WEaMwiRxkdkLBUBXLS6eQ7"/><span class="font-title-md text-title-md text-on-surface">Radical Transparency</span></div><p class="text-body-md font-body-md text-on-surface-variant leading-relaxed max-w-md">EOSC Semantic Interoperability architecture delivering authoritative, machine-actionable conformity profiles, triplestore linksets, and open scientific data governance.</p><div class="flex items-center gap-space-xs"><span class="px-space-sm py-0.5 rounded bg-surface-container text-on-tertiary-container font-badge-caps text-badge-caps uppercase tracking-wider">EOSC Core Aligned</span><span class="px-space-sm py-0.5 rounded bg-surface-container text-secondary font-badge-caps text-badge-caps uppercase tracking-wider">CC-BY 4.0</span><span class="px-space-sm py-0.5 rounded bg-surface-container text-on-surface font-badge-caps text-badge-caps uppercase tracking-wider">FAIR Verified</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-title-md text-title-md text-on-surface mb-space-xs">Interoperability</span><a class="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="conformity-profiles" href="#">Conformity Profiles</a><a class="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="linksets-documentation" href="#">Linksets Documentation</a><a class="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="purl-resolution-directory" href="#">Persistent URI Directory</a><a class="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="crosswalk-registries" href="#">Crosswalk Registries</a></div><div class="flex flex-col gap-space-sm"><span class="font-title-md text-title-md text-on-surface mb-space-xs">Framework &amp; Governance</span><a class="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="open-data-licensing" href="#">Open Data Licensing</a><a class="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="federated-nodes" href="#">Federated Nodes</a><a class="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="provenance-standards" href="#">Provenance Standards</a><a class="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="https://github.com/eosc-semantic-interop/if-solutions-proposals" rel="noopener noreferrer" target="_blank">GitHub Proposals</a></div><div class="flex flex-col gap-space-sm"><span class="font-title-md text-title-md text-on-surface mb-space-xs">Stay Informed</span><p class="text-body-sm font-body-sm text-on-surface-variant mb-space-xs">Subscribe to semantic interoperability releases, RFCs, and governance alerts.</p><form class="flex flex-col gap-space-xs" onsubmit="event.preventDefault();"><div class="flex items-center gap-space-xs"><input class="h-9 px-space-sm rounded bg-surface-container text-on-surface placeholder:text-outline text-body-sm font-body-sm w-full focus:outline-none focus:ring-2 focus:ring-secondary/20" placeholder="researcher@domain.eu" type="email"/><button class="h-9 px-space-md rounded bg-primary text-on-primary font-body-sm text-body-sm font-medium hover:bg-inverse-surface transition-colors shrink-0" type="submit">Join</button></div><span class="text-body-sm font-body-sm text-outline">EOSC Community Privacy Principles apply.</span></form></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md text-body-sm font-body-sm text-outline"><p>© European Open Science Cloud (EOSC) Semantic Interoperability Task Force. Open Access.</p><div class="flex items-center gap-space-lg"><a class="hover:text-on-surface transition-colors" data-path="legal-notice" href="#">Legal Notice</a><a class="hover:text-on-surface transition-colors" data-path="accessibility" href="#">Accessibility</a><a class="hover:text-on-surface transition-colors" data-path="fair-compliance" href="#">FAIR Compliance Statement</a></div></div></div></footer></body></html>

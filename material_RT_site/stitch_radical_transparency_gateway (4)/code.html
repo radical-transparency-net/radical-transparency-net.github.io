@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-container": "#fefcff", "surface-container-lowest": "#ffffff", "tertiary-container": "#00201d", "background": "#f8f9ff", "primary-fixed-dim": "#bec6e0", "on-background": "#0b1c30", "on-tertiary-container": "#0c9488", "primary-fixed": "#dae2fd", "primary": "#000000", "on-secondary-fixed": "#00174b", "inverse-on-surface": "#eaf1ff", "outline-variant": "#c6c6cd", "tertiary-fixed-dim": "#6bd8cb", "tertiary-fixed": "#89f5e7", "secondary": "#0051d5", "inverse-surface": "#213145", "on-secondary-fixed-variant": "#003ea8", "on-error-container": "#93000a", "outline": "#76777d", "on-surface": "#0b1c30", "error-container": "#ffdad6", "inverse-primary": "#bec6e0", "error": "#ba1a1a", "tertiary": "#000000", "on-primary-fixed-variant": "#3f465c", "surface-container-high": "#dce9ff", "surface-tint": "#565e74", "surface-container-low": "#eff4ff", "secondary-fixed": "#dbe1ff", "secondary-container": "#316bf3", "surface-container-highest": "#d3e4fe", "on-tertiary-fixed": "#00201d", "on-tertiary": "#ffffff", "surface-variant": "#d3e4fe", "surface-container": "#e5eeff", "on-primary-fixed": "#131b2e", "on-tertiary-fixed-variant": "#005049", "on-primary-container": "#7c839b", "on-surface-variant": "#45464d", "surface-dim": "#cbdbf5", "on-error": "#ffffff", "primary-container": "#131b2e", "surface": "#f8f9ff", "on-primary": "#ffffff", "secondary-fixed-dim": "#b4c5ff", "surface-bright": "#f8f9ff", "on-secondary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-desktop": "3rem", "gutter-mobile": "1rem", "gutter-desktop": "2rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "gutter": "1.5rem", "space-xl": "2.5rem", "space-md": "1rem", "margin": "2rem", "space-lg": "1.5rem" }, "fontFamily": { "label-code-sm": ["JetBrains Mono"], "body-lg": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "badge-caps": ["JetBrains Mono"], "headline-md": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-code-md": ["JetBrains Mono"], "body-sm": ["Plus Jakarta Sans"] }, "fontSize": { "label-code-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }], "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "badge-caps": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-code-md": ["13px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-[1440px] mx-auto px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><img alt="Radical Transparency Brand Mark" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc7egXac54ZwwmgOrYq10IxZ6s4zMMEw33vKSZFanCQ0RT3wt97B0hP4wT8kp9sAy8Bugedt1ykttNYC_HMCRUwaGLa9mbX2gC6FZU5KcdAcu_uWCsdrAGbEfQxA4h283M8fHLQU-SvnB2iG2ljQerCh_xnbm8fxTMl8zEBGiss4fBswwVab-YOR_6_hP2fUhhl2y-0CBxc22_CedUM1WEaMwiRxkdkLBUBXLS6eQ7"/><div class="flex items-center gap-space-sm"><span class="font-title-md text-title-md text-on-surface tracking-tight">Radical Transparency</span><span class="px-space-xs py-0.5 rounded bg-surface-container-low text-on-tertiary-container font-badge-caps text-badge-caps uppercase tracking-wider">EOSC Interop</span></div></div><nav class="hidden xl:flex items-center gap-space-sm text-body-md font-body-md" data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded"><a class="px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="triage-and-explore" href="#">Triage &amp; Explore</a><a class="px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="what-is-radical-transparency" href="#">What is Radical Transparency?</a><a class="px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="developer-hub-and-tooling" href="#">Developer Hub &amp; Tooling</a><a class="px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="knowledge-and-community" href="#">Knowledge &amp; Community</a><a class="px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="communication-roadmap" href="#">Communication Roadmap</a></nav><div class="flex items-center gap-space-sm shrink-0"><div class="relative hidden md:flex items-center"><span class="material-symbols-outlined absolute left-2.5 text-outline text-[18px] pointer-events-none">search</span><input class="h-9 pl-8 pr-space-sm rounded bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-sm font-body-sm w-56 focus:outline-none focus:ring-2 focus:ring-secondary/20" placeholder="Search schemas, PURLs, proposals..." type="search"/></div><a class="hidden sm:flex items-center gap-1.5 px-space-sm py-1.5 rounded text-body-sm font-label-code-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="https://github.com/eosc-semantic-interop/if-solutions-proposals" rel="noopener noreferrer" target="_blank" title="eosc-semantic-interop/if-solutions-proposals"><span class="material-symbols-outlined text-[18px]">code</span><span>GitHub</span></a><a class="inline-flex items-center justify-center px-space-md py-1.5 rounded bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-inverse-surface transition-colors" data-path="get-involved" href="#">Get Involved</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background min-h-[calc(100vh-4rem)]"><div class="flex flex-col w-full">
+<div class="relative w-full overflow-hidden bg-gradient-to-b from-surface-container-high/40 via-surface-container-low/20 to-transparent">
+<div class="max-w-[1440px] mx-auto px-margin py-space-xl">
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs mb-space-md text-on-surface-variant font-label-code-sm text-label-code-sm">
+<a class="hover:text-secondary transition-colors" href="#">Home</a>
+<span>/</span>
+<span class="text-on-surface font-semibold">Community &amp; Communication</span>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-end">
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<div class="inline-flex items-center gap-space-xs w-fit px-space-sm py-0.5 rounded-full bg-surface-container-highest text-secondary font-badge-caps text-badge-caps uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">campaign</span>
+<span>Strategic Framework 2026-2027</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight">
+            Community Empowerment &amp; Strategic Communication Plan
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
+            Equipping research organizations, data stewards, and working groups with educational resources, while executing a transparent, milestone-driven outreach campaign.
+          </p>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-space-sm">
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-code-sm text-label-code-sm text-outline uppercase tracking-wider">Active Cohorts</span>
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">1,480+</span>
+</div>
+<div class="h-10 w-px bg-surface-container-high"></div>
+<div class="flex flex-col">
+<span class="font-label-code-sm text-label-code-sm text-outline uppercase tracking-wider">Roadmap Status</span>
+<span class="inline-flex items-center gap-1 font-label-code-md text-label-code-md text-on-tertiary-container font-semibold">
+<span class="h-2 w-2 rounded-full bg-on-tertiary-container animate-pulse"></span>
+                Phase 2 In-Flight
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto px-margin py-space-xl flex flex-col gap-space-xl">
+<section class="flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-sm">
+<div>
+<span class="font-badge-caps text-badge-caps text-secondary uppercase tracking-widest">Track 01 • Capacity Building</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Educational &amp; Community Enablement</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Structured, role-tailored tooling to bridge high-level policy with machine-actionable FAIR execution.</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-1 rounded bg-surface-container text-on-surface font-label-code-sm text-label-code-sm">Role-Specific Tracks: 3</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter-desktop">
+<div class="relative flex flex-col rounded-xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="h-44 w-full rounded-lg overflow-hidden mb-space-md bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A modern university research library and digital data archive room in Munich with researchers analyzing high-dimensional graphs on screens, bathed in natural morning light with clean slate blue accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHStto0BR7ibRd_YAMS6aV6pwe0MJjCKan76SH0qtPku2BKKjioJi-pA8gNsDY-tunphCmnNl0EEGaGvIjJcmsOC9818iz9Haz0f9lsao8LCm5fkcKBeJfUybNNTRBQ0dnUBYTmuiLENlFESQxRd9tz8Pfp3XEEiyz3Jqb2cJXVkb4zTC6C6IulPjdMbqragUxywORxnXH__JUv9Dx123xDrM1leHV8Rf4bzyM1Afr"/>
+</div>
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-secondary font-badge-caps text-badge-caps uppercase">Institutional</span>
+<span class="font-label-code-sm text-label-code-sm text-outline">Track A</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">For Research Institutions &amp; Libraries</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+            Architectural playbooks for academic leadership, research managers, and technical library teams operationalizing cross-border compliance.
+          </p>
+<ul class="flex flex-col gap-space-xs mb-space-lg flex-1">
+<li class="flex items-start gap-space-xs p-space-xs rounded hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">verified_user</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Step-by-Step Audit Playbook</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Self-evaluation matrix for metadata schemas &amp; repositories.</span>
+</div>
+</li>
+<li class="flex items-start gap-space-xs p-space-xs rounded hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">policy</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Open Licensing Checklists</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">CC-BY 4.0, CC0 1.0, and ODbL alignment with Horizon Europe rules.</span>
+</div>
+</li>
+<li class="flex items-start gap-space-xs p-space-xs rounded hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">school</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Data Steward Certification</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">8-module professional curriculum accredited across EOSC nodes.</span>
+</div>
+</li>
+</ul>
+<div class="pt-space-md bg-surface-container-lowest">
+<button class="w-full flex items-center justify-center gap-space-xs px-space-md py-2.5 rounded bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-inverse-surface transition-colors">
+<span>Access Institutional Kit</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="relative flex flex-col rounded-xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="h-44 w-full rounded-lg overflow-hidden mb-space-md bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Bioinformatics laboratory setting with scientific researchers collaborating over computational structural biology models on multiple monitors, European research institution environment, cool crisp lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9_716_zmQH_upJKjBaS117rsBA45KfNZ2hJMgC31VIpJclDYmZIShy7RdVDZUPzQjd0W4OI9KL-brev0IaOzD7_GsSJ8n-i7bN2lY4gJ8FWx02vVXuWc2Y2cVJ-EIvf7nhjLs7bCiAAxWNBaPDKGH9YldCCwLH29l-1zOewF_vyebYs1R7PclyIsYREJqogTQH4MA_uv4xH6_xwkupXtrlxFPahnf6REYvn4GqtNn"/>
+</div>
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-tertiary-container font-badge-caps text-badge-caps uppercase">Domain Science</span>
+<span class="font-label-code-sm text-label-code-sm text-outline">Track B</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">For Domain Scientists &amp; Working Groups</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+            Direct semantic pipelines designed for disciplinary working groups (Life Sciences, Social Sciences, High-Energy Physics) needing actionable linksets.
+          </p>
+<ul class="flex flex-col gap-space-xs mb-space-lg flex-1">
+<li class="flex items-start gap-space-xs p-space-xs rounded hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-on-tertiary-container text-[20px] shrink-0 mt-0.5">schema</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Ontology Formulation Guides</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">RFC-style templates to submit unambiguous class &amp; property extensions.</span>
+</div>
+</li>
+<li class="flex items-start gap-space-xs p-space-xs rounded hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-on-tertiary-container text-[20px] shrink-0 mt-0.5">rate_review</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Open Peer-Review of Linksets</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Participate in GitHub Pull Request reviews for triple validity.</span>
+</div>
+</li>
+<li class="flex items-start gap-space-xs p-space-xs rounded hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-on-tertiary-container text-[20px] shrink-0 mt-0.5">event</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Working Group Workshops</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Bi-monthly co-design clinics for SKOS/OWL vocabulary reconciliation.</span>
+</div>
+</li>
+</ul>
+<div class="pt-space-md bg-surface-container-lowest">
+<button class="w-full flex items-center justify-center gap-space-xs px-space-md py-2.5 rounded bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-inverse-surface transition-colors">
+<span>Explore Domain Playbook</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="relative flex flex-col rounded-xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="h-44 w-full rounded-lg overflow-hidden mb-space-md bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="An energetic speaker addressing an audience at a modern European technology symposium on open science data governance, vibrant cobalt lighting, architectural glass auditorium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgYokTWgOGUszfqSGLVyjvLMQl74pDCIG47UbfbTtMTSAYb9C46XYnnCrcJSTm2pixkG0rk4rJY5w1HBsku4zAelC_1dZaa1WTYJxm6b3y67w0IdJiX6p9H1GTVAv3E2cfj1kQJ-KlK9ypHqwqfjpo0bl_mtCUlP_bKCLUeiTMMtia45qOXGLtOoQXR-WdJZJX3uBv64_DJXp7WffIvQKURSaXvGn8mHm7NaSna4f2"/>
+</div>
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-secondary-container font-badge-caps text-badge-caps uppercase">Advocacy</span>
+<span class="font-label-code-sm text-label-code-sm text-outline">Track C</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">For Open Science Champions</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+            Outreach collateral, narrative templates, and presentation assets enabling community evangelists to present Radical Transparency locally.
+          </p>
+<ul class="flex flex-col gap-space-xs mb-space-lg flex-1">
+<li class="flex items-start gap-space-xs p-space-xs rounded hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-secondary-container text-[20px] shrink-0 mt-0.5">slideshow</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Keynote Slide Decks (.key/.pptx)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Authoritative deck variants (15 min, 30 min, 60 min masterclasses).</span>
+</div>
+</li>
+<li class="flex items-start gap-space-xs p-space-xs rounded hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-secondary-container text-[20px] shrink-0 mt-0.5">summarize</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Elevator Pitch One-Pagers</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Briefing document for Vice-Rectors of Research &amp; Chief Data Officers.</span>
+</div>
+</li>
+<li class="flex items-start gap-space-xs p-space-xs rounded hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-secondary-container text-[20px] shrink-0 mt-0.5">groups</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Meetup Kit Downloads</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Host a hack-hour: runbook, badges, Q&amp;A cards, and session slido decks.</span>
+</div>
+</li>
+</ul>
+<div class="pt-space-md bg-surface-container-lowest">
+<button class="w-full flex items-center justify-center gap-space-xs px-space-md py-2.5 rounded bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-inverse-surface transition-colors">
+<span>Download Champion Kit (.zip)</span>
+<span class="material-symbols-outlined text-[16px]">download</span>
+</button>
+</div>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col lg:flex-row items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-xl">
+<div class="inline-flex items-center gap-1 font-badge-caps text-badge-caps uppercase tracking-wider text-secondary">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span>
+<span>Live Community Engagements</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Upcoming Community Webinars &amp; Sprints</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Join practical sessions with EOSC Core architects to validate linksets, resolve SPARQL queries, and review schema updates.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md w-full lg:w-auto shrink-0">
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md min-w-[300px]">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-tertiary-container font-badge-caps text-badge-caps uppercase">Webinar</span>
+<span class="font-label-code-sm text-label-code-sm text-outline">Oct 24, 2026</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface mt-1">Demystifying EOSC Semantic Interoperability</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Architectural breakdown of crosswalks and machine-actionable conformity profiles.</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="inline-flex items-center gap-1 font-label-code-sm text-label-code-sm text-on-tertiary-container">
+<span class="h-1.5 w-1.5 rounded-full bg-on-tertiary-container"></span>
+                Registration Open
+              </span>
+<button class="px-space-md py-1.5 rounded bg-secondary text-on-secondary font-body-sm text-body-sm font-semibold hover:bg-secondary-container transition-colors">
+                Register
+              </button>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md min-w-[300px]">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-secondary font-badge-caps text-badge-caps uppercase">Hybrid Hackathon</span>
+<span class="font-label-code-sm text-label-code-sm text-outline">Nov 12, 2026</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface mt-1">Hands-on Linkset Curation Hackathon</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Collaborative live session curating PURLs and crosswalk bridges in Brussels &amp; Virtual.</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-code-sm text-label-code-sm text-outline">Brussels &amp; Online</span>
+<button class="px-space-md py-1.5 rounded bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-inverse-surface transition-colors">
+                Apply for Seat
+              </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="flex flex-col gap-space-lg pt-space-md">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-sm">
+<div>
+<span class="font-badge-caps text-badge-caps text-secondary uppercase tracking-widest">Track 02 • Strategic Governance</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">The Radical Transparency Communication Plan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">A transparent, timeline-backed dissemination strategy tracking milestone deliverables across European research infrastructures.</p>
+</div>
+<div class="flex items-center gap-space-xs p-1 rounded-lg bg-surface-container">
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface shadow-sm font-body-sm text-body-sm font-semibold transition-all" id="view-timeline-btn">Timeline View</button>
+<button class="px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm font-medium transition-all" id="view-kanban-btn">Kanban View</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop" id="roadmap-timeline-container">
+<div class="flex flex-col p-space-lg rounded-xl bg-surface-container-lowest shadow-sm relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-outline-variant"></div>
+<div class="flex items-center justify-between mb-space-sm mt-1">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface font-label-code-sm text-label-code-sm font-bold">PHASE 01</span>
+<span class="font-badge-caps text-badge-caps text-on-tertiary-container uppercase">Completed</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Foundation &amp; Awareness</h3>
+<span class="font-label-code-sm text-label-code-sm text-outline mb-space-md">Q1 - Q2 2026</span>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+            Establishing the architectural vocabulary, canonical repository presence, and first-wave institutional engagement across Europe.
+          </p>
+<div class="flex flex-col gap-space-xs mt-auto">
+<div class="flex items-center gap-2 p-space-xs rounded bg-surface-container-low font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">check_circle</span>
+<span class="text-on-surface font-medium">Open Proposal Docs Launch</span>
+</div>
+<div class="flex items-center gap-2 p-space-xs rounded bg-surface-container-low font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">check_circle</span>
+<span class="text-on-surface font-medium">EOSC Symposium Plenary Session</span>
+</div>
+<div class="flex items-center gap-2 p-space-xs rounded bg-surface-container-low font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">check_circle</span>
+<span class="text-on-surface font-medium">Interoperability Whitepaper v1.0</span>
+</div>
+<div class="flex items-center gap-2 p-space-xs rounded bg-surface-container-low font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">check_circle</span>
+<span class="text-on-surface font-medium">Developer Beta CLI Tooling</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col p-space-lg rounded-xl bg-surface-container-lowest shadow-md relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-secondary"></div>
+<div class="flex items-center justify-between mb-space-sm mt-1">
+<span class="px-space-xs py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-code-sm text-label-code-sm font-bold">PHASE 02</span>
+<span class="px-space-xs py-0.5 rounded bg-secondary/10 text-secondary font-badge-caps text-badge-caps uppercase">In Progress</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Pilot Adoptions &amp; Early Birds</h3>
+<span class="font-label-code-sm text-label-code-sm text-secondary font-semibold mb-space-md">Q3 2026 (Active)</span>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+            Deployment of validation runners and live schema ingestion across flagship multi-disciplinary clusters.
+          </p>
+<div class="flex flex-col gap-space-xs mt-auto">
+<div class="flex items-center gap-2 p-space-xs rounded bg-surface-container-high font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">sync</span>
+<span class="text-on-surface font-semibold">Life Sciences Cluster Ingestion</span>
+</div>
+<div class="flex items-center gap-2 p-space-xs rounded bg-surface-container-high font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">sync</span>
+<span class="text-on-surface font-semibold">Physics Data Triplestore Linkset</span>
+</div>
+<div class="flex items-center gap-2 p-space-xs rounded bg-surface-container-low font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-outline">hourglass_empty</span>
+<span class="text-on-surface-variant">Social Sciences &amp; Humanities Pilot</span>
+</div>
+<div class="flex items-center gap-2 p-space-xs rounded bg-surface-container-low font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-outline">hourglass_empty</span>
+<span class="text-on-surface-variant">Automated Crosswalk Regression Test</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col p-space-lg rounded-xl bg-surface-container-lowest shadow-sm relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-outline-variant"></div>
+<div class="flex items-center justify-between mb-space-sm mt-1">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface font-label-code-sm text-label-code-sm font-bold">PHASE 03</span>
+<span class="font-badge-caps text-badge-caps text-outline uppercase">Upcoming</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Multi-Stakeholder Evangelism</h3>
+<span class="font-label-code-sm text-label-code-sm text-outline mb-space-md">Q4 2026</span>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+            Direct institutional alignment with national funding agencies, ministry observers, and regional cloud registries.
+          </p>
+<div class="flex flex-col gap-space-xs mt-auto">
+<div class="flex items-center gap-2 p-space-xs rounded bg-surface-container-low font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-outline">radio_button_unchecked</span>
+<span class="text-on-surface-variant">National Research Agency Briefs</span>
+</div>
+<div class="flex items-center gap-2 p-space-xs rounded bg-surface-container-low font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-outline">radio_button_unchecked</span>
+<span class="text-on-surface-variant">Interactive Compliance Dashboards</span>
+</div>
+<div class="flex items-center gap-2 p-space-xs rounded bg-surface-container-low font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-outline">radio_button_unchecked</span>
+<span class="text-on-surface-variant">Pan-European Webinar Series (6x)</span>
+</div>
+<div class="flex items-center gap-2 p-space-xs rounded bg-surface-container-low font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-outline">radio_button_unchecked</span>
+<span class="text-on-surface-variant">Open Science Federation Showcase</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col p-space-lg rounded-xl bg-surface-container-lowest shadow-sm relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-outline-variant"></div>
+<div class="flex items-center justify-between mb-space-sm mt-1">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface font-label-code-sm text-label-code-sm font-bold">PHASE 04</span>
+<span class="font-badge-caps text-badge-caps text-outline uppercase">Target Baseline</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Standardization &amp; Integration</h3>
+<span class="font-label-code-sm text-label-code-sm text-outline mb-space-md">2027+</span>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+            Integration into the standard EOSC Interoperability Framework (EIF) baseline for all federated node certifications.
+          </p>
+<div class="flex flex-col gap-space-xs mt-auto">
+<div class="flex items-center gap-2 p-space-xs rounded bg-surface-container-low font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-outline">lock</span>
+<span class="text-on-surface-variant">EIF Core Baseline Recommendation</span>
+</div>
+<div class="flex items-center gap-2 p-space-xs rounded bg-surface-container-low font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-outline">lock</span>
+<span class="text-on-surface-variant">W3C / RDA Working Group Liaison</span>
+</div>
+<div class="flex items-center gap-2 p-space-xs rounded bg-surface-container-low font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-outline">lock</span>
+<span class="text-on-surface-variant">Autonomous Schema Resolvers</span>
+</div>
+<div class="flex items-center gap-2 p-space-xs rounded bg-surface-container-low font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-outline">lock</span>
+<span class="text-on-surface-variant">Global Research Graph Ingestion</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-lg grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-badge-caps text-badge-caps text-secondary uppercase tracking-widest">Multi-Channel Operations</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Stakeholder Engagement Channels &amp; Feedback Loops</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Continuous communication pipelines ensuring two-way dialogue between the Task Force and the European scientific ecosystem.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="p-2 rounded bg-surface-container-high text-secondary">
+<span class="material-symbols-outlined text-[24px]">forum</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-title-md text-title-md text-on-surface">Bi-Weekly Open Office Hours</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Live voice &amp; screen sharing on Discord &amp; Matrix every alternate Thursday at 14:00 CET.</p>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-code-sm text-label-code-sm text-outline">Next: Thu, 14:00 CET</span>
+<a class="font-body-sm text-body-sm text-secondary font-semibold hover:underline inline-flex items-center gap-1" href="#">
+<span>Join Server</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="p-2 rounded bg-surface-container-high text-on-tertiary-container">
+<span class="material-symbols-outlined text-[24px]">task_alt</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-title-md text-title-md text-on-surface">GitHub Discussions Triage</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Public triage board tracking Requests for Comment (RFC), ontology issues, and bugs.</p>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-code-sm text-label-code-sm text-on-tertiary-container">SLA: &lt; 48h Response</span>
+<a class="font-body-sm text-body-sm text-on-tertiary-container font-semibold hover:underline inline-flex items-center gap-1" href="https://github.com/eosc-semantic-interop/if-solutions-proposals" rel="noopener noreferrer" target="_blank">
+<span>View Board</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="p-2 rounded bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined text-[24px]">newspaper</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-title-md text-title-md text-on-surface">Press &amp; Media Kit</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Download vector logos, brand architecture diagrams, and editorial guidelines.</p>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-code-sm text-label-code-sm text-outline">Assets: SVG / PDF / EPS</span>
+<a class="font-body-sm text-body-sm text-on-surface font-semibold hover:underline inline-flex items-center gap-1" href="#">
+<span>Media Kit (48MB)</span>
+<span class="material-symbols-outlined text-[14px]">download</span>
+</a>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="p-2 rounded bg-surface-container-high text-secondary-container">
+<span class="material-symbols-outlined text-[24px]">share</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-title-md text-title-md text-on-surface">Social &amp; Mastodon Relay</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Real-time alerts for RDF releases, pull request merges, and compliance notices.</p>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-code-sm text-label-code-sm text-outline">@eosc_semantic@fediscience.org</span>
+<a class="font-body-sm text-body-sm text-secondary-container font-semibold hover:underline inline-flex items-center gap-1" href="#">
+<span>Follow Feed</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col p-space-lg rounded-xl bg-surface-container-lowest shadow-md">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-secondary font-badge-caps text-badge-caps uppercase">Monthly Dispatch</span>
+<span class="font-label-code-sm text-label-code-sm text-outline">Direct to Inbox</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Subscribe to the Transparency Digest</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+            A concise monthly bulletin detailing semantic crosswalk approvals, governance milestones, RFC comment windows, and interoperability case studies.
+          </p>
+<form class="flex flex-col gap-space-sm" onsubmit="event.preventDefault(); document.getElementById('newsletter-success').classList.remove('hidden'); this.reset();">
+<div class="flex flex-col gap-1">
+<label class="font-label-code-sm text-label-code-sm text-on-surface font-semibold">Institutional Email</label>
+<input class="h-10 px-space-sm rounded bg-surface-container-low text-on-surface placeholder:text-outline text-body-sm font-body-sm focus:outline-none focus:ring-2 focus:ring-secondary/30" placeholder="dr.alex.meyer@mpg.de" required="" type="email"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-code-sm text-label-code-sm text-on-surface font-semibold">Primary Stakeholder Role</label>
+<select class="h-10 px-space-sm rounded bg-surface-container-low text-on-surface text-body-sm font-body-sm focus:outline-none focus:ring-2 focus:ring-secondary/30">
+<option>Data Steward / Research Software Engineer</option>
+<option>Principal Investigator / Senior Scientist</option>
+<option>Institutional Library Director / Dean</option>
+<option>EOSC Node Operator / Infrastructure Lead</option>
+<option>Policy Maker / EU Project Officer</option>
+</select>
+</div>
+<div class="flex items-start gap-space-xs pt-space-xs">
+<input class="mt-1 h-4 w-4 rounded text-secondary focus:ring-secondary/20" id="digest-consent" required="" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface-variant" for="digest-consent">
+                I agree to receive communications regarding EOSC Semantic Interoperability releases in compliance with EU GDPR.
+              </label>
+</div>
+<button class="mt-space-sm h-10 px-space-md rounded bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-inverse-surface transition-colors flex items-center justify-center gap-space-xs" type="submit">
+<span class="material-symbols-outlined text-[18px]">mark_email_read</span>
+<span>Join Transparency Network</span>
+</button>
+<div class="hidden p-space-sm rounded bg-surface-container-high text-on-tertiary-container font-label-code-sm text-label-code-sm flex items-center gap-2" id="newsletter-success">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Registration logged. Verification token dispatched.</span>
+</div>
+</form>
+<div class="mt-space-md pt-space-md border-t border-surface-container-high flex items-center justify-between text-outline font-label-code-sm text-label-code-sm">
+<span>Volume: ~1 email / mo</span>
+<span>Unsubscribe anytime</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+    (function() {
+      const timelineBtn = document.getElementById('view-timeline-btn');
+      const kanbanBtn = document.getElementById('view-kanban-btn');
+      const container = document.getElementById('roadmap-timeline-container');
+
+      if (timelineBtn && kanbanBtn && container) {
+        timelineBtn.addEventListener('click', function() {
+          timelineBtn.className = 'px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface shadow-sm font-body-sm text-body-sm font-semibold transition-all';
+          kanbanBtn.className = 'px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm font-medium transition-all';
+          container.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop';
+        });
+
+        kanbanBtn.addEventListener('click', function() {
+          kanbanBtn.className = 'px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface shadow-sm font-body-sm text-body-sm font-semibold transition-all';
+          timelineBtn.className = 'px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm font-medium transition-all';
+          container.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop p-space-md rounded-xl bg-surface-container-low';
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_8px_rgba(0,0,0,0.02)]"><div class="max-w-[1440px] mx-auto px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter-desktop mb-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md pr-space-lg"><div class="flex items-center gap-space-sm"><img alt="Radical Transparency Brand Mark" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc7egXac54ZwwmgOrYq10IxZ6s4zMMEw33vKSZFanCQ0RT3wt97B0hP4wT8kp9sAy8Bugedt1ykttNYC_HMCRUwaGLa9mbX2gC6FZU5KcdAcu_uWCsdrAGbEfQxA4h283M8fHLQU-SvnB2iG2ljQerCh_xnbm8fxTMl8zEBGiss4fBswwVab-YOR_6_hP2fUhhl2y-0CBxc22_CedUM1WEaMwiRxkdkLBUBXLS6eQ7"/><span class="font-title-md text-title-md text-on-surface">Radical Transparency</span></div><p class="text-body-md font-body-md text-on-surface-variant leading-relaxed max-w-md">EOSC Semantic Interoperability architecture delivering authoritative, machine-actionable conformity profiles, triplestore linksets, and open scientific data governance.</p><div class="flex items-center gap-space-xs"><span class="px-space-sm py-0.5 rounded bg-surface-container text-on-tertiary-container font-badge-caps text-badge-caps uppercase tracking-wider">EOSC Core Aligned</span><span class="px-space-sm py-0.5 rounded bg-surface-container text-secondary font-badge-caps text-badge-caps uppercase tracking-wider">CC-BY 4.0</span><span class="px-space-sm py-0.5 rounded bg-surface-container text-on-surface font-badge-caps text-badge-caps uppercase tracking-wider">FAIR Verified</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-title-md text-title-md text-on-surface mb-space-xs">Interoperability</span><a class="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="conformity-profiles" href="#">Conformity Profiles</a><a class="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="linksets-documentation" href="#">Linksets Documentation</a><a class="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="purl-resolution-directory" href="#">Persistent URI Directory</a><a class="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="crosswalk-registries" href="#">Crosswalk Registries</a></div><div class="flex flex-col gap-space-sm"><span class="font-title-md text-title-md text-on-surface mb-space-xs">Framework &amp; Governance</span><a class="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="open-data-licensing" href="#">Open Data Licensing</a><a class="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="federated-nodes" href="#">Federated Nodes</a><a class="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="provenance-standards" href="#">Provenance Standards</a><a class="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="https://github.com/eosc-semantic-interop/if-solutions-proposals" rel="noopener noreferrer" target="_blank">GitHub Proposals</a></div><div class="flex flex-col gap-space-sm"><span class="font-title-md text-title-md text-on-surface mb-space-xs">Stay Informed</span><p class="text-body-sm font-body-sm text-on-surface-variant mb-space-xs">Subscribe to semantic interoperability releases, RFCs, and governance alerts.</p><form class="flex flex-col gap-space-xs" onsubmit="event.preventDefault();"><div class="flex items-center gap-space-xs"><input class="h-9 px-space-sm rounded bg-surface-container text-on-surface placeholder:text-outline text-body-sm font-body-sm w-full focus:outline-none focus:ring-2 focus:ring-secondary/20" placeholder="researcher@domain.eu" type="email"/><button class="h-9 px-space-md rounded bg-primary text-on-primary font-body-sm text-body-sm font-medium hover:bg-inverse-surface transition-colors shrink-0" type="submit">Join</button></div><span class="text-body-sm font-body-sm text-outline">EOSC Community Privacy Principles apply.</span></form></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md text-body-sm font-body-sm text-outline"><p>© European Open Science Cloud (EOSC) Semantic Interoperability Task Force. Open Access.</p><div class="flex items-center gap-space-lg"><a class="hover:text-on-surface transition-colors" data-path="legal-notice" href="#">Legal Notice</a><a class="hover:text-on-surface transition-colors" data-path="accessibility" href="#">Accessibility</a><a class="hover:text-on-surface transition-colors" data-path="fair-compliance" href="#">FAIR Compliance Statement</a></div></div></div></footer></body></html>
