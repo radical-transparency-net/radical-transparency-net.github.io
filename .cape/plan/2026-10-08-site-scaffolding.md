@@ -2,13 +2,13 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Build a production-ready, highly componentized Vite + React + TypeScript web portal styled with Tailwind CSS for `radical-transparency-net.github.io`, implementing all mockups from `material_RT_site/` with decoupled data models and clean Lorem Ipsum placeholders.
+**Goal:** Build a production-ready, highly componentized Vite + React + TypeScript web portal styled with Tailwind CSS for `radical-transparency-net.github.io`, implementing all mockups from `.material/site-design-stitch/` with decoupled data models and clean Lorem Ipsum placeholders.
 
 **Architecture:** A modular React single-page application routed via `HashRouter` for zero-configuration GitHub Pages hosting. Components are organized into atomic, isolated sections (`layout/`, `common/`, `home/`, `theory/`, `developer/`, `community/`), consuming strongly typed data from `src/data/*.ts` without hardcoding content strings in JSX.
 
 **Tech Stack:** React 18/19, TypeScript, Vite 5+, Tailwind CSS, `react-router-dom`, Google Fonts (`Plus Jakarta Sans`, `JetBrains Mono`), Material Symbols Outlined.
 
-**Spec:** [`docs/superpowers/specs/2026-10-08-vite-rt-site-design.md`](file:///c:/Users/cedricd/Documents/Github/radical-transparency-net.github.io/docs/superpowers/specs/2026-10-08-vite-rt-site-design.md)
+**Spec:** [`.cape/context/2026-10-08-vite-portal-design.md`](../context/2026-10-08-vite-portal-design.md)
 
 ## Global Constraints
 

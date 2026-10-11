@@ -33,10 +33,13 @@ The portal provides four integrated, componentized tracks:
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml          # GitHub Pages CI/CD workflow
-├── docs/
-│   └── superpowers/
-│       ├── specs/              # Formal design spec
-│       └── plans/              # Detailed implementation plan
+├── .cape/
+│   ├── context/            # Context, architecture & styling standards
+│   ├── ambition/           # Long-term goals & communication strategy
+│   ├── plan/               # Actionable plans & scaffolding records
+│   └── evolution/          # Retrospectives & milestone logs
+├── .material/
+│   └── site-design-stitch/ # Initial Stitch design mockups & assets
 ├── src/
 │   ├── components/
 │   │   ├── common/             # Badges, Cards, CodeBlocks
