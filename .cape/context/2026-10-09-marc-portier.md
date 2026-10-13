@@ -1,56 +1,41 @@
-# Marc Portier, insight into his way of working - suggestions in how to best collaborate with him, and in what way you, as an LLM, can be of help.
+# Contributor Profile: Marc Portier
 
-# 1. LANGUAGE & COMMUNICATION
-- ALWAYS respond to user chat messages in DUTCH by default.
-- Even if the user writes in English or pastes English snippets, keep conversational responses in DUTCH.
-- Project deliverables (Markdown pattern docs, JSON-LD linksets, LaTeX position papers, Python scripts, SVG branding) MUST be generated in ENGLISH.
-- Don't appease with nice fluffy wow excitement. Marc has no need for it and respects a vigilant eye and focus on future improvements a lot more.
-- This might lead him to an endless persuit of further perfections that fails to land an release partial results that can benefit from sharing and discussing -- the typical approach to that is suggesting to maintain a backlog of todos - the `.cape/ambition/**` section might be a very good place for that. It also might be useful to 'remember' the difference between a thing we want to provide short term vs long term by adding e.g. `_short_term` or `_long_term` to the file name.
+**Role:** Open Science Team Lead & Architectural Lead  
+**Affiliation:** Flanders Marine Institute (VLIZ)  
+**Status:** Active Core Contributor  
 
-# 2. ARCHITECTURAL & PATTERN PRINCIPLES
-- Enforce the 10 Radical Transparency Linkset Usage Patterns (RT-P01 to RT-P10).
-- NEVER introduce custom protocols when an existing IETF RFC (e.g., RFC 8288, 6906, 9264, 9727, 5829, 8574) or W3C/Schema.org standard applies ("Maximum Boredom").
-- RESPECT THE SEMANTIC VS. STRUCTURAL DISTINCTION:
-  * Structural Hierarchy & Navigation (RT-P05, RT-P08, RT-P09): Use `rel="collection"` and `rel="item"`.
-  * Semantic Profile Inheritance & Composition (RT-P02): Use `schema:hasPart` (`rel="https://schema.org/hasPart"` or `http://schema.org/hasPart`). Never confuse this with `rel="item"`.
-- DIRECT CONTENT ACCESS (RT-P04): Persistent identifiers (PIDs/DOIs) point directly to content payloads. Client-side user agents render metadata affordances; do not force server-side HTML splash pages.
-- DETACHED LOCAL STORAGE (RT-P10): Sidecars must be named `[filename].[ext].ls.json` with relative local anchors (`./[filename].[ext]`).
+---
 
-# 3. CODE & FILE GENERATION QUALITY
-- JSON / JSON-LD: Always generate 100% valid JSON with standard straight double quotes (`"`). Never use smart/curly quotes (`“`, `”`).
-- SVG: Ensure proper closed paths, clean viewBox definitions, and `fill-rule="evenodd"` for compound shapes.
-- Citations & References: Preserve academic rigor. Always attribute quotes and references accurately (e.g., Anscombe 1959 for Wittgenstein's sunrise anecdote, Antoine de Saint-Exupéry for simplicity).
+## 1. Professional Background & Expertise
 
-# 4. WORKING STYLE
-- Be direct, concise, and intellectually rigorous.
-- Avoid fluff, meta-preambles, or AI filler ("As an AI...").
-- Always verify file state and exact file paths before claiming edits or generation.
+Marc Portier leads the Open Science Team at VLIZ and serves as the primary conceptual and architectural driver behind the Radical Transparency initiative.
 
-# 5. ONLINE IDENTITY & PRESENCE
-Marc's online identities include:
-- Vliz: https://www.vliz.be/staff
-- marineinfo: https://marineinfo.org/id/person/38476
-- ORCID: https://orcid.org/0000-0002-9648-6484
-- github: 
-  - https://github.com/marc-portier, 
-  - https://github.com/mpo-vliz
-- linkedin: https://www.linkedin.com/in/marc-portier
+* **Engineering Foundations:** Background in systems engineering and industrial process automation, evolving into distributed software engineering (UNIX, C, Perl, Python, relational and graph data architectures).
+* **Marine Biodiversity Informatics:** Extensive experience designing and contributing to European and global marine research infrastructures, including WoRMS (World Register of Marine Species), LifeWatch, Marine Regions, IMIS, and EMO-BON (European Marine Omics Biodiversity Observation Network).
+* **Semantic Web & Linked Data:** Former research collaboration with IMEC / iMinds on semantic web technologies, knowledge graph modeling, and linked open data publication.
+* **Open Science Standards & Governance:**
+  * Active contributor to the European Open Science Cloud Association (EOSC-A) and its Interoperability Framework initiative.
+  * Member of the Steering Committee for the **RO-Crate** (Research Object Crate) specification.
 
+---
 
-# 6. personal profile
-Old geazer with too many ideas, including the concepts behind this radical transparency movement.
-Solid software (and web architecture_) engineering background.
-Actual education was in systems engineering and (industrial) process automation. 
-Extended into software engineering (UNIX, databases, C, perl, python..), and later on (with VLIZ) marine biodiversity informatics (LifeWatch, WoRMS, Marine Regions, IMIS, emobon) and (with IMEC (formerly iMinds)) semantic web.
-Involved with EOSC-A and its interoperability framework initiative (https://eosc-interoperability.github.io).
-On the steering bord of the RO-Crate standard.
-Often not practical enough (and needs to be kept in check by others in the team).
-Idiealistic dreamer, thinking about about changing the world, one good idea at a time. 
-Story and philosophy driven.
-Loves paradoxes - they provoke deeper thought, and provide inroads into new insights.
-Has limited attention for time and money considerations -- natural tendency to let content, concept, narrative, goal prevail.
-Loves a good story, and is a sucker for a nice anecdote.
-Likes other people and more ideas.
-Learns from interaction more than from formal study.  (talk about the paper we both read outbeats reading the paper by a megafactor)
-Appreciates factual clarity and logical coherence. 
-Tends to focus on naming and strict semantics to keep conversations alligned.
+## 2. Project Responsibilities & Architectural Focus
+
+Within the `radical-transparency-net` ecosystem, Marc's primary responsibilities include:
+* Setting the strategic vision, foundational metaphors, and societal /philosophical framing of the initiative.
+* Formulating and refining the 10 Linkset Usage Patterns (`RT-P01` to `RT-P10`).
+* Enforcing protocol-level rigor: strict adherence to established IETF RFCs (e.g., RFC 8288, RFC 6906, RFC 9264, RFC 9727, RFC 5829, RFC 8574) and W3C Recommendations ("Maximum Boredom").
+* Maintaining semantic precision across the team (e.g., distinguishing semantic profile composition `schema:hasPart` from structural navigation `rel="collection"` / `rel="item"`).
+* Guiding community alignment across partner initiatives (EOSC, SAGE, DSSC and CEDS, OGC, CDIF).
+
+---
+
+## 3. Identities & Verifiable Profiles
+
+* **VLIZ Staff Directory:** [https://www.vliz.be/staff](https://www.vliz.be/staff)
+* **MarineInfo Persistent ID:** [https://marineinfo.org/id/person/38476](https://marineinfo.org/id/person/38476)
+* **ORCID:** [https://orcid.org/0000-0002-9648-6484](https://orcid.org/0000-0002-9648-6484)
+* **GitHub:** 
+  * Personal: [https://github.com/marc-portier](https://github.com/marc-portier)
+  * Organization: [https://github.com/mpo-vliz](https://github.com/mpo-vliz)
+* **LinkedIn:** [https://www.linkedin.com/in/marc-portier](https://www.linkedin.com/in/marc-portier)
