@@ -60,7 +60,7 @@ npm run preview
 1. **Type Safety:** Run `npm run build` locally. Ensure zero TypeScript (`tsc -b`) or Vite bundling errors.
 2. **Visual Inspection:** Verify responsive layouts across desktop, tablet, and mobile viewports.
 3. **Data Integrity:** Confirm that any content edits remain isolated within `src/data/*.ts` and conform to the interfaces in `src/types/index.ts`.
-4. **Branch Standard:** Push changes to a feature branch (`feat/<topic>` or `fix/<topic>`) and submit a Pull Request against `main`.
+4. **Pre-Flight Verification:** Complete the mandatory 5-gate verification cycle defined in [`.agents/skills/pr-preparation/SKILL.md`](../../.agents/skills/pr-preparation/SKILL.md) before opening a Pull Request against `main`.
 
 ---
 
