@@ -45,16 +45,19 @@ Every document added to `.cape` must strictly adhere to the following naming pat
 Each folder (`context/`, `ambition/`, `plan/`, `evolution/`) maintains a root `index.md` file summarizing its contents in reverse chronological order (newest date first).
 
 ### When modifying or creating a `.cape` file, agents MUST:
-1. Parse the newly created or updated file's header (`# Title`, `**Date:**`, `**Status:**` or summary).
-2. Open the corresponding `.cape/<category>/index.md`.
-3. Insert or update the entry in the markdown table.
-4. Ensure the table rows remain strictly sorted by date descending (youngest on top).
+1. Ensure the new file defines `# <Title>`, `**Date:** YYYY-MM-DD`, `**Status:** <status>`, and `**Summary:** <1-line summary>`.
+2. Run the deterministic indexing command:
+   ```bash
+   npm run cape:index
+   ```
+   (This parses all metadata and deterministically regenerates and sorts all `index.md` tables).
+3. Verify that the relevant `index.md` is cleanly updated.
 
 ### Standard Table Schema:
 ```markdown
-| Date | Document | Summary | Status / Category |
+| Date | Document | Summary | Status |
 | :--- | :--- | :--- | :--- |
-| YYYY-MM-DD | [Title](file.md) | 1-line factual summary | Active / Draft / Complete |
+| YYYY-MM-DD | [Title](file.md) | 1-line factual summary | Active / Complete / In Progress |
 ```
 
 ---
