@@ -1,7 +1,7 @@
 # .CAPE + Superpowers Multi-Agent Collaboration Implementation Plan
 
 **Date:** 2026-10-19  
-**Status:** In Progress  
+**Status:** Complete  
 **Summary:** Implementation plan for .cape and superpowers integration, deterministic indexing, and universal agent directives.  
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
@@ -42,7 +42,7 @@
 - Consumes: `.cape/{context,ambition,plan,evolution}/*.md` files.
 - Produces: Updated `.cape/{context,ambition,plan,evolution}/index.md` files with sorted Markdown tables.
 
-- [ ] **Step 1: Write `scripts/update-cape-index.mjs`**
+- [x] **Step 1: Write `scripts/update-cape-index.mjs`**
 
 Implement ESM script that:
 1. Iterates over the 4 categories: `context`, `ambition`, `plan`, `evolution`.
@@ -54,12 +54,12 @@ Implement ESM script that:
    `| Date | Document | Summary | Status / Category |`
 7. Normalizes link paths with forward slashes.
 
-- [ ] **Step 2: Run script and inspect generated `index.md` files**
+- [x] **Step 2: Run script and inspect generated `index.md` files**
 
 Run: `node scripts/update-cape-index.mjs`  
 Expected: All 4 `index.md` files updated with sorted tables and clean column padding.
 
-- [ ] **Step 3: Commit indexing script**
+- [x] **Step 3: Commit indexing script**
 
 ```bash
 git add scripts/update-cape-index.mjs
@@ -77,18 +77,18 @@ git commit -m "feat(cape): add deterministic index generator script"
 - Consumes: `scripts/update-cape-index.mjs`
 - Produces: `npm run cape:index` and updated `npm run verify`
 
-- [ ] **Step 1: Add `cape:index` and `verify` scripts to `package.json`**
+- [x] **Step 1: Add `cape:index` and `verify` scripts to `package.json`**
 
 Add scripts:
 - `"cape:index": "node scripts/update-cape-index.mjs"`
 - `"verify": "npm run cape:index && tsc -b && vite build"`
 
-- [ ] **Step 2: Run `npm run verify` to test build and index generation**
+- [x] **Step 2: Run `npm run verify` to test build and index generation**
 
 Run: `npm run verify`  
 Expected: TypeScript compiles cleanly (`tsc -b`), Vite production build completes in `dist/`, and `.cape` indices are regenerated.
 
-- [ ] **Step 3: Commit `package.json` updates**
+- [x] **Step 3: Commit `package.json` updates**
 
 ```bash
 git add package.json
@@ -108,7 +108,7 @@ git commit -m "chore: add cape:index and verify scripts to package.json"
 - Consumes: Specifications from `.cape/context/2026-10-19-cape-superpowers-integration-design.md`
 - Produces: Cross-harness configuration directing all agents to `.cape/context/`, `.cape/plan/`, and zero-overhead bounded task rules.
 
-- [ ] **Step 1: Create `AGENTS.md`**
+- [x] **Step 1: Create `AGENTS.md`**
 
 Include:
 1. **Pre-flight Ingestion:** Mandatory reading of `.cape/context/2026-10-09-architecture.md`, `2026-10-09-repo-structure.md`, and `2026-10-11-style-and-sensitivity.md`.
@@ -116,11 +116,11 @@ Include:
 3. **Routing Standards:** Design specs $\rightarrow$ `.cape/context/`, plans $\rightarrow$ `.cape/plan/`, retrospectives $\rightarrow$ `.cape/evolution/`.
 4. **Verification Protocol:** Mandatory `npm run verify` before PR submission.
 
-- [ ] **Step 2: Create `CLAUDE.md` and `GEMINI.md` with transparent pointers to `AGENTS.md`**
+- [x] **Step 2: Create `CLAUDE.md` and `GEMINI.md` with transparent pointers to `AGENTS.md`**
 
 Ensure Claude Code and Gemini CLI automatically load `AGENTS.md`.
 
-- [ ] **Step 3: Commit root agent instruction files**
+- [x] **Step 3: Commit root agent instruction files**
 
 ```bash
 git add AGENTS.md CLAUDE.md GEMINI.md
@@ -141,19 +141,19 @@ git commit -m "feat(agents): add universal harness-agnostic agent directives"
 - Consumes: `.cape` path conventions.
 - Produces: Ready-to-run Superpowers skills pointing to `.cape/` out of the box.
 
-- [ ] **Step 1: Update `brainstorming/SKILL.md` default spec path**
+- [x] **Step 1: Update `brainstorming/SKILL.md` default spec path**
 
 Replace `docs/superpowers/specs/YYYY-MM-DD-<topic>-design.md` with `.cape/context/YYYY-MM-DD-<topic>-design.md`.
 
-- [ ] **Step 2: Update `writing-plans/SKILL.md` default plan path**
+- [x] **Step 2: Update `writing-plans/SKILL.md` default plan path**
 
 Replace `docs/superpowers/plans/YYYY-MM-DD-<feature-name>.md` with `.cape/plan/YYYY-MM-DD-<feature-name>.md`.
 
-- [ ] **Step 3: Update `cape-keeper/SKILL.md` to run `npm run cape:index`**
+- [x] **Step 3: Update `cape-keeper/SKILL.md` to run `npm run cape:index`**
 
 Instruct agents to run `npm run cape:index` rather than manual markdown table surgery.
 
-- [ ] **Step 4: Stage and commit all skills in `.agents/skills/`**
+- [x] **Step 4: Stage and commit all skills in `.agents/skills/`**
 
 Verify git status excludes `.agents/rules/local-*` and commit all skills.
 
@@ -173,7 +173,7 @@ git commit -m "feat(skills): realign superpowers skills to .cape and track share
 - Consumes: Brainstorming rationale and decisions.
 - Produces: Permanent ADR documenting why and how Superpowers and `.cape` converged.
 
-- [ ] **Step 1: Author `.cape/evolution/2026-10-19-cape-superpowers-integration.md`**
+- [x] **Step 1: Author `.cape/evolution/2026-10-19-cape-superpowers-integration.md`**
 
 Document:
 - Context of PR #1 and commit `9b514a9`.
@@ -181,12 +181,12 @@ Document:
 - Proportional task sizing rationale (zero `.cape` overhead for bounded tasks).
 - Tooling decision: `scripts/update-cape-index.mjs`.
 
-- [ ] **Step 2: Regenerate indices**
+- [x] **Step 2: Regenerate indices**
 
 Run: `npm run cape:index`  
 Expected: `.cape/evolution/index.md` captures the new record.
 
-- [ ] **Step 3: Commit evolution record and index updates**
+- [x] **Step 3: Commit evolution record and index updates**
 
 ```bash
 git add .cape/evolution/ .cape/context/index.md .cape/plan/index.md
