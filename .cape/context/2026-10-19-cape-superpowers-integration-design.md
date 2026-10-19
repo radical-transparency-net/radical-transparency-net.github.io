@@ -3,6 +3,7 @@
 **Status:** Approved  
 **Date:** 2026-10-19  
 **Category:** Context / Architecture  
+**Summary:** Specification establishing the Harmonized Protocol between .cape and superpowers for multi-agent workflows.  
 **Target Repository:** `radical-transparency-net.github.io`  
 **Related Pull Request:** [#1: Feat/cape init](https://github.com/radical-transparency-net/radical-transparency-net.github.io/pull/1)  
 **Authors:** Cedric D (`cedricd`), Marc Portier (`mpo-vliz`), Antigravity Agent  

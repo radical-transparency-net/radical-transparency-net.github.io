@@ -1,5 +1,9 @@
 # .CAPE + Superpowers Multi-Agent Collaboration Implementation Plan
 
+**Date:** 2026-10-19  
+**Status:** In Progress  
+**Summary:** Implementation plan for .cape and superpowers integration, deterministic indexing, and universal agent directives.  
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Implement the Harmonized Protocol between `.cape` and the Superpowers agent ecosystem: build a deterministic CLI indexer (`npm run cape:index`), establish the universal root agent entrypoint (`AGENTS.md`, `CLAUDE.md`, `GEMINI.md`), align skill path defaults, record the evolutionary ADR, and verify the entire pre-flight pipeline.
