@@ -4,7 +4,7 @@
 **Date:** 2026-10-08  
 **Repository Target:** `radical-transparency-net.github.io`  
 **Primary Baseline:** [eosc-semantic-interop/if-solutions-proposals](https://github.com/eosc-semantic-interop/if-solutions-proposals/tree/main/proposals/radical-transparency)  
-**Mockup Baseline:** `material_RT_site/` (`stitch_radical_transparency_gateway (1)` through `(4)`)
+**Mockup Baseline:** `.material/site-design-stitch/` (`stitch_radical_transparency_gateway (1)` through `(4)`)
 
 ---
 
@@ -15,7 +15,7 @@ The **Radical Transparency Network** portal serves as the primary gateway into t
 2. **Tooling & Specifications:** Ready-to-run tooling, conformity profiles, linksets, and validation playgrounds.
 3. **Training & Mobilization:** Playbooks for institutions, domain scientists, and champions, plus strategic communications and release roadmaps.
 
-To ensure long-term maintainability while honoring the mockups provided in `material_RT_site`, all UI structures are strictly componentized, with content and placeholders (Lorem Ipsum) completely decoupled into typed data modules.
+To ensure long-term maintainability while honoring the mockups provided in `.material/site-design-stitch/`, all UI structures are strictly componentized, with content and placeholders (Lorem Ipsum) completely decoupled into typed data modules.
 
 ---
 
