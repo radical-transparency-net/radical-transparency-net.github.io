@@ -12,11 +12,98 @@ export interface SiteConfig {
   tagline: string;
   description: string;
   githubUrl: string;
+  orgUrl: string;
+  respecUrl: string;
   proposalsUrl: string;
   version: string;
   specStatus: string;
   license: string;
   navLinks: NavLinkItem[];
+}
+
+export interface TriageDoorItem {
+  id: string;
+  number: string;
+  category: string;
+  icon: string;
+  title: string;
+  description: string;
+  checkpoints: string[];
+  cta: string;
+  ctaPath: string;
+  accentVariant: 'teal' | 'secondary' | 'primary';
+}
+
+export interface PatternItem {
+  id: string;
+  code: string;
+  title: string;
+  shortSummary: string;
+  goal: string;
+  motivation: string;
+  cautionNote?: string;
+  svgPath?: string;
+  textDiagram?: string;
+  encodingTitle: string;
+  encodingLanguage: string;
+  encodingSnippet: string;
+  linkRelations: string[];
+  standards: string[];
+  relatedPatternIds: string[];
+  respecUrl: string;
+  githubSourceUrl: string;
+}
+
+export interface ToolItem {
+  id: string;
+  name: string;
+  tagline: string;
+  status: string;
+  category: string;
+  summary: string;
+  description: string;
+  capabilities: string[];
+  quickstartTitle: string;
+  quickstartLanguage: string;
+  quickstartSnippet: string;
+  relatedPatternIds: string[];
+  repoUrl: string;
+  liveUrl?: string;
+}
+
+export interface SemanticAssetRepresentation {
+  label: string;
+  format: string;
+  url: string;
+}
+
+export interface SemanticAsset {
+  id: string;
+  prefix: string;
+  name: string;
+  version: string;
+  status: string;
+  namespaceUri: string;
+  docsUrl: string;
+  repoUrl: string;
+  description: string;
+  terms: {
+    classes: string[];
+    properties: string[];
+  };
+  representations: SemanticAssetRepresentation[];
+  notes: string;
+}
+
+export interface CommunityResource {
+  id: string;
+  title: string;
+  category: string;
+  description: string;
+  icon: string;
+  url: string;
+  ctaLabel: string;
+  isExternal: boolean;
 }
 
 export interface StatItem {

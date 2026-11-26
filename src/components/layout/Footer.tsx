@@ -1,4 +1,5 @@
 import React from 'react';
+import { siteConfig } from '../../data/siteConfig';
 
 export const Footer: React.FC = () => {
   return (
@@ -7,7 +8,7 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter-desktop mb-space-xl">
           {/* Brand & VLIZ Organization Column */}
           <div className="lg:col-span-2 flex flex-col gap-space-md pr-space-lg">
-            <div className="flex items-center gap-space-sm">
+            <div className="flex items-center gap-space-md">
               <a
                 href="https://vliz.be/en"
                 target="_blank"
@@ -23,86 +24,85 @@ export const Footer: React.FC = () => {
               </a>
             </div>
             <p className="text-body-md font-body-md text-on-surface-variant leading-relaxed max-w-md">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+              Radical Transparency Network is developed at the Flanders Marine Institute (VLIZ) to make web-scale semantic interoperability explicit, verifiable, and measurable using open IETF and W3C standards.
             </p>
-            {/* Lorem Ipsumified Pills */}
             <div className="flex flex-wrap items-center gap-space-xs">
               <span className="px-space-sm py-0.5 rounded bg-surface-container text-on-tertiary-container font-badge-caps text-badge-caps uppercase tracking-wider">
-                Lorem Ipsum A
+                Declare · Verify · Quantify
               </span>
               <span className="px-space-sm py-0.5 rounded bg-surface-container text-secondary font-badge-caps text-badge-caps uppercase tracking-wider">
-                Lorem Ipsum B
+                RFC 8288 / 9264
               </span>
               <span className="px-space-sm py-0.5 rounded bg-surface-container text-on-surface font-badge-caps text-badge-caps uppercase tracking-wider">
-                Lorem Ipsum C
+                {siteConfig.license}
               </span>
             </div>
           </div>
 
-          {/* Links Column 1 (Lorem Ipsum) */}
+          {/* Column 1: Specifications */}
           <div className="flex flex-col gap-space-sm">
             <span className="font-title-md text-title-md text-on-surface mb-space-xs font-semibold">
-              Lorem Section I
+              Specifications
             </span>
-            <a href="#/theory" className="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors">
-              Lorem ipsum dolor 01
+            <a href="#/patterns" className="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors">
+              Patterns Overview (RT-P01–10)
             </a>
-            <a href="#/theory" className="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors">
-              Lorem ipsum dolor 02
+            <a
+              href={siteConfig.respecUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+            >
+              ReSpec Specification
             </a>
-            <a href="#/theory" className="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors">
-              Lorem ipsum dolor 03
-            </a>
-            <a href="#/theory" className="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors">
-              Lorem ipsum dolor 04
+            <a href="#/semantic-assets" className="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors">
+              Semantic Assets (rtwl:)
             </a>
           </div>
 
-          {/* Links Column 2 (Lorem Ipsum) */}
+          {/* Column 2: Beta Tooling */}
           <div className="flex flex-col gap-space-sm">
             <span className="font-title-md text-title-md text-on-surface mb-space-xs font-semibold">
-              Lorem Section II
+              Beta Tooling
             </span>
-            <a href="#/community" className="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors">
-              Lorem consectetuer 01
+            <a href="#/tools" className="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors">
+              Tools Overview
             </a>
-            <a href="#/community" className="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors">
-              Lorem consectetuer 02
+            <a href="#/tools/webmap-er" className="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors">
+              webmap-ER (Beta)
             </a>
-            <a href="#/community" className="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors">
-              Lorem consectetuer 03
+            <a href="#/tools/lod-docker-webserver" className="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors">
+              lod_docker_webserver (Beta)
             </a>
-            <a href="#/community" className="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors">
-              Lorem consectetuer 04
+            <a href="#/tools/wrx" className="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors">
+              wrx Extractor (Beta)
             </a>
           </div>
 
-          {/* Newsletter Column */}
+          {/* Column 3: Network */}
           <div className="flex flex-col gap-space-sm">
             <span className="font-title-md text-title-md text-on-surface mb-space-xs font-semibold">
-              Lorem Newsletter
+              Network
             </span>
-            <p className="text-body-sm font-body-sm text-on-surface-variant mb-space-xs">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.
-            </p>
-            <form className="flex flex-col gap-space-xs" onSubmit={(e) => e.preventDefault()}>
-              <div className="flex items-center gap-space-xs">
-                <input
-                  className="h-9 px-space-sm rounded bg-surface-container text-on-surface placeholder:text-outline text-body-sm font-body-sm w-full focus:outline-none focus:ring-2 focus:ring-secondary/20 border border-outline-variant/30"
-                  placeholder="lorem.ipsum@vliz.be"
-                  type="email"
-                />
-                <button
-                  className="h-9 px-space-md rounded bg-primary text-on-primary font-body-sm text-body-sm font-medium hover:bg-inverse-surface transition-colors shrink-0"
-                  type="submit"
-                >
-                  Join
-                </button>
-              </div>
-              <span className="text-[11px] text-outline">
-                VLIZ Legal Notice & Privacy Policy apply.
-              </span>
-            </form>
+            <a
+              href={siteConfig.orgUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+            >
+              GitHub Organization
+            </a>
+            <a href="#/community" className="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors">
+              Community &amp; Origins
+            </a>
+            <a
+              href="https://github.com/radical-transparency-net/visuals-branding-design"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-body-md font-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+            >
+              Visual Branding Assets
+            </a>
           </div>
         </div>
 
@@ -116,13 +116,12 @@ export const Footer: React.FC = () => {
               rel="noopener noreferrer"
               className="text-on-surface-variant hover:underline font-medium"
             >
-              Legal Notice & Privacy Policy
+              Legal Notice &amp; Privacy Policy
             </a>
           </p>
-          <div className="flex items-center gap-space-lg">
-            <span className="hover:text-on-surface cursor-pointer transition-colors">Lorem Notice</span>
-            <span className="hover:text-on-surface cursor-pointer transition-colors">Lorem Accessibility</span>
-            <span className="hover:text-on-surface cursor-pointer transition-colors">Lorem Statement</span>
+          <div className="flex items-center gap-space-lg font-label-code-sm text-label-code-sm">
+            <span>{siteConfig.version}</span>
+            <span>{siteConfig.license}</span>
           </div>
         </div>
       </div>

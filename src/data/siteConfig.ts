@@ -1,18 +1,22 @@
 import { SiteConfig } from '../types';
 
 export const siteConfig: SiteConfig = {
-  title: "(DRAFT) Radical Transparency",
-  tagline: "(DRAFT) Radical Transparency in Semantic Interoperability",
-  description: "(DRAFT) Accelerating open science through unambiguous data provenance, verifiable linksets, conformity profiles, and transparent semantic alignment across research infrastructures.",
-  githubUrl: "https://github.com/eosc-semantic-interop/if-solutions-proposals",
+  title: "Radical Transparency",
+  tagline: "Radical Transparency Linkset Usage Patterns",
+  description:
+    "Making semantic interoperability explicit, verifiable, and measurable through web-linking patterns (RT-P01 to RT-P10), beta extraction and validation tools, and dereferenceable RDF vocabularies.",
+  githubUrl: "https://github.com/radical-transparency-net",
+  orgUrl: "https://github.com/radical-transparency-net",
+  respecUrl: "https://radical-transparency-net.github.io/spec-linkset-usage-patterns/",
   proposalsUrl: "https://github.com/eosc-semantic-interop/if-solutions-proposals/tree/main/proposals/radical-transparency",
-  version: "v2.4-STABLE",
-  specStatus: "(DRAFT) Schema Active",
-  license: "CC-BY 4.0 Open Spec",
+  version: "Declare v1.0",
+  specStatus: "Active Specification",
+  license: "CC-BY 4.0",
   navLinks: [
-    { label: "(DRAFT) Triage & Explore", path: "/" },
-    { label: "(DRAFT) What is Radical Transparency?", path: "/theory" },
-    { label: "(DRAFT) Developer Hub & Tooling", path: "/developer" },
-    { label: "(DRAFT) Knowledge & Community", path: "/community" },
+    { label: "Home", path: "/" },
+    { label: "Patterns", path: "/patterns" },
+    { label: "Tools", path: "/tools" },
+    { label: "Semantic Assets", path: "/semantic-assets" },
+    { label: "Community", path: "/community" },
   ],
 };
