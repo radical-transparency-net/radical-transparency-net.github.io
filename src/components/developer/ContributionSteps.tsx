@@ -6,18 +6,18 @@ export const ContributionSteps: React.FC = () => {
     <section className="w-full">
       <div className="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm border border-surface-container-high/40">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
-          {/* Steps content (8 cols) - Lorem Ipsumified */}
+          {/* Steps content (8 cols) */}
           <div className="lg:col-span-8 flex flex-col gap-space-md">
             <div className="flex items-center gap-space-xs">
               <span className="px-space-sm py-0.5 rounded bg-surface-container-high text-secondary font-badge-caps text-badge-caps uppercase tracking-wider font-semibold">
-                (DRAFT) Lorem Governance Protocol
+                Open Governance
               </span>
             </div>
             <h2 className="font-headline-lg text-headline-lg text-on-surface font-bold">
-              (DRAFT) Lorem Ipsum: Contribution Guidelines
+              Contribution Guidelines
             </h2>
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque euismod venenatis. Mauris sit amet massa vitae tortor sodales tincidunt.
+              Submit pattern refinements, tooling fixes, and vocabulary updates via GitHub pull requests.
             </p>
 
             {/* Step Progression Grid */}
@@ -28,11 +28,11 @@ export const ContributionSteps: React.FC = () => {
                     1
                   </span>
                   <span className="font-title-md text-title-md text-on-surface font-semibold">
-                    Lorem Step 1
+                    Open Issue
                   </span>
                 </div>
                 <p className="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.
+                  Describe the pattern edge case, protocol detail, or tool behavior in the relevant repository.
                 </p>
               </div>
 
@@ -42,11 +42,11 @@ export const ContributionSteps: React.FC = () => {
                     2
                   </span>
                   <span className="font-title-md text-title-md text-on-surface font-semibold">
-                    Lorem Step 2
+                    Verify Locally
                   </span>
                 </div>
                 <p className="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
+                  Validate link headers, linksets, or TypeScript builds before proposing changes.
                 </p>
               </div>
 
@@ -56,11 +56,11 @@ export const ContributionSteps: React.FC = () => {
                     3
                   </span>
                   <span className="font-title-md text-title-md text-on-surface font-semibold">
-                    Lorem Step 3
+                    Submit PR
                   </span>
                 </div>
                 <p className="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
-                  Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia.
+                  Open a pull request referencing the relevant RT-Pattern or specification section.
                 </p>
               </div>
             </div>
@@ -74,15 +74,15 @@ export const ContributionSteps: React.FC = () => {
               </span>
               <div className="flex flex-col">
                 <span className="font-title-md text-title-md text-on-surface font-semibold">
-                  Lorem Proposals
+                  Open Repositories
                 </span>
                 <span className="font-label-code-sm text-label-code-sm text-outline font-mono text-xs">
-                  lorem-open-source/repo
+                  radical-transparency-net
                 </span>
               </div>
             </div>
             <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+              Specifications, tooling, and semantic assets are coordinated in the public GitHub organization.
             </p>
             <div className="flex flex-col gap-2 pt-space-xs">
               <a
@@ -92,7 +92,7 @@ export const ContributionSteps: React.FC = () => {
                 rel="noopener noreferrer"
               >
                 <span className="material-symbols-outlined text-[18px]">add_circle</span>
-                <span>Open Lorem Pull Request</span>
+                <span>Open GitHub Organization</span>
               </a>
               <a
                 className="w-full inline-flex items-center justify-center gap-1 text-center font-body-sm text-body-sm text-secondary hover:underline py-1 font-medium"
@@ -100,7 +100,7 @@ export const ContributionSteps: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span>Read Lorem Guidelines</span>
+                <span>View Incubator Archive</span>
                 <span className="material-symbols-outlined text-[16px]">arrow_outward</span>
               </a>
             </div>

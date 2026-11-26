@@ -23,13 +23,13 @@ export const RoleFinder: React.FC = () => {
         <div>
           <div className="flex items-center gap-space-xs font-badge-caps text-badge-caps uppercase tracking-wider text-secondary mb-space-xs font-semibold">
             <span className="material-symbols-outlined text-[15px]">tune</span>
-            (DRAFT) Tailored Workflow Engine
+            Tailored Workflow Engine
           </div>
           <h2 className="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">
-            (DRAFT) Instant Role Finder
+            Role Finder
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant mt-1">
-            (DRAFT) Select your scientific or technical capacity to reveal immediate, actionable starting points.
+            Select your scientific or technical capacity to reveal starting points.
           </p>
         </div>
 
@@ -149,7 +149,7 @@ export const RoleFinder: React.FC = () => {
                 auto_stories
               </span>
               <span className="font-title-md text-title-md text-on-surface font-semibold">
-                (DRAFT) Curated Fast-Track
+                Curated Fast-Track
               </span>
             </div>
 
@@ -255,7 +255,7 @@ export const RoleFinder: React.FC = () => {
             to="/community"
             className="mt-space-md w-full inline-flex items-center justify-center py-2.5 rounded bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-inverse-surface transition-colors shadow-sm"
           >
-            (DRAFT) Download Role Handbook
+            View Community Resources
           </Link>
         </div>
       </div>

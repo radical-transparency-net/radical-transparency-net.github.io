@@ -7,14 +7,14 @@ export const PillarsGrid: React.FC = () => {
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-space-md">
         <div>
           <span className="font-badge-caps text-badge-caps text-secondary uppercase tracking-wider font-semibold">
-            (DRAFT) Foundations
+            Foundations
           </span>
           <h2 className="text-headline-lg font-headline-lg text-on-surface font-bold">
-            (DRAFT) Core Tenets & Pillars
+            Core Tenets &amp; Pillars
           </h2>
         </div>
         <p className="text-body-sm font-body-sm text-on-surface-variant max-w-md">
-          (DRAFT) Four operational requirements defining compliance with semantic interoperability frameworks.
+          Four operational principles supporting explicit, verifiable, and measurable interoperability.
         </p>
       </div>
 

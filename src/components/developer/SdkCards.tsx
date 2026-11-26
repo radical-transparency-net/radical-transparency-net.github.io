@@ -16,14 +16,14 @@ export const SdkCards: React.FC = () => {
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
         <div className="flex flex-col">
           <span className="font-label-code-sm text-label-code-sm text-secondary uppercase tracking-wider font-semibold">
-            (DRAFT) Lorem Toolchains
+            Beta Toolchains
           </span>
           <h2 className="font-headline-lg text-headline-lg text-on-surface font-bold">
-            (DRAFT) Lorem Ipsum: Client Libraries
+            Ecosystem Tools &amp; Libraries
           </h2>
         </div>
         <p className="font-body-md text-body-md text-on-surface-variant max-w-md">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
+          Early-stage tooling implementing Radical Transparency extraction, testing, and visual diagnostics.
         </p>
       </div>
 
@@ -65,10 +65,10 @@ export const SdkCards: React.FC = () => {
             </div>
 
             <div className="flex items-center justify-between text-body-sm font-body-sm pt-space-xs border-t border-surface-container-high/30">
-              <span className="text-secondary font-semibold hover:underline flex items-center gap-1 cursor-pointer">
-                <span>Lorem Docs</span>
+              <a href={sdk.docsUrl} className="text-secondary font-semibold hover:underline flex items-center gap-1">
+                <span>View Tool</span>
                 <span className="material-symbols-outlined text-[16px]">chevron_right</span>
-              </span>
+              </a>
               <span className="text-outline text-label-code-sm font-label-code-sm text-xs font-mono">
                 {sdk.badgeText}
               </span>

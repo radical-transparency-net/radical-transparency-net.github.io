@@ -7,13 +7,13 @@ export const PlaybookTracks: React.FC = () => {
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-sm border-b border-surface-container-high/40">
         <div>
           <span className="font-badge-caps text-badge-caps text-secondary uppercase tracking-widest font-semibold">
-            (DRAFT) Track 01 • Capacity Building
+            Track 01 • Capacity Building
           </span>
           <h2 className="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">
-            (DRAFT) Educational & Community Enablement
+            Educational &amp; Community Enablement
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed">
-            (DRAFT) Structured, role-tailored tooling to bridge high-level policy with machine-actionable FAIR execution.
+            Role-tailored guidance connecting high-level policy with machine-actionable FAIR execution.
           </p>
         </div>
         <div className="flex items-center gap-space-xs">

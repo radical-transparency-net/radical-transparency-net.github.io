@@ -8,13 +8,13 @@ export const ComparisonMatrix: React.FC = () => {
     <section className="flex flex-col gap-space-lg" id="matrix-breakdown">
       <div className="flex flex-col gap-space-xs">
         <span className="font-badge-caps text-badge-caps text-secondary uppercase tracking-wider font-semibold">
-          (DRAFT) Comparative Architecture
+          Comparative Architecture
         </span>
         <h2 className="text-headline-lg font-headline-lg text-on-surface font-bold">
-          (DRAFT) From Ambiguity to Clarity
+          From Ambiguity to Clarity
         </h2>
         <p className="text-body-md font-body-md text-on-surface-variant max-w-2xl leading-relaxed">
-          (DRAFT) Observe how the Radical Transparency Model eliminates systematic points of failure inherent in conventional closed-source crosswalks.
+          Compare implicit crosswalk assumptions against explicit, machine-verifiable web-linking declarations.
         </p>
       </div>
 

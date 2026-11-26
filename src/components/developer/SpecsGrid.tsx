@@ -7,14 +7,14 @@ export const SpecsGrid: React.FC = () => {
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
         <div className="flex flex-col">
           <span className="font-label-code-sm text-label-code-sm text-secondary uppercase tracking-wider font-semibold">
-            (DRAFT) Lorem Standards
+            Open Standards
           </span>
           <h2 className="font-headline-lg text-headline-lg text-on-surface font-bold">
-            (DRAFT) Core Technical Specifications
+            Core Technical Specifications
           </h2>
         </div>
         <p className="font-body-md text-body-md text-on-surface-variant max-w-md">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque euismod venenatis.
+          Foundational RFC and W3C web-linking patterns powering the Declare layer.
         </p>
       </div>
 
@@ -44,7 +44,7 @@ export const SpecsGrid: React.FC = () => {
               </p>
 
               <div className="bg-surface-container-low rounded-lg p-space-sm mb-space-md font-label-code-sm text-label-code-sm text-on-surface-variant flex flex-col gap-1 border border-surface-container-high/30">
-                <span className="text-outline uppercase text-[10px] font-semibold">Lorem Target Profile</span>
+                <span className="text-outline uppercase text-[10px] font-semibold">Target URI</span>
                 <span className="text-on-surface font-semibold truncate font-mono">
                   {spec.targetUri}
                 </span>
@@ -56,11 +56,11 @@ export const SpecsGrid: React.FC = () => {
                 className="font-body-sm text-body-sm font-semibold text-secondary hover:underline flex items-center gap-1"
                 href={spec.specUrl}
               >
-                <span>Lorem Schema Spec</span>
+                <span>Open Specification</span>
                 <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
               </a>
               <span className="font-badge-caps text-badge-caps uppercase text-outline">
-                Lorem Verified
+                RT Spec
               </span>
             </div>
           </div>

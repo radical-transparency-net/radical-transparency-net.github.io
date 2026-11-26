@@ -4,7 +4,7 @@ import { sampleLineageTurtle } from '../../data/theory';
 
 export const LineageInspector: React.FC = () => {
   const [copied, setCopied] = useState(false);
-  const purl = 'http://example.org/lorem/linkset/sample-01';
+  const purl = 'https://w3id.org/rt/ns/weblink#';
 
   const handleCopy = () => {
     navigator.clipboard.writeText(purl).then(() => {
@@ -15,7 +15,7 @@ export const LineageInspector: React.FC = () => {
 
   return (
     <div className="flex flex-col gap-space-xl">
-      {/* Live PURL Inspector - Lorem Ipsumified */}
+      {/* Live PURL Inspector */}
       <section className="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm border border-surface-container-high/40 flex flex-col gap-space-md">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
           <div className="flex items-center gap-space-sm">
@@ -23,11 +23,11 @@ export const LineageInspector: React.FC = () => {
               terminal
             </span>
             <h2 className="text-title-md font-title-md text-on-surface font-semibold">
-              Lorem Ipsum: Inspect a Radically Transparent Linkset Declaration
+              Inspect a Reified Web Link Declaration (rtwl:)
             </h2>
           </div>
           <span className="px-space-xs py-0.5 rounded bg-surface-container-high text-secondary font-label-code-sm text-label-code-sm border border-outline-variant/30 font-medium">
-            Lorem RDF / Turtle Preview
+            RDF / Turtle Preview
           </span>
         </div>
 
@@ -41,11 +41,11 @@ export const LineageInspector: React.FC = () => {
           <div className="flex items-center gap-space-md">
             <span className="flex items-center gap-1 text-on-tertiary-container font-medium">
               <span className="material-symbols-outlined text-[16px]">check_circle</span>
-              Lorem SHACL Shape Conforming
+              RFC 8288 / 9264 Reification
             </span>
             <span className="flex items-center gap-1">
               <span className="material-symbols-outlined text-[16px]">key</span>
-              Signed: Lorem-CA-2026
+              Namespace: rtwl (v0.1.0-draft)
             </span>
           </div>
 
@@ -56,7 +56,7 @@ export const LineageInspector: React.FC = () => {
             <span className="material-symbols-outlined text-[14px]">
               {copied ? 'check' : 'content_copy'}
             </span>
-            <span>{copied ? 'Lorem PURL Copied!' : 'Copy Lorem Resolvable PURL'}</span>
+            <span>{copied ? 'Namespace Copied!' : 'Copy rtwl: Namespace URI'}</span>
           </button>
         </div>
       </section>
@@ -65,67 +65,65 @@ export const LineageInspector: React.FC = () => {
       <section className="flex flex-col gap-space-md">
         <div className="flex flex-col gap-space-xs">
           <span className="font-badge-caps text-badge-caps text-secondary uppercase tracking-wider font-semibold">
-            (DRAFT) Continuous Path
+            Next Steps
           </span>
           <h2 className="text-headline-md font-headline-md text-on-surface font-bold">
-            (DRAFT) Operationalize Radical Transparency
+            Apply Radical Transparency
           </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter-desktop">
-          {/* Callout 1 */}
           <div className="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm border border-surface-container-high/40 flex flex-col justify-between gap-space-lg">
             <div className="flex flex-col gap-space-sm">
               <div className="flex items-center justify-between">
                 <span className="px-space-xs py-0.5 rounded bg-surface-container-high text-secondary font-badge-caps text-badge-caps uppercase font-semibold">
-                  (DRAFT) Specification Guide
+                  Specification
                 </span>
                 <span className="material-symbols-outlined text-outline text-[20px]">
                   description
                 </span>
               </div>
               <h3 className="text-headline-sm font-headline-sm text-on-surface font-bold">
-                (DRAFT) Conformity Profiles Architecture
+                Linkset Usage Patterns
               </h3>
               <p className="text-body-md font-body-md text-on-surface-variant leading-relaxed">
-                (DRAFT) Read how <code className="font-label-code-sm text-secondary font-mono">conformity-profiles.md</code> formalizes syntactic and semantic invariants with executable SHACL test suites.
+                Explore RT-P01 through RT-P10 for concrete HTTP Link header, RFC 9264 linkset, and sitemap recipes.
               </p>
             </div>
             <div className="flex items-center justify-between pt-space-md border-t border-surface-container-high/30">
               <Link
-                to="/developer"
+                to="/patterns"
                 className="inline-flex items-center gap-1.5 px-space-md py-2 rounded bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-inverse-surface transition-colors shadow-sm"
               >
-                <span>(DRAFT) Read Conformity Profiles</span>
+                <span>Browse RT-Patterns</span>
                 <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
               </Link>
             </div>
           </div>
 
-          {/* Callout 2 */}
           <div className="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm border border-surface-container-high/40 flex flex-col justify-between gap-space-lg">
             <div className="flex flex-col gap-space-sm">
               <div className="flex items-center justify-between">
                 <span className="px-space-xs py-0.5 rounded bg-surface-container text-on-tertiary-container font-badge-caps text-badge-caps uppercase font-semibold">
-                  (DRAFT) Developer SDK
+                  Beta Tooling
                 </span>
                 <span className="material-symbols-outlined text-outline text-[20px]">
                   terminal
                 </span>
               </div>
               <h3 className="text-headline-sm font-headline-sm text-on-surface font-bold">
-                (DRAFT) Developer Hub & Tooling
+                Ecosystem Tools
               </h3>
               <p className="text-body-md font-body-md text-on-surface-variant leading-relaxed">
-                (DRAFT) Integrate CLI and workflows to validate linksets on pull request and verify PURL resolution uptime automatically.
+                Explore webmap-ER, lod_docker_webserver, and wrx in active beta development.
               </p>
             </div>
             <div className="flex items-center justify-between pt-space-md border-t border-surface-container-high/30">
               <Link
-                to="/developer"
+                to="/tools"
                 className="inline-flex items-center gap-1.5 px-space-md py-2 rounded bg-secondary text-on-secondary font-body-sm text-body-sm font-semibold hover:bg-secondary-container transition-colors shadow-sm"
               >
-                <span>(DRAFT) Explore Developer Tooling</span>
+                <span>Explore Beta Tooling</span>
                 <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
               </Link>
             </div>

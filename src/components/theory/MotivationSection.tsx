@@ -5,13 +5,13 @@ export const MotivationSection: React.FC = () => {
     <section className="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm border border-surface-container-high/40 flex flex-col gap-space-lg">
       <div className="flex flex-col gap-space-xs">
         <span className="font-badge-caps text-badge-caps text-secondary uppercase tracking-wider font-semibold">
-          (DRAFT) Strategic Directive
+          Strategic Rationale
         </span>
         <h2 className="text-headline-lg font-headline-lg text-on-surface font-bold">
-          (DRAFT) Ecosystem Connection & Motivation
+          Ecosystem Connection &amp; Motivation
         </h2>
         <p className="text-body-lg font-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
-          (DRAFT) Extracted and synthesized from the official <code className="font-label-code-md text-label-code-md text-secondary">motivation.md</code> specifications of the Semantic Interoperability Task Force.
+          Grounded in the Radical Transparency interoperability architecture across EOSC, OGC, CODATA/CDIF, and FAIR Signposting.
         </p>
       </div>
 

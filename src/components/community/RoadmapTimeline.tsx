@@ -38,13 +38,13 @@ export const RoadmapTimeline: React.FC = () => {
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-sm border-b border-surface-container-high/40">
         <div>
           <span className="font-badge-caps text-badge-caps text-secondary uppercase tracking-widest font-semibold">
-            (DRAFT) Track 02 • Strategic Governance
+            Track 02 • Governance
           </span>
           <h2 className="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">
-            (DRAFT) The Radical Transparency Strategic Roadmap
+            The Radical Transparency Roadmap
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed max-w-3xl">
-            (DRAFT) A transparent, timeline-backed dissemination strategy tracking milestone deliverables across research infrastructures.
+            Milestone tracking across specifications, extraction tooling, and dereferenceable semantic assets.
           </p>
         </div>
 
