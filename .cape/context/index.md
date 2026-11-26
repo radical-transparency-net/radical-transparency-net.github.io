@@ -8,6 +8,8 @@ Practical agreements, architectural baselines, contributor profiles, and ecosyst
 
 | Date | Document | Summary | Status |
 | :--- | :--- | :--- | :--- |
+| 2026-11-26 | [Portal Content Redesign & Ecosystem Alignment Specification](2026-11-26-portal-content-redesign-design.md) | Architectural design for replacing portal lorem-ipsum/draft content with RT-Patterns (RT-P01–RT-P10), beta tools, semantic assets, v1.0 branding, and preserved legacy components. | Proposed |
+| 2026-11-26 | [Portal Repository Triage & Asset Mapping Registry](2026-11-26-portal-repo-triage.md) | Canonical registry mapping radical-transparency-net repositories to portal routes, src/data modules, public/assets subfolders, and preserved reusable components. | Active Baseline |
 | 2026-10-19 | [.CAPE + Superpowers Multi-Agent Collaboration Specification](2026-10-19-cape-superpowers-integration-design.md) | Specification establishing the Harmonized Protocol between .cape and superpowers for multi-agent workflows. | Approved |
 | 2026-10-11 | [Writing Style, Professional Tone & Sensitivity Guidelines](2026-10-11-style-and-sensitivity.md) | Policy on factual writing style, public git boundaries, zero-fluff, and English default language. | Active Policy |
 | 2026-10-09 | [Contributor Profile: Marc Portier](2026-10-09-marc-portier.md) | Background, marine informatics expertise, RO-Crate/EOSC roles, and architectural lead scope. | Active Core Contributor |

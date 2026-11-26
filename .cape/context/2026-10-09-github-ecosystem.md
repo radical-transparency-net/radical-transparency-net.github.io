@@ -18,13 +18,16 @@ Depending onm purpose we suggest:
 
 | Category | Naming Pattern | Purpose / Role | Current Name | Planned Canonical Name |
 | :--- | :--- | :--- | :--- | :--- |
-| **Gateway / Portal** | `*.github.io` | Canonical landing portal, theory, documentation, triage hub | `radical-transparency-net.github.io` | `radical-transparency-net.github.io` |
+| **Gateway / Portal** | `*.github.io` | Canonical landing portal, pattern overview, tools, semantic assets | `radical-transparency-net.github.io` | `radical-transparency-net.github.io` |
+| **Specifications** | `spec-*` | Formal ReSpec specifications (`RT-P01`–`RT-P10` linkset usage patterns) | `spec-linkset-usage-patterns` | `spec-linkset-usage-patterns` |
+| **Semantic Assets** | `semantic-assets` | Dereferenceable RDF vocabularies, ontologies, and `rtwl:` linksets | `semantic-assets` | `semantic-assets` |
+| **Visual Branding** | `visuals-branding-design` | Official *Brugse Schelprand* logo, favicons, and visual guidelines | `visuals-branding-design` | `visuals-branding-design` |
 | **Executable Tools** | `*-tool` | Standalone CLI or interactive client tools for extraction, analysis, editing | `wrx`<br>`webmap-ER` | `wrx-tool`<br>`webmap-er-tool` |
 | **Reference Demonstrators** | `docker-*-demo` | Standalone containerized testbeds demonstrating RT patterns and RDF publication | `lod_docker_webserver` | `docker-rt-patterns-demo` |
 | **Libraries / SDKs** | `*-lib` / `*-sdk` | Reusable protocol parsers, validators, and client SDKs | *(Planned)* | `rt-core-lib` |
 
 > [!NOTE]
-> Renaming existing external repositories will be executed deliberately in a planned migration window (documented in `.cape/plan/2026-10-09-setup.md`). The key principle is that naming must reflect architectural function.
+> Renaming existing external repositories will be executed deliberately in a planned migration window (documented in `.cape/plan/2026-10-09-setup.md`). The key principle is that naming must reflect architectural function. For the exact mapping of how each repository is surfaced in portal routes, `src/data/` modules, and `public/assets/` subfolders, see [Portal Repository Triage & Asset Mapping Registry](2026-11-26-portal-repo-triage.md).
 
 ---
 
