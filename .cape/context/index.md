@@ -8,6 +8,7 @@ Practical agreements, architectural baselines, contributor profiles, and ecosyst
 
 | Date | Document | Summary | Status |
 | :--- | :--- | :--- | :--- |
+| 2026-11-26 | [External Alignment Dossier & Foundational Framing](2026-11-26-external-alignment-dossier.md) | Consolidated external alignment notes (OGC, CDIF, FAIR Signposting, ODIS, EOSC, DSSC/SIMPL, FIP) and foundational adoption arguments migrated from the incubator repository. | Active Baseline |
 | 2026-11-26 | [Portal Content Redesign & Ecosystem Alignment Specification](2026-11-26-portal-content-redesign-design.md) | Architectural design for replacing portal lorem-ipsum/draft content with RT-Patterns (RT-P01–RT-P10), beta tools, semantic assets, v1.0 branding, and preserved legacy components. | Active Baseline |
 | 2026-11-26 | [Portal Repository Triage & Asset Mapping Registry](2026-11-26-portal-repo-triage.md) | Canonical registry mapping radical-transparency-net repositories to portal routes, src/data modules, public/assets subfolders, and preserved reusable components. | Active Baseline |
 | 2026-10-19 | [.CAPE + Superpowers Multi-Agent Collaboration Specification](2026-10-19-cape-superpowers-integration-design.md) | Specification establishing the Harmonized Protocol between .cape and superpowers for multi-agent workflows. | Approved |

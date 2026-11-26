@@ -1,65 +1,57 @@
 # Linkset Usage Patterns (RT-P01 to RT-P10): Migration, Alignment & Publication Backlog
 
 **Date:** 2026-11-25  
-**Status:** Planned  
-**Summary:** Actionable backlog for migrating finalized RT patterns from the incubator repo, hosting the rtwl vocabulary, tracking OGC/CDIF/Signposting alignment feedback, and publishing a Zenodo release.  
+**Status:** In Progress  
+**Summary:** Actionable backlog tracking pattern migration, `rtwl:` hosting via `w3id.org` + `semantic-assets`, domain/CORS/sitemap dogfooding, external alignment, Zenodo publication, and future RT x AI triage.  
 
 ---
 
 ## Context & Preconditions
 
-The foundational Linkset Usage Patterns suite (`00-linkset-patterns.md` through `10-detached-local-storage.md`, SVG/PNG diagrams, and the PDF build toolchain including `mkpdf.sh` and `table-widths.lua`) has been consolidated and committed in the incubator repository (`eosc-semantic-interop/if-solutions-proposals`, under `proposals/radical-transparency/linkset-usage-patterns/`).
-
-Once the `feat/cape-init` Pull Request is reviewed by Marc and Cedric and merged into `main`, the workstreams below transition the patterns into `radical-transparency-net.github.io` and drive external alignment and formal publication.
+Foundational pattern drafts (`00-linkset-patterns.md` through `10-detached-local-storage.md`) originated in `eosc-semantic-interop/if-solutions-proposals`. During November 2026 execution, work pivoted from bundling patterns directly into the portal SPA toward a dedicated multi-repo architecture (`spec-linkset-usage-patterns`, `semantic-assets`, `w3id.org`, `visuals-branding-design`), while `RT-DPP` (Position Paper) was published separately under `vliz-be-opsci/papers`. See `.cape/evolution/2026-11-26-multi-repo-ecosystem-and-automation.md`.
 
 ---
 
-## Workstream 1: Portal Migration (`if-solutions-proposals` $\rightarrow$ `radical-transparency-net.github.io`)
+## Workstream 1: Ecosystem Migration & Incubator Graduation
 
-**Dependency:** `feat/cape-init` merged into `main` (per [Project Setup & Next Steps](2026-10-09-setup.md)).
-
-- [ ] **Transfer canonical pattern suite:** Move `00-linkset-patterns.md` through `10-detached-local-storage.md`, `00-profile-subjects.svg`/`.png`, `01`–`09` SVG/PNG diagrams, and `master-links.md` from `eosc-semantic-interop/if-solutions-proposals` into this repository.
-- [ ] **Integrate build & PDF pipeline:** Wire `mkln.sh`, `mkpdf.sh`, and `table-widths.lua` into the portal build/release workflow (producing both individual pattern PDFs and `RT-linkset-usage-patterns-complete.pdf`, plus web-accessible HTML/Markdown routes as planned in `2026-10-09-setup.md`).
-- [ ] **Connect portal data layer:** Reference the migrated pattern paths and bundle outputs cleanly from `src/data/*.ts` without breaking SPA `HashRouter` navigation.
-- [ ] **Deprecate incubator copy:** Replace the moved pattern files in `eosc-semantic-interop/if-solutions-proposals` with a redirect/deprecation notice pointing to `radical-transparency-net.github.io`.
-- [ ] **Leave obsolete/deferred items behind:** Keep `conformity-profiles.md` (marked obsolete) out of the migration, and keep `RT-P11` (API-UI & Aggregate Content Parts) and `RT-P12` (Web Manifests) parked until a later iteration.
-
-**Done Criteria:** All 11 active pattern documents and generated PDFs live canonically in `radical-transparency-net.github.io`, `npm run verify` passes, and the incubator repo points cleanly to the new canonical home.
+- [x] **Migrate canonical pattern suite (`spec-linkset-usage-patterns`):** Published normalized `rt-patterns-overview.md` and `rt-p01-*` through `rt-p10-*` docs, SVG/PNG diagrams, and ReSpec `index.html`.
+- [x] **Sync portal data & diagrams:** Integrated pattern summaries and verified SVG diagrams into `radical-transparency-net.github.io` (`/patterns`, `/patterns/:id`, `/semantic-assets`).
+- [x] **Publish Position Paper (`RT-DPP`):** Managed and published via `vliz-be-opsci/papers` (`https://open-science.vliz.be/papers/2026-radical-transparency-position/2026-radical-transparency-position.pdf`), cross-linked from overview and portal.
+- [x] **Archive local resources & clean incubator repo:** Preserved untracked resources/slides in local `MATERIAL/from-if-solutions-proposals/` and replaced legacy incubator drafts in `eosc-semantic-interop/if-solutions-proposals` with a graduation placeholder pointing to `https://radical-transparency.net/`.
+- [ ] **Publish PR / commit cleanup:** Commit and push finalized changes across `semantic-assets`, `if-solutions-proposals`, and `radical-transparency-net.github.io`.
 
 ---
 
-## Workstream 2: Host `rtwl:` Reification Vocabulary (`https://radical-transparency.net/ns/weblink#`)
+## Workstream 2: Host `rtwl:` Vocabulary (`https://w3id.org/rt/ns/weblink#`), Domain Cutover & Dogfooding
 
-**Dependency:** Workstream 1 portal structure / static hosting under `public/` (or dedicated `ns/weblink` route).
-
-- [ ] **Author formal vocabulary:** Write the lightweight RDF/RDFS vocabulary file defining the terms introduced in Section 5 of `00-linkset-patterns.md`:
-  - Classes: `rtwl:WebLink`, `rtwl:TargetAttribute`
-  - Properties: `rtwl:anchor`, `rtwl:rel`, `rtwl:href`, `rtwl:attribute`, `rtwl:key`, `rtwl:value`
-- [ ] **Publish dereferenceable representations:** Serve Turtle (`text/turtle`), JSON-LD (`application/ld+json`), and human-readable HTML (`text/html`) at `https://radical-transparency.net/ns/weblink` (including `RT-P03` content-negotiation links / variant files compatible with static GitHub Pages hosting).
-- [ ] **Self-declare conformity (`RT-P01`):** Ensure the vocabulary resource declares its own profile/metadata links cleanly.
-
-**Done Criteria:** Fetching `https://radical-transparency.net/ns/weblink#` resolves cleanly to machine-actionable RDF and human documentation matching the examples in `00-linkset-patterns.md`.
+- [x] **Author formal vocabulary:** Defined `rtwl:WebLink`, `rtwl:TargetAttribute`, `rtwl:anchor`, `rtwl:rel`, `rtwl:href`, `rtwl:attribute`, `rtwl:key`, and `rtwl:value` (`v0.1.0-draft`) in `semantic-assets/weblink/weblink.ttl` + observed link examples.
+- [x] **Build deterministic source-only pipeline:** Created `Makefile` + PEP 723 `uv` generator (`scripts/build.py`), `.gitignore`d derived artifacts, and wired `.github/workflows/build-and-deploy.yml` (`make all && make check` + GitHub Actions Pages deploy) with default `BASE_URL` = `https://radical-transparency.net/semantic-assets`.
+- [x] **Draft `w3id.org` conneg & `RT-P03` headers:** Split `ids/rt/.htaccess` and `ids/rt/ns/.htaccess` and verified against 42 `w3id-check` rules.
+- [ ] **Point `w3id.org` directly to `radical-transparency.net` & submit upstream PR:** Update `ids/rt/ns/.htaccess` rewrite targets from `radical-transparency-net.github.io/semantic-assets` to `https://radical-transparency.net/semantic-assets` (avoiding double redirect), evaluate adding `Access-Control-Expose-Headers: Link`, and open upstream PR to `perma-id/w3id.org`.
+- [ ] **Stage clean `_site/` artifact in `semantic-assets`:** Refine `semantic-assets/.github/workflows/build-and-deploy.yml` to upload only web deliverables (`_site/` + `.nojekyll`), excluding `Makefile`, `scripts/`, and `.agents/`.
+- [ ] **Complete `RT-P06` root dogfooding on `radical-transparency.net`:** Add `public/sitemap-index.xml` and `public/robots.txt` on the root portal pointing to `https://radical-transparency.net/semantic-assets/sitemap-semantic-assets.xml` (and future sitemaps for `spec-linkset-usage-patterns`).
 
 ---
 
 ## Workstream 3: Cross-Organizational Alignment & Feedback Incorporation
 
-**Scope:** Active alignment loop with **OGC**, **CODATA / CDIF**, and **FAIR Signposting** (feedback already solicited; `RT-P11`/`RT-P12` remain parked).
+See full alignment dossier in `.cape/context/2026-11-26-external-alignment-dossier.md`.
 
-- [ ] **Audit gaps & extensions:** Systematically map concrete misalignments, overlaps, and potential extension points between the RT patterns and partner specifications (e.g., OGC `/conformance` vs. RFC 6906 `rel="profile"` + RFC 9264 `rel="linkset"`, CDIF profile descriptors, Signposting `signmaps` vs. `RT-P06`/`RT-P07`) as structured input for alignment discussions.
-- [ ] **Track external feedback:** Collect and log technical review comments from OGC, CDIF, and FAIR Signposting contacts (recording architectural decisions as `.cape/evolution/` entries when they change pattern semantics).
-- [ ] **Incorporate accepted revisions:** Update the affected pattern Markdown/SVG/PDF sources where external review identifies ambiguities, edge cases, or consensus alignments.
-
-**Done Criteria:** Gap analysis notes exist to guide partner discussions, and external feedback from OGC, CDIF, and Signposting is triaged and reflected in an updated pattern revision.
+- [ ] **Audit gaps & extensions:** Compare partner mechanisms against `RT-P01`–`RT-P10` (OGC `/conformance` + `26-021`, CDIF `cdifbook#14`/`#15` & `profile` parameter, Signposting `signmaps` XMLNS / `RT-P04` / `rel="service-doc"`, ODIS sitemaps, FIP, DSSC/SIMPL).
+- [ ] **Track external feedback:** Record technical review comments from Cyrielle, OGC, CDIF, and Signposting contacts (logging semantics-changing outcomes as `.cape/evolution/` entries).
+- [ ] **Incorporate accepted revisions:** Update ReSpec Markdown/SVG diagrams accordingly; evaluate documenting `Access-Control-Expose-Headers: Link` in `RT-P03`.
 
 ---
 
-## Workstream 4: Formal Publication & Persistent Archiving
+## Workstream 4: Formal Publication & Persistent Archiving (`RT-P09` Dogfooding)
 
-**Dependency:** Post-feedback revision from Workstream 3 (or frozen v1.0 release snapshot).
+- [ ] **Zenodo release (`spec-linkset-usage-patterns`):** Add complete `CITATION.cff` metadata, tag a release of `RT-P01`–`RT-P10` (Markdown, SVGs, ReSpec snapshot), and archive on **Zenodo** to mint a persistent versioned DOI.
+- [ ] **Cite & cross-link:** Embed the Zenodo DOI and `RT-P09` version navigation links across `spec-linkset-usage-patterns`, `semantic-assets`, and `radical-transparency.net`.
 
-- [ ] **Zenodo release (baseline):** Package a tagged release of the pattern suite (`00`–`10` Markdown, SVGs/PNGs, and `RT-linkset-usage-patterns-complete.pdf`) with complete author/contributor metadata (`CITATION.cff`) and archive it on **Zenodo** to mint a persistent release DOI (`RT-P09` practice applied to our own spec).
-- [ ] **Cite & cross-link:** Add the minted Zenodo DOI to `00-linkset-patterns.md`, the portal `src/data/` entries, and any `cite-as` linksets published by `radical-transparency.net`.
-- [ ] **Evaluate secondary formal venues:** Assess whether a companion technical note or standards-track submission (beyond Zenodo) adds value once alignment talks mature.
+---
 
-**Done Criteria:** A citable, versioned Zenodo DOI exists for the Linkset Usage Patterns suite and is linked from the portal.
+## Workstream 5: Strategic Horizons, RT × AI Benchmark & Tooling Triage
+
+Captured without premature filtering in `.cape/ambition/2026-11-26-strategic-ideas-and-ai-reality-check.md` for upcoming prioritization:
+
+- [ ] **Triage & scope next sprint:** Prioritize across the **RT × AI `Quantify` A/B benchmark** (measuring accuracy, hallucination reduction, latency, and token savings), **RT-MCP Bridge** (`wrx` + `grmp` exposed as MCP tools), **RT-Core 5-minute starter profile**, **online inspector/validator**, **non-RDF profile examples** (STAC, Croissant, Frictionless, GeoParquet), and companion tools/notes (`cpurr`, `grmp`, `stitch`, `rdf-webcomponents`, `RT-D14`–`D16`).
