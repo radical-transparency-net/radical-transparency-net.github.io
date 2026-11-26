@@ -106,6 +106,34 @@ export interface CommunityResource {
   isExternal: boolean;
 }
 
+export interface HomeLifecycleStep {
+  number: string;
+  title: string;
+  description: string;
+}
+
+export interface HomeReadingPathStep {
+  patternId: string;
+  summary: string;
+}
+
+export interface HomeReadingPath {
+  id: string;
+  code: string;
+  audience: string;
+  focus: string;
+  steps: HomeReadingPathStep[];
+}
+
+export interface HomeStandardGroup {
+  category: string;
+  items: {
+    label: string;
+    detail: string;
+    url: string;
+  }[];
+}
+
 export interface StatItem {
   value: string;
   label: string;

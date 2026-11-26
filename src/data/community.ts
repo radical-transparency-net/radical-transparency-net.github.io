@@ -30,14 +30,14 @@ export const communityResourcesData: CommunityResource[] = [
     isExternal: true,
   },
   {
-    id: 'eosc-incubator',
-    title: 'EOSC Semantic Interoperability Incubator',
-    category: 'Specification Origins',
+    id: 'spec-alignment',
+    title: 'Cross-Standard Alignment & Feedback',
+    category: 'Specification Governance',
     description:
-      'The Linkset Usage Patterns and foundational interoperability rationale originated in the eosc-semantic-interop/if-solutions-proposals incubator before graduating to their canonical organization.',
+      'Contribute technical review comments, alignment notes (OGC, CODATA/CDIF, FAIR Signposting), and pull requests directly on the canonical Linkset Usage Patterns repository.',
     icon: 'hub',
-    url: 'https://github.com/eosc-semantic-interop/if-solutions-proposals/tree/main/proposals/radical-transparency',
-    ctaLabel: 'View Incubator Archive',
+    url: 'https://github.com/radical-transparency-net/spec-linkset-usage-patterns',
+    ctaLabel: 'Open Patterns Repository',
     isExternal: true,
   },
   {

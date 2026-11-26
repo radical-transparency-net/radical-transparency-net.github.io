@@ -22,10 +22,15 @@ test('semanticAssetsData publishes rtwl vocabulary metadata and dev notice', asy
   assert.ok(rtwl.representations.length >= 4);
 });
 
-test('community.ts provides factual resources and scrubbed preserved exports', async () => {
+test('community.ts provides factual resources without EOSC incubator and scrubbed preserved exports', async () => {
   const community = await loadTsModule('src/data/community.ts');
   assert.ok(Array.isArray(community.communityResourcesData));
   assert.ok(community.communityResourcesData.length >= 3);
+  assert.equal(
+    community.communityResourcesData.some((item) => item.id === 'eosc-incubator'),
+    false,
+  );
+  assert.doesNotMatch(JSON.stringify(community.communityResourcesData), /incubator/i);
 
   const serialized = JSON.stringify(community);
   assert.doesNotMatch(serialized, /\(DRAFT\)|lorem|ipsum|lh3\.googleusercontent\.com/i);

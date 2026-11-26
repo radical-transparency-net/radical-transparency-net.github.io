@@ -2,7 +2,7 @@ import { SiteConfig } from '../types';
 
 export const siteConfig: SiteConfig = {
   title: "Radical Transparency",
-  tagline: "Radical Transparency Linkset Usage Patterns",
+  tagline: "Radical Transparency",
   description:
     "Making semantic interoperability explicit, verifiable, and measurable through web-linking patterns (RT-P01 to RT-P10), beta extraction and validation tools, and dereferenceable RDF vocabularies.",
   githubUrl: "https://github.com/radical-transparency-net",
