@@ -62,7 +62,7 @@ export const PatternDiagramViewer: React.FC<PatternDiagramViewerProps> = ({
           <img
             src={activeSrc}
             alt={alt}
-            className="max-w-full h-auto mx-auto"
+            className="w-full max-w-full h-auto mx-auto"
           />
         </div>
       ) : textDiagram ? (

@@ -54,7 +54,7 @@ export const ToolDetailPage: React.FC = () => {
             <Badge variant="outline">{tool.status}</Badge>
           </div>
 
-          <h1 className="font-display-hero text-display-hero text-on-surface tracking-tight mb-space-xs">
+          <h1 className="font-display-hero text-headline-lg sm:text-display-hero text-on-surface tracking-tight mb-space-xs break-words">
             {tool.name}
           </h1>
           <p className="font-headline-sm text-headline-sm text-on-tertiary-container mb-space-md">
