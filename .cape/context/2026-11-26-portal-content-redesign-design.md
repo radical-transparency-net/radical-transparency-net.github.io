@@ -1,7 +1,7 @@
 # Portal Content Redesign & Ecosystem Alignment Specification
 
 **Date:** 2026-11-26  
-**Status:** Proposed  
+**Status:** Active Baseline  
 **Summary:** Architectural design for replacing portal lorem-ipsum/draft content with RT-Patterns (RT-P01–RT-P10), beta tools, semantic assets, v1.0 branding, and preserved legacy components.
 
 ---
