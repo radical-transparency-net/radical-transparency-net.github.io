@@ -40,6 +40,7 @@ See full alignment dossier in `.cape/context/2026-11-26-external-alignment-dossi
 - [ ] **Audit gaps & extensions:** Compare partner mechanisms against `RT-P01`–`RT-P10` (OGC `/conformance` + `26-021`, CDIF `cdifbook#14`/`#15` & `profile` parameter, Signposting `signmaps` XMLNS / `RT-P04` / `rel="service-doc"`, ODIS sitemaps, FIP, DSSC/SIMPL).
 - [ ] **Track external feedback:** Record technical review comments from Cyrielle, OGC, CDIF, and Signposting contacts (logging semantics-changing outcomes as `.cape/evolution/` entries).
 - [ ] **Incorporate accepted revisions:** Update ReSpec Markdown/SVG diagrams accordingly; evaluate documenting `Access-Control-Expose-Headers: Link` in `RT-P03`.
+- [ ] **Audit RFC 2119 / RFC 8174 normative keyword consistency across RT-P01–RT-P10:** Normalize non-standard `CAN` and mixed-case `should` phrasing in `rt-p07-catalog-assistance.md` (use uppercase `MAY` / `SHOULD` where normative), and review `RT-P01`, `RT-P04`, and `RT-P05` (which currently lack explicit RFC 2119 keywords) ahead of any formal specification release.
 
 ---
 
